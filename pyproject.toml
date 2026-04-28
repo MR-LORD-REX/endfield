@@ -1,0 +1,21 @@
+[build-system]
+requires=["setuptools>=61.0"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="endfield"
+version="1.0.0"
+description="A Python library for fetching player data from the Enka Network API."
+authors=[
+    {name="sora", email="sahikast07@gmail.com"}
+]
+readme="README.md"
+License={file="LICENSE.txt"}
+dependencies=[
+    "aiohttp>=3.8.0",
+    "pydantic>=2.0.0",
+    "asyncio",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

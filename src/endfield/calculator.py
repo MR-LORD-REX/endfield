@@ -166,34 +166,6 @@ def apply_prop(
 
 
 def compute_final_stats(character: CharacterData) -> ComputedStats:
-    """
-    Compute final in-game stats for a character.
-
-    Changes versus the original:
-    ─────────────────────────────
-    FIX-A  Weapon base ATK was counted twice.  The original re-assigned
-           base_atk = base_atk + weapon_base_atk, then initialised
-           ComputedStats(atk = int(base_atk + weapon_base_atk)) — a second
-           addition.  Now weapon_base_atk is added only in total_base_atk.
-
-    FIX-B  HP formula now correctly accounts for the str×5 scaling term and
-           defers multiplier application until str is finalised:
-               HP = (base_hp + str_final × 5) × (1 + Σmult) + Σflat
-
-    FIX-C  ATK final multiplier applied after all bonuses are collected:
-               ATK_final = ATK_after_bonuses × (1 + main_final×0.005 + sub_final×0.002)
-           The original never applied this step.
-
-    FIX-D  Hidden game formula implemented:
-               healing_received_bonus = will_final × 0.001
-           Confirmed exactly for all four test characters.
-
-    NOTE   Secondary talent attribute bonuses (str / wisd / will from the
-           talent-tree secondary rows) are not applied here because
-           client.py _build_talent_info only exposes the primary attribute
-           column.  See the client.py bug report for the fix.
-    """
-
     base_atk_char = character.base_atk.value
     base_hp       = character.base_hp.value
 

@@ -1,2892 +1,2892 @@
 {
-  "4": {
-    "StrId": "chr_0007_ikut",
-    "NameHash": "7503679737956618234",
-    "Rarity": 5,
-    "Element": "Pulse",
-    "Profession": "VANGUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0007_ikut_3": {
-        "40": 15
-      },
-      "chr_0007_ikut_1": {
-        "40": 10
-      },
-      "chr_0007_ikut_7": {
-        "40": 20
-      },
-      "chr_0007_ikut_5": {
-        "40": 15
-      }
-    },
-    "SkillInfoMap": {
-      "7": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "8": {
-        "Icon": "/ui/ef/skillicon/icon_skill_ikut_01.png",
-        "Element": "Pulse"
-      },
-      "9": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_ikut_01.png",
-        "Element": "Pulse"
-      },
-      "56": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_ikut_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0007_ikut_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_ikut_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0007_ikut_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0007_ikut_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0007_ikut_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0007_ikut_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_ikut_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0007_ikut_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0007_ikut_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_ikut_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0007_ikut_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_ikut_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "40": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "6": {
-    "StrId": "chr_0009_azrila",
-    "NameHash": "5028992047801557402",
-    "Rarity": 6,
-    "Element": "Fire",
-    "Profession": "DEFENDER",
-    "WeaponType": "Claymores",
-    "MainAttrId": 39,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0009_azrila_1": {
-        "39": 10
-      },
-      "chr_0009_azrila_3": {
-        "39": 15
-      },
-      "chr_0009_azrila_5": {
-        "39": 15
-      },
-      "chr_0009_azrila_7": {
-        "39": 20
-      }
-    },
-    "SkillInfoMap": {
-      "22": {
-        "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-        "Element": "Physical"
-      },
-      "23": {
-        "Icon": "/ui/ef/skillicon/icon_skill_azrila_01.png",
-        "Element": "Fire"
-      },
-      "24": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_azrila_01.png",
-        "Element": "Fire"
-      },
-      "54": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_azrila_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0009_azrila_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_azrila_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0009_azrila_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_azrila_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0009_azrila_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0009_azrila_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0009_azrila_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0009_azrila_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0009_azrila_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_azrila_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0009_azrila_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_azrila_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "39": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          },
-          "42": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "8": {
-    "StrId": "chr_0011_seraph",
-    "NameHash": "1803181259851624411",
-    "Rarity": 5,
-    "Element": "Cryst",
-    "Profession": "SUPPORTER",
-    "WeaponType": "Wand",
-    "MainAttrId": 42,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0011_seraph_7": {
-        "42": 20
-      },
-      "chr_0011_seraph_5": {
-        "42": 15
-      },
-      "chr_0011_seraph_3": {
-        "42": 15
-      },
-      "chr_0011_seraph_1": {
-        "42": 10
-      }
-    },
-    "SkillInfoMap": {
-      "10": {
-        "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-        "Element": "Cryst"
-      },
-      "11": {
-        "Icon": "/ui/ef/skillicon/icon_skill_seraph_01.png",
-        "Element": "Cryst"
-      },
-      "12": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_seraph_01.png",
-        "Element": "Cryst"
-      },
-      "53": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_seraph_01.png",
-        "Element": "Cryst"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0011_seraph_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0011_seraph_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0011_seraph_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0011_seraph_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_seraph_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0011_seraph_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0011_seraph_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_seraph_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0011_seraph_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_seraph_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "29": {
-            "Value": 0.1,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "10": {
-    "StrId": "chr_0004_pelica",
-    "NameHash": "7201533996830628902",
-    "Rarity": 5,
-    "Element": "Pulse",
-    "Profession": "CASTER",
-    "WeaponType": "Wand",
-    "MainAttrId": 41,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0004_pelica_7": {
-        "41": 20
-      },
-      "chr_0004_pelica_5": {
-        "41": 15
-      },
-      "chr_0004_pelica_3": {
-        "41": 15
-      },
-      "chr_0004_pelica_1": {
-        "41": 10
-      }
-    },
-    "SkillInfoMap": {
-      "35": {
-        "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-        "Element": "Pulse"
-      },
-      "36": {
-        "Icon": "/ui/ef/skillicon/icon_skill_pelica_01.png",
-        "Element": "Pulse"
-      },
-      "37": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_pelica_01.png",
-        "Element": "Pulse"
-      },
-      "38": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_pelica_01.png",
-        "Element": "Pulse"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0004_pelica_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0004_pelica_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0004_pelica_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_pelica_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0004_pelica_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_pelica_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0004_pelica_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_pelica_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0004_pelica_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0004_pelica_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      }
-    },
-    "PotAttributes": []
-  },
-  "11": {
-    "StrId": "chr_0012_avywen",
-    "NameHash": "5709646229592187150",
-    "Rarity": 5,
-    "Element": "Pulse",
-    "Profession": "ASSAULT",
-    "WeaponType": "Lance",
-    "MainAttrId": 42,
-    "SubAttrId": 40,
-    "AttributeNodes": {
-      "chr_0012_avywen_5": {
-        "42": 15
-      },
-      "chr_0012_avywen_7": {
-        "42": 20
-      },
-      "chr_0012_avywen_1": {
-        "42": 10
-      },
-      "chr_0012_avywen_3": {
-        "42": 15
-      }
-    },
-    "SkillInfoMap": {
-      "25": {
-        "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
-        "Element": "Physical"
-      },
-      "26": {
-        "Icon": "/ui/ef/skillicon/icon_skill_avywen_01.png",
-        "Element": "Pulse"
-      },
-      "27": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_avywen_01.png",
-        "Element": "Pulse"
-      },
-      "51": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_avywen_01.png",
-        "Element": "Pulse"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0012_avywen_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_avywen_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0012_avywen_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_avywen_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0012_avywen_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0012_avywen_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0012_avywen_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0012_avywen_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0012_avywen_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_avywen_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0012_avywen_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_avywen_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 3,
-        "Attrs": {
-          "42": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "52": {
-            "Value": 0.08,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "12": {
-    "StrId": "chr_0013_aglina",
-    "NameHash": "5075663083436839087",
-    "Rarity": 6,
-    "Element": "Natural",
-    "Profession": "SUPPORTER",
-    "WeaponType": "Wand",
-    "MainAttrId": 42,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0013_aglina_3": {
-        "42": 15
-      },
-      "chr_0013_aglina_1": {
-        "42": 10
-      },
-      "chr_0013_aglina_7": {
-        "42": 20
-      },
-      "chr_0013_aglina_5": {
-        "42": 15
-      }
-    },
-    "SkillInfoMap": {
-      "13": {
-        "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-        "Element": "Natural"
-      },
-      "14": {
-        "Icon": "/ui/ef/skillicon/icon_skill_aglina_01.png",
-        "Element": "Natural"
-      },
-      "15": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aglina_01.png",
-        "Element": "Natural"
-      },
-      "16": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_aglina_01.png",
-        "Element": "Natural"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0013_aglina_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_aglina_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0013_aglina_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_aglina_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0013_aglina_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0013_aglina_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0013_aglina_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0013_aglina_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0013_aglina_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_aglina_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0013_aglina_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_aglina_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": []
-  },
-  "13": {
-    "StrId": "chr_0005_chen",
-    "NameHash": "3128157701878862541",
-    "Rarity": 5,
-    "Element": "Physical",
-    "Profession": "GUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0005_chen_5": {
-        "40": 15
-      },
-      "chr_0005_chen_7": {
-        "40": 20
-      },
-      "chr_0005_chen_1": {
-        "40": 10
-      },
-      "chr_0005_chen_3": {
-        "40": 15
-      }
-    },
-    "SkillInfoMap": {
-      "1": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "2": {
-        "Icon": "/ui/ef/skillicon/icon_skill_chen_01.png",
-        "Element": "Physical"
-      },
-      "3": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_chen_01.png",
-        "Element": "Physical"
-      },
-      "21": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_chen_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0005_chen_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_chen_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0005_chen_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_chen_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0005_chen_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_chen_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0005_chen_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_chen_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0005_chen_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0005_chen_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0005_chen_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0005_chen_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "40": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "50": {
-            "Value": 0.08,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "14": {
-    "StrId": "chr_0006_wolfgd",
-    "NameHash": "-3531987865314967190",
-    "Rarity": 5,
-    "Element": "Fire",
-    "Profession": "CASTER",
-    "WeaponType": "Pistol",
-    "MainAttrId": 39,
-    "SubAttrId": 40,
-    "AttributeNodes": {
-      "chr_0006_wolfgd_3": {
-        "39": 15
-      },
-      "chr_0006_wolfgd_5": {
-        "39": 15
-      },
-      "chr_0006_wolfgd_7": {
-        "39": 20
-      },
-      "chr_0006_wolfgd_1": {
-        "39": 10
-      }
-    },
-    "SkillInfoMap": {
-      "28": {
-        "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
-        "Element": "Fire"
-      },
-      "29": {
-        "Icon": "/ui/ef/skillicon/icon_skill_wolfgd_01.png",
-        "Element": "Fire"
-      },
-      "30": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_wolfgd_01.png",
-        "Element": "Fire"
-      },
-      "52": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_wolfgd_01.png",
-        "Element": "Fire"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0006_wolfgd_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_wolfgd_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0006_wolfgd_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_wolfgd_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0006_wolfgd_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_wolfgd_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0006_wolfgd_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_wolfgd_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0006_wolfgd_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0006_wolfgd_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0006_wolfgd_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0006_wolfgd_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 1,
-        "Attrs": {
-          "39": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "40": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "20": {
-    "StrId": "chr_0018_dapan",
-    "NameHash": "4641966554191326705",
-    "Rarity": 5,
-    "Element": "Physical",
-    "Profession": "ASSAULT",
-    "WeaponType": "Claymores",
-    "MainAttrId": 39,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0018_dapan_5": {
-        "39": 15
-      },
-      "chr_0018_dapan_7": {
-        "39": 20
-      },
-      "chr_0018_dapan_3": {
-        "39": 15
-      },
-      "chr_0018_dapan_1": {
-        "39": 10
-      }
-    },
-    "SkillInfoMap": {
-      "17": {
-        "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-        "Element": "Physical"
-      },
-      "18": {
-        "Icon": "/ui/ef/skillicon/icon_skill_dapan_01.png",
-        "Element": "Physical"
-      },
-      "19": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_dapan_01.png",
-        "Element": "Physical"
-      },
-      "55": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_dapan_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0018_dapan_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_dapan_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0018_dapan_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0018_dapan_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0018_dapan_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0018_dapan_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_dapan_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0018_dapan_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_dapan_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0018_dapan_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_dapan_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0018_dapan_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 3,
-        "Attrs": {
-          "39": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "50": {
-            "Value": 0.08,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "22": {
-    "StrId": "chr_0002_endminm",
-    "NameHash": "-7078064683023630592",
-    "Rarity": 6,
-    "Element": "Physical",
-    "Profession": "GUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0002_endminm_7": {
-        "40": 20
-      },
-      "chr_0002_endminm_1": {
-        "40": 10
-      },
-      "chr_0002_endminm_5": {
-        "40": 15
-      },
-      "chr_0002_endminm_3": {
-        "40": 15
-      }
-    },
-    "SkillInfoMap": {
-      "31": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "32": {
-        "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
-        "Element": "Physical"
-      },
-      "33": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
-        "Element": "Physical"
-      },
-      "34": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0002_endminm_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_endminm_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0002_endminm_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_endminm_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0002_endminm_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_endminm_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0002_endminm_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_endminm_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "1": {
-            "Value": 0.1,
-            "Formula": "BaseMultiplier"
-          },
-          "40": {
-            "Value": 25,
-            "Formula": "BaseAddition"
-          },
-          "60": {
-            "Value": -0.1,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "23": {
-    "StrId": "chr_0016_laevat",
-    "NameHash": "-7854629517048772793",
-    "Rarity": 6,
-    "Element": "Fire",
-    "Profession": "ASSAULT",
-    "WeaponType": "Sword",
-    "MainAttrId": 41,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0016_laevat_7": {
-        "41": 20
-      },
-      "chr_0016_laevat_5": {
-        "41": 15
-      },
-      "chr_0016_laevat_3": {
-        "41": 15
-      },
-      "chr_0016_laevat_1": {
-        "41": 10
-      }
-    },
-    "SkillInfoMap": {
-      "39": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Fire"
-      },
-      "40": {
-        "Icon": "/ui/ef/skillicon/icon_skill_laevat_01.png",
-        "Element": "Fire"
-      },
-      "41": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_laevat_01.png",
-        "Element": "Fire"
-      },
-      "49": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_laevat_01.png",
-        "Element": "Fire"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0016_laevat_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_laevat_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0016_laevat_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0016_laevat_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0016_laevat_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_laevat_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0016_laevat_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_laevat_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0016_laevat_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_laevat_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0016_laevat_passive_skill_0_3": {
-        "Icon": "/ui/ef/icon_talent_laevat_01.png",
-        "Level": 3,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0016_laevat_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0016_laevat_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "17": {
-            "Value": 0.15,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "24": {
-    "StrId": "chr_0014_aurora",
-    "NameHash": "-6313235431437717749",
-    "Rarity": 5,
-    "Element": "Cryst",
-    "Profession": "DEFENDER",
-    "WeaponType": "Claymores",
-    "MainAttrId": 39,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0014_aurora_1": {
-        "39": 10
-      },
-      "chr_0014_aurora_3": {
-        "39": 15
-      },
-      "chr_0014_aurora_5": {
-        "39": 15
-      },
-      "chr_0014_aurora_7": {
-        "39": 20
-      }
-    },
-    "SkillInfoMap": {
-      "42": {
-        "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-        "Element": "Physical"
-      },
-      "43": {
-        "Icon": "/ui/ef/skillicon/icon_skill_aurora_01.png",
-        "Element": "Cryst"
-      },
-      "44": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aurora_01.png",
-        "Element": "Cryst"
-      },
-      "50": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_aurora_01.png",
-        "Element": "Cryst"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0014_aurora_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_aurora_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0014_aurora_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_aurora_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0014_aurora_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_aurora_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0014_aurora_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0014_aurora_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0014_aurora_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0014_aurora_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0014_aurora_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_aurora_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "3": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          },
-          "42": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "26": {
-    "StrId": "chr_0015_lifeng",
-    "NameHash": "-6840171208004431812",
-    "Rarity": 6,
-    "Element": "Physical",
-    "Profession": "GUARD",
-    "WeaponType": "Lance",
-    "MainAttrId": 40,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0015_lifeng_1": {
-        "40": 10
-      },
-      "chr_0015_lifeng_7": {
-        "40": 20
-      },
-      "chr_0015_lifeng_5": {
-        "40": 15
-      },
-      "chr_0015_lifeng_3": {
-        "40": 15
-      }
-    },
-    "SkillInfoMap": {
-      "57": {
-        "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
-        "Element": "Physical"
-      },
-      "58": {
-        "Icon": "/ui/ef/skillicon/icon_skill_lifeng_01.png",
-        "Element": "Physical"
-      },
-      "59": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lifeng_01.png",
-        "Element": "Physical"
-      },
-      "60": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_lifeng_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0015_lifeng_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_lifeng_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0015_lifeng_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0015_lifeng_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0015_lifeng_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0015_lifeng_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0015_lifeng_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_lifeng_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0015_lifeng_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_lifeng_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0015_lifeng_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_lifeng_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "39": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "40": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "42": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "27": {
-    "StrId": "chr_0017_yvonne",
-    "NameHash": "-8634541419450148796",
-    "Rarity": 6,
-    "Element": "Cryst",
-    "Profession": "ASSAULT",
-    "WeaponType": "Pistol",
-    "MainAttrId": 41,
-    "SubAttrId": 40,
-    "AttributeNodes": {
-      "chr_0017_yvonne_1": {
-        "41": 10
-      },
-      "chr_0017_yvonne_3": {
-        "41": 15
-      },
-      "chr_0017_yvonne_5": {
-        "41": 15
-      },
-      "chr_0017_yvonne_7": {
-        "41": 20
-      }
-    },
-    "SkillInfoMap": {
-      "61": {
-        "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
-        "Element": "Cryst"
-      },
-      "62": {
-        "Icon": "/ui/ef/skillicon/icon_skill_yvonne_01.png",
-        "Element": "Cryst"
-      },
-      "63": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_yvonne_01.png",
-        "Element": "Cryst"
-      },
-      "64": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_yvonne_01.png",
-        "Element": "Cryst"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0017_yvonne_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_yvonne_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0017_yvonne_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_yvonne_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0017_yvonne_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_yvonne_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0017_yvonne_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_yvonne_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0017_yvonne_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0017_yvonne_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0017_yvonne_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0017_yvonne_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "9": {
-            "Value": 0.07,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "29": {
-    "StrId": "chr_0003_endminf",
-    "NameHash": "-2349442812164400839",
-    "Rarity": 6,
-    "Element": "Physical",
-    "Profession": "GUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0003_endminf_5": {
-        "40": 15
-      },
-      "chr_0003_endminf_7": {
-        "40": 20
-      },
-      "chr_0003_endminf_3": {
-        "40": 15
-      },
-      "chr_0003_endminf_1": {
-        "40": 10
-      }
-    },
-    "SkillInfoMap": {
-      "45": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "46": {
-        "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
-        "Element": "Physical"
-      },
-      "47": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
-        "Element": "Physical"
-      },
-      "48": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0003_endminf_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_endminm_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0003_endminf_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_endminm_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0003_endminf_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_endminm_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0003_endminf_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_endminm_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "1": {
-            "Value": 0.1,
-            "Formula": "BaseMultiplier"
-          },
-          "40": {
-            "Value": 25,
-            "Formula": "BaseAddition"
-          },
-          "60": {
-            "Value": -0.1,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "30": {
-    "StrId": "chr_0019_karin",
-    "NameHash": "-1652352317843725885",
-    "Rarity": 4,
-    "Element": "Fire",
-    "Profession": "VANGUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0019_karin_1": {
-        "40": 10
-      },
-      "chr_0019_karin_5": {
-        "40": 15
-      },
-      "chr_0019_karin_3": {
-        "40": 15
-      },
-      "chr_0019_karin_7": {
-        "40": 20
-      }
-    },
-    "SkillInfoMap": {
-      "65": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "66": {
-        "Icon": "/ui/ef/skillicon/icon_skill_karin_01.png",
-        "Element": "Fire"
-      },
-      "67": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_karin_01.png",
-        "Element": "Fire"
-      },
-      "68": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_karin_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0019_karin_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_karin_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0019_karin_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_karin_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0019_karin_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0019_karin_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0019_karin_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_karin_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0019_karin_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0019_karin_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "40": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "31": {
-    "StrId": "chr_0021_whiten",
-    "NameHash": "-7359346505174141947",
-    "Rarity": 4,
-    "Element": "Cryst",
-    "Profession": "GUARD",
-    "WeaponType": "Lance",
-    "MainAttrId": 42,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0021_whiten_5": {
-        "42": 15
-      },
-      "chr_0021_whiten_7": {
-        "42": 20
-      },
-      "chr_0021_whiten_1": {
-        "42": 10
-      },
-      "chr_0021_whiten_3": {
-        "42": 15
-      }
-    },
-    "SkillInfoMap": {
-      "77": {
-        "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
-        "Element": "Physical"
-      },
-      "78": {
-        "Icon": "/ui/ef/skillicon/icon_skill_whiten_01.png",
-        "Element": "Cryst"
-      },
-      "79": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_whiten_01.png",
-        "Element": "Physical"
-      },
-      "80": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_whiten_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0021_whiten_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0021_whiten_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0021_whiten_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_whiten_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0021_whiten_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_whiten_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0021_whiten_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0021_whiten_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_whiten_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0021_whiten_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_whiten_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0021_whiten_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "39": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          },
-          "42": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "32": {
-    "StrId": "chr_0022_bounda",
-    "NameHash": "4120402758683380662",
-    "Rarity": 4,
-    "Element": "Natural",
-    "Profession": "CASTER",
-    "WeaponType": "Pistol",
-    "MainAttrId": 40,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0022_bounda_1": {
-        "40": 10
-      },
-      "chr_0022_bounda_3": {
-        "40": 15
-      },
-      "chr_0022_bounda_5": {
-        "40": 15
-      },
-      "chr_0022_bounda_7": {
-        "40": 20
-      }
-    },
-    "SkillInfoMap": {
-      "69": {
-        "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
-        "Element": "Natural"
-      },
-      "70": {
-        "Icon": "/ui/ef/skillicon/icon_skill_bounda_01.png",
-        "Element": "Natural"
-      },
-      "71": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_bounda_01.png",
-        "Element": "Natural"
-      },
-      "72": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_bounda_01.png",
-        "Element": "Natural"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0022_bounda_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0022_bounda_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_bounda_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0022_bounda_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0022_bounda_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0022_bounda_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_bounda_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0022_bounda_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_bounda_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0022_bounda_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_bounda_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0022_bounda_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 1,
-        "Attrs": {
-          "40": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "33": {
-    "StrId": "chr_0023_antal",
-    "NameHash": "2232202019045239793",
-    "Rarity": 4,
-    "Element": "Pulse",
-    "Profession": "SUPPORTER",
-    "WeaponType": "Wand",
-    "MainAttrId": 41,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0023_antal_3": {
-        "41": 15
-      },
-      "chr_0023_antal_1": {
-        "41": 10
-      },
-      "chr_0023_antal_5": {
-        "41": 15
-      },
-      "chr_0023_antal_7": {
-        "41": 20
-      }
-    },
-    "SkillInfoMap": {
-      "85": {
-        "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-        "Element": "Pulse"
-      },
-      "86": {
-        "Icon": "/ui/ef/skillicon/icon_skill_antal_01.png",
-        "Element": "Pulse"
-      },
-      "87": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_antal_01.png",
-        "Element": "Pulse"
-      },
-      "88": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_antal_01.png",
-        "Element": "Pulse"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0023_antal_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_antal_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0023_antal_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0023_antal_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_antal_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0023_antal_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0023_antal_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0023_antal_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_antal_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0023_antal_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_antal_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0023_antal_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "1": {
-            "Value": 0.1,
-            "Formula": "BaseMultiplier"
-          },
-          "41": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "35": {
-    "StrId": "chr_0020_meurs",
-    "NameHash": "-494400192924640152",
-    "Rarity": 4,
-    "Element": "Physical",
-    "Profession": "DEFENDER",
-    "WeaponType": "Claymores",
-    "MainAttrId": 39,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0020_meurs_3": {
-        "39": 15
-      },
-      "chr_0020_meurs_7": {
-        "39": 20
-      },
-      "chr_0020_meurs_1": {
-        "39": 10
-      },
-      "chr_0020_meurs_5": {
-        "39": 15
-      }
-    },
-    "SkillInfoMap": {
-      "89": {
-        "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-        "Element": "Physical"
-      },
-      "90": {
-        "Icon": "/ui/ef/skillicon/icon_skill_meurs_01.png",
-        "Element": "Physical"
-      },
-      "91": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_meurs_01.png",
-        "Element": "Physical"
-      },
-      "92": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_meurs_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0020_meurs_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_meurs_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0020_meurs_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0020_meurs_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_meurs_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0020_meurs_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0020_meurs_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0020_meurs_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_meurs_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0020_meurs_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_meurs_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0020_meurs_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "3": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          },
-          "42": {
-            "Value": 10,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "38": {
-    "StrId": "chr_9000_endmin",
-    "NameHash": "-7421751997530373346",
-    "Rarity": 6,
-    "Element": "Physical",
-    "Profession": "GUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_9000_endmin_1": {
-        "40": 10
-      },
-      "chr_9000_endmin_3": {
-        "40": 15
-      },
-      "chr_9000_endmin_5": {
-        "40": 15
-      },
-      "chr_9000_endmin_7": {
-        "40": 20
-      }
-    },
-    "SkillInfoMap": {
-      "73": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "74": {
-        "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
-        "Element": "Physical"
-      },
-      "75": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
-        "Element": "Physical"
-      },
-      "76": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_9000_endmin_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_endminm_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_9000_endmin_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_endminm_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_9000_endmin_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_endminm_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_9000_endmin_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_endminm_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 4,
-        "Attrs": {
-          "1": {
-            "Value": 0.1,
-            "Formula": "BaseMultiplier"
-          },
-          "40": {
-            "Value": 25,
-            "Formula": "BaseAddition"
-          },
-          "60": {
-            "Value": -0.1,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "40": {
-    "StrId": "chr_0024_deepfin",
-    "NameHash": "4730225086587248930",
-    "Rarity": 5,
-    "Element": "Cryst",
-    "Profession": "VANGUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 39,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0024_deepfin_7": {
-        "39": 20
-      },
-      "chr_0024_deepfin_1": {
-        "39": 10
-      },
-      "chr_0024_deepfin_3": {
-        "39": 15
-      },
-      "chr_0024_deepfin_5": {
-        "39": 15
-      }
-    },
-    "SkillInfoMap": {
-      "81": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "82": {
-        "Icon": "/ui/ef/skillicon/icon_skill_deepfin_01.png",
-        "Element": "Physical"
-      },
-      "83": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_deepfin_01.png",
-        "Element": "Cryst"
-      },
-      "84": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_deepfin_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0024_deepfin_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0024_deepfin_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0024_deepfin_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_deepfin_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0024_deepfin_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0024_deepfin_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_deepfin_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0024_deepfin_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_deepfin_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0024_deepfin_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0024_deepfin_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_deepfin_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "39": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          },
-          "41": {
-            "Value": 15,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "41": {
-    "StrId": "chr_0028_wulfa",
-    "NameHash": "7395048666191119127",
-    "Rarity": 6,
-    "Element": "Physical",
-    "Profession": "GUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 40,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0028_wulfa_7": {
-        "40": 20
-      },
-      "chr_0028_wulfa_5": {
-        "40": 15
-      },
-      "chr_0028_wulfa_1": {
-        "40": 10
-      },
-      "chr_0028_wulfa_3": {
-        "40": 15
-      }
-    },
-    "SkillInfoMap": {
-      "109": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "110": {
-        "Icon": "/ui/ef/skillicon/icon_skill_wulfa_01.png",
-        "Element": "Physical"
-      },
-      "111": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_wulfa_01.png",
-        "Element": "Fire"
-      },
-      "112": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_wulfa_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0028_wulfa_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_wulfa_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0028_wulfa_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0028_wulfa_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0028_wulfa_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0028_wulfa_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_wulfa_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0028_wulfa_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_wulfa_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0028_wulfa_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0028_wulfa_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_wulfa_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "9": {
-            "Value": 0.07,
-            "Formula": "BaseAddition"
-          },
-          "40": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "42": {
-    "StrId": "chr_0026_lastrite",
-    "NameHash": "2211452327399978399",
-    "Rarity": 6,
-    "Element": "Cryst",
-    "Profession": "ASSAULT",
-    "WeaponType": "Claymores",
-    "MainAttrId": 39,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0026_lastrite_1": {
-        "39": 10
-      },
-      "chr_0026_lastrite_3": {
-        "39": 15
-      },
-      "chr_0026_lastrite_5": {
-        "39": 15
-      },
-      "chr_0026_lastrite_7": {
-        "39": 20
-      }
-    },
-    "SkillInfoMap": {
-      "93": {
-        "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-        "Element": "Cryst"
-      },
-      "94": {
-        "Icon": "/ui/ef/skillicon/icon_skill_lastrite_01.png",
-        "Element": "Cryst"
-      },
-      "95": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lastrite_01.png",
-        "Element": "Cryst"
-      },
-      "96": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_lastrite_01.png",
-        "Element": "Cryst"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0026_lastrite_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0026_lastrite_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0026_lastrite_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0026_lastrite_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0026_lastrite_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_lastrite_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0026_lastrite_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_lastrite_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0026_lastrite_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_lastrite_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0026_lastrite_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_lastrite_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "39": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          },
-          "53": {
-            "Value": 0.1,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "43": {
-    "StrId": "chr_0029_pograni",
-    "NameHash": "8750064674695776697",
-    "Rarity": 6,
-    "Element": "Physical",
-    "Profession": "VANGUARD",
-    "WeaponType": "Sword",
-    "MainAttrId": 42,
-    "SubAttrId": 40,
-    "AttributeNodes": {
-      "chr_0029_pograni_5": {
-        "42": 15
-      },
-      "chr_0029_pograni_7": {
-        "42": 20
-      },
-      "chr_0029_pograni_3": {
-        "42": 15
-      },
-      "chr_0029_pograni_1": {
-        "42": 10
-      }
-    },
-    "SkillInfoMap": {
-      "97": {
-        "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-        "Element": "Physical"
-      },
-      "98": {
-        "Icon": "/ui/ef/skillicon/icon_skill_pograni_01.png",
-        "Element": "Physical"
-      },
-      "99": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_pograni_01.png",
-        "Element": "Physical"
-      },
-      "100": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_pograni_01.png",
-        "Element": "Physical"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0029_pograni_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0029_pograni_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0029_pograni_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_pograni_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0029_pograni_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_pograni_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0029_pograni_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0029_pograni_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0029_pograni_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_pograni_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0029_pograni_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_pograni_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "42": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          },
-          "50": {
-            "Value": 0.1,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "44": {
-    "StrId": "chr_0025_ardelia",
-    "NameHash": "-5102726507612351418",
-    "Rarity": 6,
-    "Element": "Natural",
-    "Profession": "SUPPORTER",
-    "WeaponType": "Wand",
-    "MainAttrId": 41,
-    "SubAttrId": 42,
-    "AttributeNodes": {
-      "chr_0025_ardelia_7": {
-        "41": 20
-      },
-      "chr_0025_ardelia_3": {
-        "41": 15
-      },
-      "chr_0025_ardelia_1": {
-        "41": 10
-      },
-      "chr_0025_ardelia_5": {
-        "41": 15
-      }
-    },
-    "SkillInfoMap": {
-      "101": {
-        "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-        "Element": "Natural"
-      },
-      "102": {
-        "Icon": "/ui/ef/skillicon/icon_skill_ardelia_01.png",
-        "Element": "Natural"
-      },
-      "103": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_ardelia_01.png",
-        "Element": "Natural"
-      },
-      "104": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_ardelia_01.png",
-        "Element": "Natural"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0025_ardelia_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_ardelia_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0025_ardelia_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0025_ardelia_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_ardelia_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0025_ardelia_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0025_ardelia_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_ardelia_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0025_ardelia_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0025_ardelia_passive_skill_0_3": {
-        "Icon": "/ui/ef/icon_talent_ardelia_01.png",
-        "Level": 3,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0025_ardelia_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": []
-  },
-  "45": {
-    "StrId": "chr_0027_tangtang",
-    "NameHash": "-558922159116356568",
-    "Rarity": 6,
-    "Element": "Cryst",
-    "Profession": "CASTER",
-    "WeaponType": "Pistol",
-    "MainAttrId": 40,
-    "SubAttrId": 39,
-    "AttributeNodes": {
-      "chr_0027_tangtang_5": {
-        "40": 15
-      },
-      "chr_0027_tangtang_7": {
-        "40": 20
-      },
-      "chr_0027_tangtang_1": {
-        "40": 10
-      },
-      "chr_0027_tangtang_3": {
-        "40": 15
-      }
-    },
-    "SkillInfoMap": {
-      "113": {
-        "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
-        "Element": "Cryst"
-      },
-      "114": {
-        "Icon": "/ui/ef/skillicon/icon_skill_tangtang_01.png",
-        "Element": "Cryst"
-      },
-      "115": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_tangtang_01.png",
-        "Element": "Cryst"
-      },
-      "116": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_tangtang_01.png",
-        "Element": "Cryst"
-      }
-    },
-    "NodeSkillMap": {
-      "fac_chr_0027_tangtang_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0027_tangtang_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0027_tangtang_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_tangtang_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0027_tangtang_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0027_tangtang_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_tangtang_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0027_tangtang_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "chr_0027_tangtang_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_tangtang_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0027_tangtang_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_tangtang_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "40": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          },
-          "53": {
-            "Value": 0.1,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  },
-  "46": {
-    "StrId": "chr_0030_zhuangfy",
-    "NameHash": "-5918768875146078054",
-    "Rarity": 6,
-    "Element": "Pulse",
-    "Profession": "ASSAULT",
-    "WeaponType": "Wand",
-    "MainAttrId": 42,
-    "SubAttrId": 41,
-    "AttributeNodes": {
-      "chr_0030_zhuangfy_1": {
-        "42": 10
-      },
-      "chr_0030_zhuangfy_3": {
-        "42": 15
-      },
-      "chr_0030_zhuangfy_5": {
-        "42": 15
-      },
-      "chr_0030_zhuangfy_7": {
-        "42": 20
-      }
-    },
-    "SkillInfoMap": {
-      "105": {
-        "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-        "Element": "Pulse"
-      },
-      "106": {
-        "Icon": "/ui/ef/skillicon/icon_skill_zhuangfy_01.png",
-        "Element": "Pulse"
-      },
-      "107": {
-        "Icon": "/ui/ef/skillicon/icon_ultimate_skill_zhuangfy_01.png",
-        "Element": "Pulse"
-      },
-      "108": {
-        "Icon": "/ui/ef/skillicon/icon_combo_skill_zhuangfy_01.png",
-        "Element": "Pulse"
-      }
-    },
-    "NodeSkillMap": {
-      "chr_0030_zhuangfy_passive_skill_0_2": {
-        "Icon": "/ui/ef/icon_talent_zhuangfy_01.png",
-        "Level": 2,
-        "Index": 0,
-        "Type": 4
-      },
-      "fac_chr_0030_zhuangfy_0_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 2,
-        "Index": 2,
-        "Type": 5
-      },
-      "chr_0030_zhuangfy_passive_skill_1_2": {
-        "Icon": "/ui/ef/icon_talent_zhuangfy_02.png",
-        "Level": 2,
-        "Index": 1,
-        "Type": 4
-      },
-      "chr_0030_zhuangfy_passive_skill_0_1": {
-        "Icon": "/ui/ef/icon_talent_zhuangfy_01.png",
-        "Level": 1,
-        "Index": 0,
-        "Type": 4
-      },
-      "chr_0030_zhuangfy_passive_skill_1_1": {
-        "Icon": "/ui/ef/icon_talent_zhuangfy_02.png",
-        "Level": 1,
-        "Index": 1,
-        "Type": 4
-      },
-      "fac_chr_0030_zhuangfy_1_2": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 2,
-        "Index": 3,
-        "Type": 5
-      },
-      "fac_chr_0030_zhuangfy_0_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
-        "Level": 1,
-        "Index": 2,
-        "Type": 5
-      },
-      "fac_chr_0030_zhuangfy_1_1": {
-        "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
-        "Level": 1,
-        "Index": 3,
-        "Type": 5
-      }
-    },
-    "PotAttributes": [
-      {
-        "Level": 2,
-        "Attrs": {
-          "32": {
-            "Value": 0.15,
-            "Formula": "BaseAddition"
-          },
-          "42": {
-            "Value": 20,
-            "Formula": "BaseAddition"
-          }
-        }
-      }
-    ]
-  }
+    "4": {
+        "StrId": "chr_0007_ikut",
+        "NameHash": "7503679737956618234",
+        "Rarity": 5,
+        "Element": "Pulse",
+        "Profession": "VANGUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0007_ikut_3": {
+                "40": 15
+            },
+            "chr_0007_ikut_1": {
+                "40": 10
+            },
+            "chr_0007_ikut_7": {
+                "40": 20
+            },
+            "chr_0007_ikut_5": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "7": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "8": {
+                "Icon": "/ui/ef/skillicon/icon_skill_ikut_01.png",
+                "Element": "Pulse"
+            },
+            "9": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_ikut_01.png",
+                "Element": "Pulse"
+            },
+            "56": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_ikut_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0007_ikut_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_ikut_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0007_ikut_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0007_ikut_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0007_ikut_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0007_ikut_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_ikut_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0007_ikut_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0007_ikut_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_ikut_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0007_ikut_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_ikut_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "40": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "6": {
+        "StrId": "chr_0009_azrila",
+        "NameHash": "5028992047801557402",
+        "Rarity": 6,
+        "Element": "Fire",
+        "Profession": "DEFENDER",
+        "WeaponType": "Claymores",
+        "MainAttrId": 39,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0009_azrila_1": {
+                "39": 10
+            },
+            "chr_0009_azrila_3": {
+                "39": 15
+            },
+            "chr_0009_azrila_5": {
+                "39": 15
+            },
+            "chr_0009_azrila_7": {
+                "39": 20
+            }
+        },
+        "SkillInfoMap": {
+            "22": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Physical"
+            },
+            "23": {
+                "Icon": "/ui/ef/skillicon/icon_skill_azrila_01.png",
+                "Element": "Fire"
+            },
+            "24": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_azrila_01.png",
+                "Element": "Fire"
+            },
+            "54": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_azrila_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0009_azrila_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_azrila_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0009_azrila_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_azrila_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0009_azrila_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0009_azrila_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0009_azrila_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0009_azrila_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0009_azrila_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_azrila_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0009_azrila_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_azrila_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "39": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "42": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "8": {
+        "StrId": "chr_0011_seraph",
+        "NameHash": "1803181259851624411",
+        "Rarity": 5,
+        "Element": "Cryst",
+        "Profession": "SUPPORTER",
+        "WeaponType": "Wand",
+        "MainAttrId": 42,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0011_seraph_7": {
+                "42": 20
+            },
+            "chr_0011_seraph_5": {
+                "42": 15
+            },
+            "chr_0011_seraph_3": {
+                "42": 15
+            },
+            "chr_0011_seraph_1": {
+                "42": 10
+            }
+        },
+        "SkillInfoMap": {
+            "10": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Cryst"
+            },
+            "11": {
+                "Icon": "/ui/ef/skillicon/icon_skill_seraph_01.png",
+                "Element": "Cryst"
+            },
+            "12": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_seraph_01.png",
+                "Element": "Cryst"
+            },
+            "53": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_seraph_01.png",
+                "Element": "Cryst"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0011_seraph_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0011_seraph_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0011_seraph_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0011_seraph_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_seraph_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0011_seraph_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0011_seraph_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_seraph_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0011_seraph_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_seraph_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "29": {
+                        "Value": 0.1,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "10": {
+        "StrId": "chr_0004_pelica",
+        "NameHash": "7201533996830628902",
+        "Rarity": 5,
+        "Element": "Pulse",
+        "Profession": "CASTER",
+        "WeaponType": "Wand",
+        "MainAttrId": 41,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0004_pelica_7": {
+                "41": 20
+            },
+            "chr_0004_pelica_5": {
+                "41": 15
+            },
+            "chr_0004_pelica_3": {
+                "41": 15
+            },
+            "chr_0004_pelica_1": {
+                "41": 10
+            }
+        },
+        "SkillInfoMap": {
+            "35": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Pulse"
+            },
+            "36": {
+                "Icon": "/ui/ef/skillicon/icon_skill_pelica_01.png",
+                "Element": "Pulse"
+            },
+            "37": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_pelica_01.png",
+                "Element": "Pulse"
+            },
+            "38": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_pelica_01.png",
+                "Element": "Pulse"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0004_pelica_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0004_pelica_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0004_pelica_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_pelica_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0004_pelica_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_pelica_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0004_pelica_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_pelica_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0004_pelica_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0004_pelica_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": []
+    },
+    "11": {
+        "StrId": "chr_0012_avywen",
+        "NameHash": "5709646229592187150",
+        "Rarity": 5,
+        "Element": "Pulse",
+        "Profession": "ASSAULT",
+        "WeaponType": "Lance",
+        "MainAttrId": 42,
+        "SubAttrId": 40,
+        "AttributeNodes": {
+            "chr_0012_avywen_5": {
+                "42": 15
+            },
+            "chr_0012_avywen_7": {
+                "42": 20
+            },
+            "chr_0012_avywen_1": {
+                "42": 10
+            },
+            "chr_0012_avywen_3": {
+                "42": 15
+            }
+        },
+        "SkillInfoMap": {
+            "25": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+                "Element": "Physical"
+            },
+            "26": {
+                "Icon": "/ui/ef/skillicon/icon_skill_avywen_01.png",
+                "Element": "Pulse"
+            },
+            "27": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_avywen_01.png",
+                "Element": "Pulse"
+            },
+            "51": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_avywen_01.png",
+                "Element": "Pulse"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0012_avywen_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_avywen_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0012_avywen_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_avywen_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0012_avywen_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0012_avywen_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0012_avywen_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0012_avywen_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0012_avywen_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_avywen_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0012_avywen_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_avywen_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 3,
+                "Attrs": {
+                    "42": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "52": {
+                        "Value": 0.08,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "12": {
+        "StrId": "chr_0013_aglina",
+        "NameHash": "5075663083436839087",
+        "Rarity": 6,
+        "Element": "Natural",
+        "Profession": "SUPPORTER",
+        "WeaponType": "Wand",
+        "MainAttrId": 42,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0013_aglina_3": {
+                "42": 15
+            },
+            "chr_0013_aglina_1": {
+                "42": 10
+            },
+            "chr_0013_aglina_7": {
+                "42": 20
+            },
+            "chr_0013_aglina_5": {
+                "42": 15
+            }
+        },
+        "SkillInfoMap": {
+            "13": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Natural"
+            },
+            "14": {
+                "Icon": "/ui/ef/skillicon/icon_skill_aglina_01.png",
+                "Element": "Natural"
+            },
+            "15": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aglina_01.png",
+                "Element": "Natural"
+            },
+            "16": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_aglina_01.png",
+                "Element": "Natural"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0013_aglina_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_aglina_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0013_aglina_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_aglina_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0013_aglina_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0013_aglina_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0013_aglina_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0013_aglina_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0013_aglina_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_aglina_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0013_aglina_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_aglina_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": []
+    },
+    "13": {
+        "StrId": "chr_0005_chen",
+        "NameHash": "3128157701878862541",
+        "Rarity": 5,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0005_chen_5": {
+                "40": 15
+            },
+            "chr_0005_chen_7": {
+                "40": 20
+            },
+            "chr_0005_chen_1": {
+                "40": 10
+            },
+            "chr_0005_chen_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "1": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "2": {
+                "Icon": "/ui/ef/skillicon/icon_skill_chen_01.png",
+                "Element": "Physical"
+            },
+            "3": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_chen_01.png",
+                "Element": "Physical"
+            },
+            "21": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_chen_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0005_chen_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_chen_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0005_chen_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_chen_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0005_chen_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_chen_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0005_chen_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_chen_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0005_chen_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0005_chen_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0005_chen_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0005_chen_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "40": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "50": {
+                        "Value": 0.08,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "14": {
+        "StrId": "chr_0006_wolfgd",
+        "NameHash": "-3531987865314967190",
+        "Rarity": 5,
+        "Element": "Fire",
+        "Profession": "CASTER",
+        "WeaponType": "Pistol",
+        "MainAttrId": 39,
+        "SubAttrId": 40,
+        "AttributeNodes": {
+            "chr_0006_wolfgd_3": {
+                "39": 15
+            },
+            "chr_0006_wolfgd_5": {
+                "39": 15
+            },
+            "chr_0006_wolfgd_7": {
+                "39": 20
+            },
+            "chr_0006_wolfgd_1": {
+                "39": 10
+            }
+        },
+        "SkillInfoMap": {
+            "28": {
+                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
+                "Element": "Fire"
+            },
+            "29": {
+                "Icon": "/ui/ef/skillicon/icon_skill_wolfgd_01.png",
+                "Element": "Fire"
+            },
+            "30": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_wolfgd_01.png",
+                "Element": "Fire"
+            },
+            "52": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_wolfgd_01.png",
+                "Element": "Fire"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0006_wolfgd_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_wolfgd_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0006_wolfgd_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_wolfgd_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0006_wolfgd_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_wolfgd_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0006_wolfgd_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_wolfgd_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0006_wolfgd_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0006_wolfgd_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0006_wolfgd_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0006_wolfgd_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 1,
+                "Attrs": {
+                    "39": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "40": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "20": {
+        "StrId": "chr_0018_dapan",
+        "NameHash": "4641966554191326705",
+        "Rarity": 5,
+        "Element": "Physical",
+        "Profession": "ASSAULT",
+        "WeaponType": "Claymores",
+        "MainAttrId": 39,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0018_dapan_5": {
+                "39": 15
+            },
+            "chr_0018_dapan_7": {
+                "39": 20
+            },
+            "chr_0018_dapan_3": {
+                "39": 15
+            },
+            "chr_0018_dapan_1": {
+                "39": 10
+            }
+        },
+        "SkillInfoMap": {
+            "17": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Physical"
+            },
+            "18": {
+                "Icon": "/ui/ef/skillicon/icon_skill_dapan_01.png",
+                "Element": "Physical"
+            },
+            "19": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_dapan_01.png",
+                "Element": "Physical"
+            },
+            "55": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_dapan_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0018_dapan_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_dapan_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0018_dapan_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0018_dapan_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0018_dapan_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0018_dapan_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_dapan_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0018_dapan_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_dapan_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0018_dapan_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_dapan_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0018_dapan_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 3,
+                "Attrs": {
+                    "39": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "50": {
+                        "Value": 0.08,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "22": {
+        "StrId": "chr_0002_endminm",
+        "NameHash": "-7078064683023630592",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0002_endminm_7": {
+                "40": 20
+            },
+            "chr_0002_endminm_1": {
+                "40": 10
+            },
+            "chr_0002_endminm_5": {
+                "40": 15
+            },
+            "chr_0002_endminm_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "31": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "32": {
+                "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "33": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "34": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0002_endminm_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_endminm_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0002_endminm_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_endminm_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0002_endminm_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_endminm_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0002_endminm_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_endminm_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "1": {
+                        "Value": 0.1,
+                        "Formula": "BaseMultiplier"
+                    },
+                    "40": {
+                        "Value": 25,
+                        "Formula": "BaseAddition"
+                    },
+                    "60": {
+                        "Value": -0.1,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "23": {
+        "StrId": "chr_0016_laevat",
+        "NameHash": "-7854629517048772793",
+        "Rarity": 6,
+        "Element": "Fire",
+        "Profession": "ASSAULT",
+        "WeaponType": "Sword",
+        "MainAttrId": 41,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0016_laevat_7": {
+                "41": 20
+            },
+            "chr_0016_laevat_5": {
+                "41": 15
+            },
+            "chr_0016_laevat_3": {
+                "41": 15
+            },
+            "chr_0016_laevat_1": {
+                "41": 10
+            }
+        },
+        "SkillInfoMap": {
+            "39": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Fire"
+            },
+            "40": {
+                "Icon": "/ui/ef/skillicon/icon_skill_laevat_01.png",
+                "Element": "Fire"
+            },
+            "41": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_laevat_01.png",
+                "Element": "Fire"
+            },
+            "49": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_laevat_01.png",
+                "Element": "Fire"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0016_laevat_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_laevat_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0016_laevat_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0016_laevat_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0016_laevat_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_laevat_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0016_laevat_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_laevat_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0016_laevat_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_laevat_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0016_laevat_passive_skill_0_3": {
+                "Icon": "/ui/ef/icon_talent_laevat_01.png",
+                "Level": 3,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0016_laevat_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0016_laevat_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "17": {
+                        "Value": 0.15,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "24": {
+        "StrId": "chr_0014_aurora",
+        "NameHash": "-6313235431437717749",
+        "Rarity": 5,
+        "Element": "Cryst",
+        "Profession": "DEFENDER",
+        "WeaponType": "Claymores",
+        "MainAttrId": 39,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0014_aurora_1": {
+                "39": 10
+            },
+            "chr_0014_aurora_3": {
+                "39": 15
+            },
+            "chr_0014_aurora_5": {
+                "39": 15
+            },
+            "chr_0014_aurora_7": {
+                "39": 20
+            }
+        },
+        "SkillInfoMap": {
+            "42": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Physical"
+            },
+            "43": {
+                "Icon": "/ui/ef/skillicon/icon_skill_aurora_01.png",
+                "Element": "Cryst"
+            },
+            "44": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aurora_01.png",
+                "Element": "Cryst"
+            },
+            "50": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_aurora_01.png",
+                "Element": "Cryst"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0014_aurora_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_aurora_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0014_aurora_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_aurora_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0014_aurora_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_aurora_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0014_aurora_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0014_aurora_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0014_aurora_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0014_aurora_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0014_aurora_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_aurora_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "3": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "42": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "26": {
+        "StrId": "chr_0015_lifeng",
+        "NameHash": "-6840171208004431812",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Lance",
+        "MainAttrId": 40,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0015_lifeng_1": {
+                "40": 10
+            },
+            "chr_0015_lifeng_7": {
+                "40": 20
+            },
+            "chr_0015_lifeng_5": {
+                "40": 15
+            },
+            "chr_0015_lifeng_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "57": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+                "Element": "Physical"
+            },
+            "58": {
+                "Icon": "/ui/ef/skillicon/icon_skill_lifeng_01.png",
+                "Element": "Physical"
+            },
+            "59": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lifeng_01.png",
+                "Element": "Physical"
+            },
+            "60": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_lifeng_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0015_lifeng_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_lifeng_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0015_lifeng_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0015_lifeng_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0015_lifeng_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0015_lifeng_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0015_lifeng_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_lifeng_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0015_lifeng_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_lifeng_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0015_lifeng_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_lifeng_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "39": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "40": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "42": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "27": {
+        "StrId": "chr_0017_yvonne",
+        "NameHash": "-8634541419450148796",
+        "Rarity": 6,
+        "Element": "Cryst",
+        "Profession": "ASSAULT",
+        "WeaponType": "Pistol",
+        "MainAttrId": 41,
+        "SubAttrId": 40,
+        "AttributeNodes": {
+            "chr_0017_yvonne_1": {
+                "41": 10
+            },
+            "chr_0017_yvonne_3": {
+                "41": 15
+            },
+            "chr_0017_yvonne_5": {
+                "41": 15
+            },
+            "chr_0017_yvonne_7": {
+                "41": 20
+            }
+        },
+        "SkillInfoMap": {
+            "61": {
+                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
+                "Element": "Cryst"
+            },
+            "62": {
+                "Icon": "/ui/ef/skillicon/icon_skill_yvonne_01.png",
+                "Element": "Cryst"
+            },
+            "63": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_yvonne_01.png",
+                "Element": "Cryst"
+            },
+            "64": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_yvonne_01.png",
+                "Element": "Cryst"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0017_yvonne_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_yvonne_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0017_yvonne_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_yvonne_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0017_yvonne_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_yvonne_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0017_yvonne_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_yvonne_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0017_yvonne_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0017_yvonne_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0017_yvonne_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0017_yvonne_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "9": {
+                        "Value": 0.07,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "29": {
+        "StrId": "chr_0003_endminf",
+        "NameHash": "-2349442812164400839",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0003_endminf_5": {
+                "40": 15
+            },
+            "chr_0003_endminf_7": {
+                "40": 20
+            },
+            "chr_0003_endminf_3": {
+                "40": 15
+            },
+            "chr_0003_endminf_1": {
+                "40": 10
+            }
+        },
+        "SkillInfoMap": {
+            "45": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "46": {
+                "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "47": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "48": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0003_endminf_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_endminm_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0003_endminf_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_endminm_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0003_endminf_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_endminm_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0003_endminf_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_endminm_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "1": {
+                        "Value": 0.1,
+                        "Formula": "BaseMultiplier"
+                    },
+                    "40": {
+                        "Value": 25,
+                        "Formula": "BaseAddition"
+                    },
+                    "60": {
+                        "Value": -0.1,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "30": {
+        "StrId": "chr_0019_karin",
+        "NameHash": "-1652352317843725885",
+        "Rarity": 4,
+        "Element": "Fire",
+        "Profession": "VANGUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0019_karin_1": {
+                "40": 10
+            },
+            "chr_0019_karin_5": {
+                "40": 15
+            },
+            "chr_0019_karin_3": {
+                "40": 15
+            },
+            "chr_0019_karin_7": {
+                "40": 20
+            }
+        },
+        "SkillInfoMap": {
+            "65": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "66": {
+                "Icon": "/ui/ef/skillicon/icon_skill_karin_01.png",
+                "Element": "Fire"
+            },
+            "67": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_karin_01.png",
+                "Element": "Fire"
+            },
+            "68": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_karin_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0019_karin_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_karin_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0019_karin_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_karin_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0019_karin_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0019_karin_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0019_karin_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_karin_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0019_karin_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0019_karin_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "40": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "31": {
+        "StrId": "chr_0021_whiten",
+        "NameHash": "-7359346505174141947",
+        "Rarity": 4,
+        "Element": "Cryst",
+        "Profession": "GUARD",
+        "WeaponType": "Lance",
+        "MainAttrId": 42,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0021_whiten_5": {
+                "42": 15
+            },
+            "chr_0021_whiten_7": {
+                "42": 20
+            },
+            "chr_0021_whiten_1": {
+                "42": 10
+            },
+            "chr_0021_whiten_3": {
+                "42": 15
+            }
+        },
+        "SkillInfoMap": {
+            "77": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+                "Element": "Physical"
+            },
+            "78": {
+                "Icon": "/ui/ef/skillicon/icon_skill_whiten_01.png",
+                "Element": "Cryst"
+            },
+            "79": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_whiten_01.png",
+                "Element": "Physical"
+            },
+            "80": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_whiten_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0021_whiten_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0021_whiten_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0021_whiten_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_whiten_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0021_whiten_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_whiten_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0021_whiten_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0021_whiten_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_whiten_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0021_whiten_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_whiten_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0021_whiten_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "39": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    },
+                    "42": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "32": {
+        "StrId": "chr_0022_bounda",
+        "NameHash": "4120402758683380662",
+        "Rarity": 4,
+        "Element": "Natural",
+        "Profession": "CASTER",
+        "WeaponType": "Pistol",
+        "MainAttrId": 40,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0022_bounda_1": {
+                "40": 10
+            },
+            "chr_0022_bounda_3": {
+                "40": 15
+            },
+            "chr_0022_bounda_5": {
+                "40": 15
+            },
+            "chr_0022_bounda_7": {
+                "40": 20
+            }
+        },
+        "SkillInfoMap": {
+            "69": {
+                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
+                "Element": "Natural"
+            },
+            "70": {
+                "Icon": "/ui/ef/skillicon/icon_skill_bounda_01.png",
+                "Element": "Natural"
+            },
+            "71": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_bounda_01.png",
+                "Element": "Natural"
+            },
+            "72": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_bounda_01.png",
+                "Element": "Natural"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0022_bounda_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0022_bounda_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_bounda_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0022_bounda_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0022_bounda_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_mineral.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0022_bounda_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_bounda_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0022_bounda_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_bounda_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0022_bounda_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_bounda_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0022_bounda_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 1,
+                "Attrs": {
+                    "40": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "33": {
+        "StrId": "chr_0023_antal",
+        "NameHash": "2232202019045239793",
+        "Rarity": 4,
+        "Element": "Pulse",
+        "Profession": "SUPPORTER",
+        "WeaponType": "Wand",
+        "MainAttrId": 41,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0023_antal_3": {
+                "41": 15
+            },
+            "chr_0023_antal_1": {
+                "41": 10
+            },
+            "chr_0023_antal_5": {
+                "41": 15
+            },
+            "chr_0023_antal_7": {
+                "41": 20
+            }
+        },
+        "SkillInfoMap": {
+            "85": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Pulse"
+            },
+            "86": {
+                "Icon": "/ui/ef/skillicon/icon_skill_antal_01.png",
+                "Element": "Pulse"
+            },
+            "87": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_antal_01.png",
+                "Element": "Pulse"
+            },
+            "88": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_antal_01.png",
+                "Element": "Pulse"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0023_antal_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_antal_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0023_antal_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0023_antal_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_antal_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0023_antal_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0023_antal_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0023_antal_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_antal_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0023_antal_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_antal_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0023_antal_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "1": {
+                        "Value": 0.1,
+                        "Formula": "BaseMultiplier"
+                    },
+                    "41": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "35": {
+        "StrId": "chr_0020_meurs",
+        "NameHash": "-494400192924640152",
+        "Rarity": 4,
+        "Element": "Physical",
+        "Profession": "DEFENDER",
+        "WeaponType": "Claymores",
+        "MainAttrId": 39,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0020_meurs_3": {
+                "39": 15
+            },
+            "chr_0020_meurs_7": {
+                "39": 20
+            },
+            "chr_0020_meurs_1": {
+                "39": 10
+            },
+            "chr_0020_meurs_5": {
+                "39": 15
+            }
+        },
+        "SkillInfoMap": {
+            "89": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Physical"
+            },
+            "90": {
+                "Icon": "/ui/ef/skillicon/icon_skill_meurs_01.png",
+                "Element": "Physical"
+            },
+            "91": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_meurs_01.png",
+                "Element": "Physical"
+            },
+            "92": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_meurs_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0020_meurs_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_meurs_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0020_meurs_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0020_meurs_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_meurs_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0020_meurs_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0020_meurs_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0020_meurs_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_meurs_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0020_meurs_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_meurs_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0020_meurs_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "3": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "42": {
+                        "Value": 10,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "38": {
+        "StrId": "chr_9000_endmin",
+        "NameHash": "-7421751997530373346",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_9000_endmin_1": {
+                "40": 10
+            },
+            "chr_9000_endmin_3": {
+                "40": 15
+            },
+            "chr_9000_endmin_5": {
+                "40": 15
+            },
+            "chr_9000_endmin_7": {
+                "40": 20
+            }
+        },
+        "SkillInfoMap": {
+            "73": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "74": {
+                "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "75": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "76": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_9000_endmin_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_endminm_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_9000_endmin_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_endminm_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_9000_endmin_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_endminm_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_9000_endmin_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_endminm_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 4,
+                "Attrs": {
+                    "1": {
+                        "Value": 0.1,
+                        "Formula": "BaseMultiplier"
+                    },
+                    "40": {
+                        "Value": 25,
+                        "Formula": "BaseAddition"
+                    },
+                    "60": {
+                        "Value": -0.1,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "40": {
+        "StrId": "chr_0024_deepfin",
+        "NameHash": "4730225086587248930",
+        "Rarity": 5,
+        "Element": "Cryst",
+        "Profession": "VANGUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 39,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0024_deepfin_7": {
+                "39": 20
+            },
+            "chr_0024_deepfin_1": {
+                "39": 10
+            },
+            "chr_0024_deepfin_3": {
+                "39": 15
+            },
+            "chr_0024_deepfin_5": {
+                "39": 15
+            }
+        },
+        "SkillInfoMap": {
+            "81": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "82": {
+                "Icon": "/ui/ef/skillicon/icon_skill_deepfin_01.png",
+                "Element": "Physical"
+            },
+            "83": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_deepfin_01.png",
+                "Element": "Cryst"
+            },
+            "84": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_deepfin_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0024_deepfin_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0024_deepfin_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0024_deepfin_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_deepfin_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0024_deepfin_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0024_deepfin_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_deepfin_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0024_deepfin_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_deepfin_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0024_deepfin_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_physical_power.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0024_deepfin_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_deepfin_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "39": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 15,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "41": {
+        "StrId": "chr_0028_wulfa",
+        "NameHash": "7395048666191119127",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 40,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0028_wulfa_7": {
+                "40": 20
+            },
+            "chr_0028_wulfa_5": {
+                "40": 15
+            },
+            "chr_0028_wulfa_1": {
+                "40": 10
+            },
+            "chr_0028_wulfa_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "109": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "110": {
+                "Icon": "/ui/ef/skillicon/icon_skill_wulfa_01.png",
+                "Element": "Physical"
+            },
+            "111": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_wulfa_01.png",
+                "Element": "Fire"
+            },
+            "112": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_wulfa_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0028_wulfa_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_wulfa_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0028_wulfa_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0028_wulfa_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0028_wulfa_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0028_wulfa_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_wulfa_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0028_wulfa_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_wulfa_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0028_wulfa_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0028_wulfa_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_wulfa_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "9": {
+                        "Value": 0.07,
+                        "Formula": "BaseAddition"
+                    },
+                    "40": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "42": {
+        "StrId": "chr_0026_lastrite",
+        "NameHash": "2211452327399978399",
+        "Rarity": 6,
+        "Element": "Cryst",
+        "Profession": "ASSAULT",
+        "WeaponType": "Claymores",
+        "MainAttrId": 39,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0026_lastrite_1": {
+                "39": 10
+            },
+            "chr_0026_lastrite_3": {
+                "39": 15
+            },
+            "chr_0026_lastrite_5": {
+                "39": 15
+            },
+            "chr_0026_lastrite_7": {
+                "39": 20
+            }
+        },
+        "SkillInfoMap": {
+            "93": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Cryst"
+            },
+            "94": {
+                "Icon": "/ui/ef/skillicon/icon_skill_lastrite_01.png",
+                "Element": "Cryst"
+            },
+            "95": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lastrite_01.png",
+                "Element": "Cryst"
+            },
+            "96": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_lastrite_01.png",
+                "Element": "Cryst"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0026_lastrite_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0026_lastrite_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0026_lastrite_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0026_lastrite_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0026_lastrite_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_lastrite_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0026_lastrite_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_lastrite_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0026_lastrite_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_lastrite_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0026_lastrite_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_lastrite_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "39": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "53": {
+                        "Value": 0.1,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "43": {
+        "StrId": "chr_0029_pograni",
+        "NameHash": "8750064674695776697",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "VANGUARD",
+        "WeaponType": "Sword",
+        "MainAttrId": 42,
+        "SubAttrId": 40,
+        "AttributeNodes": {
+            "chr_0029_pograni_5": {
+                "42": 15
+            },
+            "chr_0029_pograni_7": {
+                "42": 20
+            },
+            "chr_0029_pograni_3": {
+                "42": 15
+            },
+            "chr_0029_pograni_1": {
+                "42": 10
+            }
+        },
+        "SkillInfoMap": {
+            "97": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "98": {
+                "Icon": "/ui/ef/skillicon/icon_skill_pograni_01.png",
+                "Element": "Physical"
+            },
+            "99": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_pograni_01.png",
+                "Element": "Physical"
+            },
+            "100": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_pograni_01.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0029_pograni_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0029_pograni_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0029_pograni_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_pograni_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0029_pograni_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_pograni_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0029_pograni_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0029_pograni_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0029_pograni_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_pograni_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0029_pograni_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_pograni_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "42": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "50": {
+                        "Value": 0.1,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "44": {
+        "StrId": "chr_0025_ardelia",
+        "NameHash": "-5102726507612351418",
+        "Rarity": 6,
+        "Element": "Natural",
+        "Profession": "SUPPORTER",
+        "WeaponType": "Wand",
+        "MainAttrId": 41,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0025_ardelia_7": {
+                "41": 20
+            },
+            "chr_0025_ardelia_3": {
+                "41": 15
+            },
+            "chr_0025_ardelia_1": {
+                "41": 10
+            },
+            "chr_0025_ardelia_5": {
+                "41": 15
+            }
+        },
+        "SkillInfoMap": {
+            "101": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Natural"
+            },
+            "102": {
+                "Icon": "/ui/ef/skillicon/icon_skill_ardelia_01.png",
+                "Element": "Natural"
+            },
+            "103": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_ardelia_01.png",
+                "Element": "Natural"
+            },
+            "104": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_ardelia_01.png",
+                "Element": "Natural"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0025_ardelia_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_ardelia_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0025_ardelia_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0025_ardelia_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_ardelia_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0025_ardelia_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0025_ardelia_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_ardelia_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0025_ardelia_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_efficiency.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0025_ardelia_passive_skill_0_3": {
+                "Icon": "/ui/ef/icon_talent_ardelia_01.png",
+                "Level": 3,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0025_ardelia_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_power_consume.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": []
+    },
+    "45": {
+        "StrId": "chr_0027_tangtang",
+        "NameHash": "-558922159116356568",
+        "Rarity": 6,
+        "Element": "Cryst",
+        "Profession": "CASTER",
+        "WeaponType": "Pistol",
+        "MainAttrId": 40,
+        "SubAttrId": 39,
+        "AttributeNodes": {
+            "chr_0027_tangtang_5": {
+                "40": 15
+            },
+            "chr_0027_tangtang_7": {
+                "40": 20
+            },
+            "chr_0027_tangtang_1": {
+                "40": 10
+            },
+            "chr_0027_tangtang_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "113": {
+                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
+                "Element": "Cryst"
+            },
+            "114": {
+                "Icon": "/ui/ef/skillicon/icon_skill_tangtang_01.png",
+                "Element": "Cryst"
+            },
+            "115": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_tangtang_01.png",
+                "Element": "Cryst"
+            },
+            "116": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_tangtang_01.png",
+                "Element": "Cryst"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0027_tangtang_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0027_tangtang_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0027_tangtang_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_tangtang_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0027_tangtang_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_power_consume.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0027_tangtang_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_tangtang_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0027_tangtang_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0027_tangtang_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_tangtang_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0027_tangtang_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_tangtang_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "40": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "53": {
+                        "Value": 0.1,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "46": {
+        "StrId": "chr_0030_zhuangfy",
+        "NameHash": "-5918768875146078054",
+        "Rarity": 6,
+        "Element": "Pulse",
+        "Profession": "ASSAULT",
+        "WeaponType": "Wand",
+        "MainAttrId": 42,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0030_zhuangfy_1": {
+                "42": 10
+            },
+            "chr_0030_zhuangfy_3": {
+                "42": 15
+            },
+            "chr_0030_zhuangfy_5": {
+                "42": 15
+            },
+            "chr_0030_zhuangfy_7": {
+                "42": 20
+            }
+        },
+        "SkillInfoMap": {
+            "105": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Pulse"
+            },
+            "106": {
+                "Icon": "/ui/ef/skillicon/icon_skill_zhuangfy_01.png",
+                "Element": "Pulse"
+            },
+            "107": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_zhuangfy_01.png",
+                "Element": "Pulse"
+            },
+            "108": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_zhuangfy_01.png",
+                "Element": "Pulse"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0030_zhuangfy_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_zhuangfy_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0030_zhuangfy_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0030_zhuangfy_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_zhuangfy_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0030_zhuangfy_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_zhuangfy_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0030_zhuangfy_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_zhuangfy_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "fac_chr_0030_zhuangfy_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0030_zhuangfy_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_power_consume.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0030_zhuangfy_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "32": {
+                        "Value": 0.15,
+                        "Formula": "BaseAddition"
+                    },
+                    "42": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    }
 }

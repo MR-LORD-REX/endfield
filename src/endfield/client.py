@@ -20,6 +20,7 @@ from .models import (
     WeaponData, WeaponSkill, MainStat,CharAttr,BaseAttr,
     EquipData, AttrModifier, SuitSet, SuitSetEffect,PropMap
 )
+from .update import check_update, download_update
 
 logger = logging.getLogger(__name__)
 
@@ -89,6 +90,12 @@ class Endfield:
         raw = await self._fetch_api(str(uid))
         decoded = DataDecoder(raw).decode()
         return await self._build_player_profile(decoded)
+    
+    async def check_for_updates(self) :
+        return await check_update()
+    
+    async def update_assets(self) -> None:
+        await download_update()
 
     async def test_equip(self, uid: int | str):
         if not self._session:

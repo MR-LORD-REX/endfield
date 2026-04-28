@@ -32,7 +32,6 @@ class DataDecoder:
                 if isinstance(item, int):
                     result.append(self._resolve(self._data[item]))
                 else:
-                    # Non-integer list elements are direct values (defensive)
                     result.append(self._resolve(item))
             return result
         return node
