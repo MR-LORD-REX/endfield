@@ -238,25 +238,42 @@ class Endfield:
         enhance_map = {}
         for en in equip_raw["value"].get("enhance", []):
             enhance_map[en.get("key", 0)] = en.get("value", 0)
-        
+
+        prev_level    = None
+        prev_index    = None
+        prev_attr_type = None
+
         for index, attr_mod in enumerate(attr_mods_list):
             attr_type = attr_mod.get("AttrType", 0)
-            formula = attr_mod.get("Formula", "unknown")
-            values = attr_mod.get("Values", [0])
+            formula   = attr_mod.get("Formula", "unknown")
+            values    = attr_mod.get("Values", [0])
 
             if index in enhance_map:
-                enhance_level = enhance_map[index]
-                if enhance_level < len(values):
-                    value = values[enhance_level]
-                    enhance_lvl = enhance_level + 1
-                else:
-                    logger.warning(f"Enhancement level {enhance_level} out of range for attribute {attr_type} in relic item {template_id}")
-                    value = values[0]
-                    enhance_lvl = 0
+                # This index has its own explicit enhance key
+                enhance_level  = enhance_map[index]
+                prev_level     = enhance_level
+                prev_index     = index
+                prev_attr_type = attr_type
+
+            elif (
+                prev_level is not None
+                and prev_index is not None
+                and index == prev_index + 1          
+                and attr_type == prev_attr_type
+                or (attr_type == attr_mods_list[-1].get("AttrType"))      
+            ):
+                enhance_level  = prev_level
+                prev_index     = index               
             else:
-                value = values[0]
-                enhance_lvl = 0
-            
+                enhance_level  = 0
+                prev_level     = None
+                prev_index     = None
+                prev_attr_type = None
+            if enhance_level is None:
+                enhance_level = 0
+            value       = values[enhance_level] 
+            enhance_lvl = enhance_level + 1 
+
             attribute_modifiers.append(AttrModifier(
                 index=index,
                 attr_type=attr_type,
@@ -288,10 +305,12 @@ class Endfield:
             logger.warning(f"Skill info not found for skill_id: {skill_id}")
         skill_map=[]
         for key, value in skill_info.get("PropMap", {}).items():
+            values_list = value.get("Values", [0])
+            value_index = min(max(0, equiped - 1), len(values_list) - 1)
             skill_map.append(PropMap(
                 prop_id=str(key),
                 prop_name=self._resolver.prop_by_id.get(str(key), "unknown"),
-                value=value.get("Values")[0],
+                value=values_list[value_index],
                 formula=value.get("Formula", "unknown")
             ))
         active_bonus = SuitSetEffect(

@@ -80,7 +80,7 @@ class _HpState:
         self.flat:       float = 0.0  
         self.final_mult: float = 0.0   
 
-
+pending_attri_multipliers: list[tuple[str, float, str]] = []
 
 def apply_prop(
     computed: ComputedStats,
@@ -105,10 +105,10 @@ def apply_prop(
         obj      = ID_TO_OBJ_MAP[attri_id]
         cur      = getattr(computed, obj, 0) or 0
         if value <= 1.5 or formula == "BaseMultiplier":
-            new_val = cur + cur * value
+            pending_attri_multipliers.append((attri_id, value, formula))
         else:
-                new_val = cur + value
-        setattr(computed, obj, int(new_val) if obj in INT_FIELDS else new_val)
+            new_val = cur + value
+            setattr(computed, obj, int(new_val) if obj in INT_FIELDS else new_val)
         return
 
     obj = ID_TO_OBJ_MAP.get(prop_id)
@@ -230,6 +230,7 @@ def compute_final_stats(character: CharacterData) -> ComputedStats:
             _apply(str(attri.attr_type), attri.value, attri.formula)
 
 
+
     if character.talents and character.talents.attr_nodes:
         t = character.talents.attr_nodes
         _apply(t.attri_id, t.total_value, t.formula)
@@ -253,6 +254,13 @@ def compute_final_stats(character: CharacterData) -> ComputedStats:
                 formula = skill.formula[i]
                 _apply(prop_id, val, formula)
 
+    for attri_id, value, formula in pending_attri_multipliers:
+        cur=getattr(computed, ID_TO_OBJ_MAP[attri_id], 0) or 0
+        new_val = cur + cur * value
+        setattr(computed, ID_TO_OBJ_MAP[attri_id], int(new_val))
+       
+    pending_attri_multipliers.clear()
+
     hp_before_mult = base_hp + computed.str * 5
     computed.hp = int(hp_before_mult * (1.0 + hp_state.mult) + hp_state.flat)
     if hp_state.final_mult:
@@ -264,8 +272,7 @@ def compute_final_stats(character: CharacterData) -> ComputedStats:
                 "41": computed.wisd, "42": computed.will}.get(attri_id, 0)
 
     atk_mult = 1.0 + _final_attri(main_attri_id) * 0.005 + _final_attri(sub_attri_id) * 0.002
-    computed.atk = int(computed.atk * atk_mult)
+    computed.atk = round(computed.atk * atk_mult)
 
     computed.healing_received_bonus = round(computed.will * 0.001, 6)
-    
     return computed
