@@ -70,8 +70,6 @@ class Endfield:
             await self._init_session()
         raw = await self._fetch_api(str(uid))
         decoded = DataDecoder(raw).decode()
-        with open(f"decoded_{uid}.json", "w", encoding="utf-8") as f:
-            f.write(json.dumps(decoded, indent=2, ensure_ascii=False))
         char_data = decoded["playerInfo"].get("charData", [])
         c_tasks = []
         for cd in char_data:

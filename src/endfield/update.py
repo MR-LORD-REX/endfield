@@ -25,8 +25,12 @@ async def check_update():
                 return False
             
 async def download_update():
-    files=os.listdir(assets_path)
+    os.makedirs(assets_path,exist_ok=True)
     async with aiohttp.ClientSession() as session:
+        async with session.get(BASE_URL+"asset_metadata.json") as res:
+            files=await res.read()
+            files=json.loads(files)
+            files=files.values()
         for file in files:
             print("Downloading " + file + "...")
             async with session.get(BASE_URL + file) as response:

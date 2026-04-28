@@ -2,7 +2,7 @@
 
 A Python library for fetching and parsing player data from the Enka Network API for **Endfield**.
 
-[![PyPI version](https://img.shields.io/pypi/v/endfield.svg)](https://pypi.org/project/endfield/)
+[![PyPI version](https://img.shields.io/pypi/v/endfield-py.svg)](https://pypi.org/project/endfield-py/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
 ## Overview
@@ -13,7 +13,6 @@ A Python library for fetching and parsing player data from the Enka Network API 
 
 -  **Async Support**: Built with asyncio for efficient concurrent requests
 -  **Complete Data Models**: Pydantic-based models for type-safe data handling
--  **Inline suggestions**: Type hints and docstrings for better developer experience
 -  **Player Showcase Data**: Fetch player profiles and their character showcases
 -  **Character Information**: Get detailed character data including skills, talents, and stats
 -  **Equipment & Weapons**: Access equipment and weapon information
@@ -27,7 +26,7 @@ A Python library for fetching and parsing player data from the Enka Network API 
 ### From PyPI
 
 ```bash
-pip install endfield
+pip install endfield-py
 ```
 
 ### From GitHub
@@ -212,7 +211,7 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Credits
 
-- Built by [sora](mailto:sahikast07@gmail.com)
+- Built by [MR-LORD-REX](https://github.com/MR-LORD-REX) , [telegram](https://t.me/The_Prime_Mover)
 - Data source: [Enka Network](https://enka.network)
 
 ## Changelog
@@ -226,5 +225,9 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 - Update checking
 
 ---
+
+## NOTE 
+
+- Computation of final character stats are done by the currently known formulas, some of them might be inaccurate , feel free to contribute if you encounter any discrepancies or have suggestions for improvement.
 
 **Happy Endfielding**
