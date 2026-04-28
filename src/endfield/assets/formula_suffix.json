@@ -1,0 +1,7 @@
+{
+  "BaseAddition": "_base",
+  "BaseMultiplier": "_ratio",
+  "BaseFinalMultiplier": "_delta",
+  "BaseFinalAddition": "_delta",
+  "Addition": "_delta"
+}
