@@ -87,6 +87,14 @@ class AssetResolver:
     def get_item_icon_url(self, partial_icon: str) -> str:
         return ENKA_BASE + partial_icon
     
+    def get_weapon_icon_url(self, weapon_id: str) -> Optional[str]:
+        weapon_data = self.weapon.get(str(weapon_id))
+        if not weapon_data:
+            logger.warning("Weapon ID not found: %s", weapon_id)
+            return None
+        icon_path = weapon_data.get("Icon").split("/")[-1]
+        return ENKA_BASE + "/ui/ef/itemicon/" + icon_path
+    
     def get_name_from_id(self, id: str) -> str:
         hash=self.prop_by_id.get(str(id), "unknown")
         return self.name_map.get(hash, hash)

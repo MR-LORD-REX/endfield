@@ -437,7 +437,7 @@ class Endfield:
             breakthrough_lv=breakthrough_lvl,
             base_atk=round(float(lvl), 3),
             skill_levels=[s.current_lvl for s in skills],
-            icon_url=self._resolver.get_item_icon_url(weapon_info.get("Icon", "")),
+            icon_url=self._resolver.get_weapon_icon_url(str(template_id)),
             skills=skills,
             main_stat=main
         )
