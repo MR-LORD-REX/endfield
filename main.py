@@ -3,7 +3,7 @@ import asyncio
 
 async def main():
     async with Endfield() as client:
-        data=await client.get_showcase(4371235478)
+        data=await client.get_showcase(4225399080)
         with open("showcase.json", "w") as f:
             f.write(data.model_dump_json(indent=2))
         for char in data.characters:
