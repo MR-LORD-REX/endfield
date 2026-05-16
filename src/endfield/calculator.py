@@ -2,7 +2,7 @@ from typing import Optional, Union, List, Dict, Literal
 
 from .models.character import (
     ComputedStats, TalentInfo, SkillInfo, CharacterData,
-    TalentPassiveNode, TalentFactoryNode,
+    TalentPassiveNode, TalentFactoryNode, ComputedStatsWithDetails , StatDetail
 )
 from .models.equipment import EquipData, SuitSet
 from .models.weapon import WeaponData
@@ -65,6 +65,37 @@ ID_TO_OBJ_MAP: Dict[str, str] = {
     "87": "infliction_enhance",
     "10000": "main_attri_ratio",
     "10001": "sub_attri_ratio",
+}
+
+OBJ_TO_ID: Dict[str, str] = {v: k for k, v in ID_TO_OBJ_MAP.items()}
+
+OBJ_TO_NAME: Dict[str, str] = {
+    "hp": "HP",
+    "atk": "Attack",
+    "defense": "Defense",
+    "crit_rate": "Critical Rate",
+    "crit_dmg": "Critical DMG",
+    "normal_atk_dmg_bonus": "Basic Attack DMG Bonus",
+    "ult_skill_dmg_bonus": "Ultimate DMG Bonus",
+    "healing_bonus": "Treatment Bonus",
+    "healing_received_bonus": "Treatment Received Bonus",
+    "normal_skill_dmg_bonus": "Battle Skill DMG Bonus",
+    "combo_skill_dmg_bonus": "Combo Skill DMG Bonus",
+    "str": "Strength",
+    "agi": "Agility",
+    "wisd": "Intellect",
+    "will": "Will",
+    "ultimate_gain_efficiency": "Ultimate Gain Efficiency",
+    "physical_dmg_bonus": "Physical DMG Bonus",
+    "fire_dmg_bonus": "Heat DMG Bonus",
+    "pulse_dmg_bonus": "Electric DMG Bonus",
+    "cryst_dmg_bonus": "Cryo DMG Bonus",
+    "natural_dmg_bonus": "Nature DMG Bonus",
+    "ether_dmg_bonus": "Ether DMG Bonus",
+    "infliction_enhance": "Arts Intensity",
+    "arts_intensity": "Arts Intensity",
+    "main_attri_ratio": "Main Attribute Ratio",
+    "sub_attri_ratio": "Sub Attribute Ratio",
 }
 
 INT_FIELDS    = {"hp", "atk", "defense", "str", "agi", "wisd", "will"}
@@ -162,8 +193,6 @@ def apply_prop(
     if obj in INT_FIELDS:
         new_val = int(new_val)
     setattr(computed, obj, new_val)
-
-
 
 def compute_final_stats(character: CharacterData) -> ComputedStats:
     base_atk_char = character.base_atk.value

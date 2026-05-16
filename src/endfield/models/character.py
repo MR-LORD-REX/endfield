@@ -96,6 +96,17 @@ class ComputedStats(BaseModel):
     ether_dmg_bonus: Optional[float] = None
     infliction_enhance: Optional[float] = None
     
+class StatDetail(BaseModel):
+    value: int | float | None
+    icon_url: str
+    stat_id: str
+    name: str
+    main_attri: bool = False
+    sub_attri: bool = False
+    
+class ComputedStatsWithDetails(BaseModel):
+    all: list[StatDetail]
+    
 class CharAttr(BaseModel):
     attri_id: str
     attri_name: str
@@ -121,6 +132,7 @@ class CharacterData(BaseModel):
     splash_url: str
     bg_url: str
     round_icon_url: str
+    
     # Build
     main_attribute: CharAttr
     sub_attribute:  CharAttr
@@ -133,3 +145,4 @@ class CharacterData(BaseModel):
     skills: SkillMeta 
     talents: Optional[TalentInfo] = None
     stats: Optional[ComputedStats] = None
+    detailed_stats: Optional[ComputedStatsWithDetails] = None

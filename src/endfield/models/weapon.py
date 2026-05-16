@@ -27,6 +27,12 @@ class WeaponSkill(BaseModel):
     prop_name: str | list[str]
     icon_url: str | list[str]
     value: float | list[float]
+    
+class Gem(BaseModel):
+    rarity: int
+    name: str
+    inner_icon_url: str
+    cover_icon_url: str
 
 
 class WeaponData(BaseModel):
@@ -42,3 +48,4 @@ class WeaponData(BaseModel):
     icon_url: str
     skills: list[WeaponSkill]
     main_stat: MainStat
+    gem: Gem | None

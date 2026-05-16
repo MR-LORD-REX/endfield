@@ -96,13 +96,38 @@ Endfield(
 
 ##### `get_showcase(uid: int | str)`
 
-Fetch player showcase data including characters, equipment, and weapons.
+Fetch complete player showcase data including all characters, equipment, and weapons.
 
 ```python
 showcase = await client.get_showcase(uid=4225399080)
 ```
 
-**Returns:** `ShowcaseData` - Player showcase information
+**Returns:** `ShowcaseData` - Complete player showcase information with all characters
+
+##### `get_character_showcase(uid: int | str, index: int = 0)`
+
+Fetch detailed data for a specific character in the player's showcase.
+
+```python
+char_data = await client.get_character_showcase(uid=4225399080, index=0)
+```
+
+**Parameters:**
+
+- `uid`: Player UID
+- `index`: Character index (0-based, default: 0)
+
+**Returns:** `CharacterData` - Detailed character data including skills, talents, and computed statistics
+
+##### `get_profile(uid: int | str)`
+
+Fetch player profile information only.
+
+```python
+profile = await client.get_profile(uid=4225399080)
+```
+
+**Returns:** `PlayerProfile` - Player account and character list information
 
 ##### `check_for_updates()`
 
@@ -216,7 +241,7 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.0.0
+### Version 1.0.4
 
 - Initial release
 - Basic player data fetching

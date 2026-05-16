@@ -18,9 +18,11 @@ from .models import (
     CharacterData, ComputedStats, SkillInfo, SkillMeta , TalentInfo, 
     TalentPassiveNode, TalentFactoryNode, AttrNode, PoteAtrri, PotentialAttributes,
     WeaponData, WeaponSkill, MainStat,CharAttr,BaseAttr,
-    EquipData, AttrModifier, SuitSet, SuitSetEffect,PropMap
+    EquipData, AttrModifier, SuitSet, SuitSetEffect,PropMap ,
+    StatDetail , ComputedStatsWithDetails , Gem
 )
 from .update import check_update, download_update
+from .calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +33,6 @@ class Endfield:
 
     def __init__(
         self,
-        assets_path: str | Path = "assets",
         session: Optional[aiohttp.ClientSession] = None,
         debug: bool = False,
     ) -> None:
@@ -39,6 +40,7 @@ class Endfield:
         self._external_session = session
         self._session: Optional[aiohttp.ClientSession] = None
         self._resolver: Optional[AssetResolver] = None
+        self._debug = debug
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
@@ -64,24 +66,70 @@ class Endfield:
     async def close(self) -> None:
         if self._session and not self._external_session:
             await self._session.close()
+            
+    def get_detailed_stats(self, char_data: CharacterData) -> ComputedStatsWithDetails:
+        details = []
+        main_att= char_data.main_attribute.attri_id
+        sub_att= char_data.sub_attribute.attri_id
+        for obj_name, display_name in OBJ_TO_NAME.items():
+            value = getattr(char_data.stats, obj_name, None)
+            if value is not None:
+                prop_id = OBJ_TO_ID.get(obj_name, "unknown")
+                details.append(StatDetail(
+                    value=value,
+                    name=display_name,
+                    icon_url=self._resolver.get_attribute_url(prop_id),
+                    stat_id=prop_id,
+                    main_attri= prop_id == main_att,
+                    sub_attri= prop_id == sub_att
+                ))
+        return ComputedStatsWithDetails(all=details)
 
-    async def get_showcase(self, uid: int | str):
+    async def get_showcase(self, uid: int | str) -> ShowcaseData:
         if not self._session:
             await self._init_session()
         raw = await self._fetch_api(str(uid))
         decoded = DataDecoder(raw).decode()
         char_data = decoded["playerInfo"].get("charData", [])
+        if self._debug:
+            with open(f"debug_{uid}.json", "w", encoding="utf-8") as f:
+                json.dump(decoded, f, ensure_ascii=False, indent=2)
+                
+        profile= await self._build_player_profile(decoded)
+        
         c_tasks = []
         for cd in char_data:
-            char_id= cd.get("templateId", 0)
             c_tasks.append(self._build_character_data(cd))
         characters = await asyncio.gather(*c_tasks)
-        profile= await self._build_player_profile(decoded)
-        return ShowcaseData(
+        c_tasks.clear()
+        
+        for c in characters:
+            st=self.get_detailed_stats(c)
+            c.detailed_stats= st
+            
+        sk= ShowcaseData(
             profile=profile,
             characters=characters
         )
-            
+        if self._debug:
+            with open(f"debug_showcase_{uid}.json", "w", encoding="utf-8") as f:
+                js=sk.model_dump_json(indent=2)
+                f.write(js)
+        return sk
+    
+    async def get_character_showcase(self, uid: int | str, index: int = 0) -> CharacterData:
+        if not self._session:
+            await self._init_session()
+        raw = await self._fetch_api(str(uid))
+        decoded = DataDecoder(raw).decode()
+        char_data = decoded["playerInfo"].get("charData", [])
+        if index < 0 or index >= len(char_data):
+            raise CharacterNotFoundError(f"Character index {index} out of range for user {uid}")
+        char_data= char_data[index]
+        character = await self._build_character_data(char_data)
+        character.detailed_stats= self.get_detailed_stats(character)
+        return character
+    
     async def get_profile(self, uid: int | str) -> PlayerProfile:
         if not self._session:
             await self._init_session()
@@ -189,7 +237,7 @@ class Endfield:
                 characters.append(ProfileCharacter(
                     template_id=temp_id,
                     str_id=temp_id_str,
-                    name=char_info.get("NameHash", "unknown"),
+                    name=self._resolver.name_map.get(str(char_info.get("NameHash", "unknown")), "unknown"),
                     level=cl.get("level", 1),
                     potential_level=cl.get("potentialLevel", 0),
                     rarity=char_info.get("Rarity", 6),
@@ -335,8 +383,41 @@ class Endfield:
         breakthrough_lvl= weapon_raw.get("breakthroughLv", 0)
         gems= weapon_raw.get("attachedGem",{})
         gem_temp_id= gems.get("templateId", 0)
-        gem_terms=gems.get("terms", [])
-        total_cost=gems.get("totalCost", 0)
+        
+        gem = None
+        if gem_temp_id:
+            try:
+                outer_icon= self._resolver.weapon_gem_template.get(str(gem_temp_id), {}).get("Icon", "")
+                rarity= outer_icon.split("/")[-1].split(".")[0].split("_")[-1] if outer_icon else 3
+                outer_icon_url= self._resolver.get_item_icon_url(outer_icon) 
+            except Exception as e:
+                logger.warning(f"Failed to determine gem rarity for template_id {gem_temp_id}: {e}")
+                rarity=3
+                outer_icon_url=""
+            
+            gem_terms=gems.get("terms", [])
+            
+            term_name = ""
+            inner_icon = ""
+            
+            if gem_terms:
+                term=self._resolver.weapon_gem_term.get(str(gem_terms[-1].get("termNumId", "")), {})
+                inner_icon= term.get("TagIcon", "")
+                inner_icon= self._resolver.get_item_icon_url(inner_icon)
+                term_name_hash= term.get("TagNameHash", "")
+                term_name= self._resolver.name_map.get(str(term_name_hash), term_name_hash) if term_name_hash else ""
+                    
+            total_cost=gems.get("totalCost", 0)
+            
+            gem= Gem(
+                rarity=int(rarity),
+                name=term_name ,
+                inner_icon_url=inner_icon if inner_icon else "",
+                cover_icon_url=outer_icon_url if outer_icon_url else ""
+            )
+            print(f"Gem data: {gem}")
+        else:
+            logger.warning(f"No attached gem found for weapon with template_id {template_id}")
         
         weapon_info = self._resolver.get_weapon(str(template_id))
         if not weapon_info:
@@ -427,6 +508,7 @@ class Endfield:
                         value=[round(v.get("Values", [0])[opt-1], 3) for v in s_info.values()]
                     ))
         name_hash=str(weapon_info.get("NameHash"))
+        
         return WeaponData(
             weapon_id=str(template_id),
             name=self._resolver.name_map.get(name_hash, name_hash),
@@ -439,7 +521,8 @@ class Endfield:
             skill_levels=[s.current_lvl for s in skills],
             icon_url=self._resolver.get_weapon_icon_url(str(template_id)),
             skills=skills,
-            main_stat=main
+            main_stat=main,
+            gem=gem
         )
         
     async def _build_skill_meta(self, skill_info: dict , char_temp_id: str) -> SkillMeta:
@@ -452,6 +535,9 @@ class Endfield:
         for skill in skill_info.get("levelInfo", []):
             skill_id= skill.get("skillId", "")
             skill_data = char_skill_info.get(str(skill_id), {})
+            if not skill_data:
+                logger.warning(f"Skill {skill_id} not found in SkillInfoMap for character {char_temp_id}")
+                continue
             skills.append(SkillInfo(
                 skill_id=str(skill_id),
                 icon_url=self._resolver.get_item_icon_url(skill_data.get("Icon", "")),
@@ -708,3 +794,6 @@ class Endfield:
         stats= compute_final_stats(c_data)
         c_data.stats= stats
         return c_data
+    
+
+            
