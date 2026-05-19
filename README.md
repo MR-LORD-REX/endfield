@@ -241,7 +241,7 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.0.5
+### Version 1.0.6
 
 - Added medals data to player profile
 - Updated data models to include medals

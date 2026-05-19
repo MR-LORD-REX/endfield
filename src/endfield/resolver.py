@@ -86,6 +86,8 @@ class AssetResolver:
     
     def get_pfp_bg_url(self, url: str) -> str:
         url=url.replace("friendlistbg", "businesscardbg").replace(".png", ".webp")
+        if "normal_4" in url:
+            url=url.replace("normal_4", "normal_3")
         return ENKA_BASE + url
     
     def get_attribute_url(self, attri_id:str) -> str:

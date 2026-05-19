@@ -38,8 +38,8 @@ class Endfield:
     ) -> None:
         self._assets_path = Path(__file__).parent / "assets"
         self._external_session = session
-        self._session: Optional[aiohttp.ClientSession] = aiohttp.ClientSession() 
-        self._resolver: Optional[AssetResolver] = AssetResolver(self._assets_path, self._session)
+        self._session: Optional[aiohttp.ClientSession] = None
+        self._resolver: Optional[AssetResolver] = None
         self._debug = debug
 
         log_level = logging.DEBUG if debug else logging.WARNING
@@ -64,8 +64,10 @@ class Endfield:
         if self._external_session:
             self._session = self._external_session
         else:
-            self._session = aiohttp.ClientSession()
-        self._resolver = AssetResolver(self._assets_path, self._session)
+            if self._session is None:
+                self._session = aiohttp.ClientSession()
+        if self._resolver is None:
+            self._resolver = AssetResolver(self._assets_path, self._session)
 
     async def close(self) -> None:
         if self._session and not self._external_session:
