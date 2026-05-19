@@ -1,4 +1,4 @@
-from src.endfield import Endfield
+from endfield import Endfield
 import asyncio
 import json
 
