@@ -6,6 +6,7 @@ uid=4225399080
 
 async def main():
     async with Endfield() as ef:
+        await ef.update_assets()
         data = await ef.get_showcase(uid)
         print(data.profile.model_dump_json(indent=2))
     for char in data.characters:
