@@ -38,8 +38,8 @@ class Endfield:
     ) -> None:
         self._assets_path = Path(__file__).parent / "assets"
         self._external_session = session
-        self._session: Optional[aiohttp.ClientSession] = None
-        self._resolver: Optional[AssetResolver] = None
+        self._session: Optional[aiohttp.ClientSession] = aiohttp.ClientSession() 
+        self._resolver: Optional[AssetResolver] = AssetResolver(self._assets_path, self._session)
         self._debug = debug
 
         log_level = logging.DEBUG if debug else logging.WARNING
@@ -55,6 +55,10 @@ class Endfield:
 
     async def __aexit__(self, *_) -> None:
         await self.close()
+        
+    def __exit__(self, exc_type, exc, tb):
+        if self._session :
+            asyncio.run(self.close())
 
     async def _init_session(self) -> None:
         if self._external_session:
@@ -217,7 +221,7 @@ class Endfield:
             return await resp.json(content_type=None)
 
     async def _build_player_profile(self, decoded: dict) -> PlayerProfile:
-        player= decoded["playerInfo"].get("businessCard", {})
+        player= decoded["playerInfo"].get("businessCard", {}) 
         stats= player.get("statistic", {})
         char_list = player.get("charList", [])
         char_data_list = decoded["playerInfo"].get("charData", [])
@@ -252,11 +256,18 @@ class Endfield:
             
         medals = await self._build_medals(player.get("achievement", {}))
         
+        bg_url = self._resolver.business_card_bg.get(str(player.get("businessCardTopicId", ""))).get("Icon", "")
+        bg_url = self._resolver.get_pfp_bg_url(bg_url) 
+        avatar_url = self._resolver.avatar_icon.get(str(player.get("userAvatarId", ""))).get("Icon", "")
+        avatar_url = self._resolver.get_item_icon_url(avatar_url) 
+        
         return PlayerProfile(
             uid=decoded.get("uid", "unknown"),
             name=player.get("name", "unknown"),
             short_id=player.get("shortId", "unknown"),
             signature=player.get("signature", ""),
+            avatar_url=avatar_url,
+            bg_url=bg_url,
             adventure_level=player.get("adventureLevel", 0),
             world_level=player.get("worldLevel", 0),
             char_count=stats.get("charNum", 0),
@@ -272,7 +283,6 @@ class Endfield:
         display_list = achievement_data.get("infoList", [])
         display_order= achievement_data.get("display", [])
         display_map = {item.get("value"): item.get("key") for item in display_order}
-        print(f"Display map: {display_map}")
 
         for entry in display_list:
             medal_id = entry.get("achieveNumId")
@@ -290,8 +300,6 @@ class Endfield:
             level_infos = medal_info.get("LevelInfos", {})
 
             description = ""
-            print(f"Processing medal {medal_name} (ID: {medal_id}) with level {medal_level}")
-            print(f"Level infos: {level_infos}")
             if level_infos:
                 description= level_infos.get(str(medal_level), {}).get("ConditionDesc", "")
                 icon_id = level_infos.get(str(medal_level), {}).get("Icon", "")
@@ -457,7 +465,6 @@ class Endfield:
                 inner_icon_url=inner_icon if inner_icon else "",
                 cover_icon_url=outer_icon_url if outer_icon_url else ""
             )
-            print(f"Gem data: {gem}")
         else:
             logger.warning(f"No attached gem found for weapon with template_id {template_id}")
         

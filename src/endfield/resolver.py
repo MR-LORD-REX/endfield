@@ -84,6 +84,10 @@ class AssetResolver:
     def get_medal_url(self, medal: str) -> str:
         return MEDAL_BASE.format(medal=medal)
     
+    def get_pfp_bg_url(self, url: str) -> str:
+        url=url.replace("friendlistbg", "businesscardbg").replace(".png", ".webp")
+        return ENKA_BASE + url
+    
     def get_attribute_url(self, attri_id:str) -> str:
         attri=self.prop_by_id.get(str(attri_id), "Atk")
         attri_Name=attri.split("_")[0]

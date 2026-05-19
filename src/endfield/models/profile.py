@@ -34,6 +34,9 @@ class PlayerProfile(BaseModel):
     name: str
     short_id: str
     signature: str
+    avatar_url: str
+    bg_url: str
+    frame_url: str | None = None
     adventure_level: int
     world_level: int
     char_count: int
