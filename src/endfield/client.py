@@ -19,7 +19,7 @@ from .models import (
     TalentPassiveNode, TalentFactoryNode, AttrNode, PoteAtrri, PotentialAttributes,
     WeaponData, WeaponSkill, MainStat,CharAttr,BaseAttr,
     EquipData, AttrModifier, SuitSet, SuitSetEffect,PropMap ,
-    StatDetail , ComputedStatsWithDetails , Gem
+    StatDetail , ComputedStatsWithDetails , Gem , Medal , Medals
 )
 from .update import check_update, download_update
 from .calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
@@ -250,6 +250,8 @@ class Endfield:
                 logger.warning(f"Failed to process character {cl.get('templateId', 'unknown')}: {e}")
                 continue
             
+        medals = await self._build_medals(player.get("achievement", {}))
+        
         return PlayerProfile(
             uid=decoded.get("uid", "unknown"),
             name=player.get("name", "unknown"),
@@ -260,10 +262,50 @@ class Endfield:
             char_count=stats.get("charNum", 0),
             weapon_count=stats.get("weaponNum", 0),
             doc_count=stats.get("docNum", 0),
+            medals=medals,
             domain_progress=domain_progress,
             characters=characters,
         )
         
+    async def _build_medals(self, achievement_data: dict) -> Medals:
+        medals = []
+        display_list = achievement_data.get("infoList", [])
+        display_order= achievement_data.get("display", [])
+        display_map = {item.get("value"): item.get("key") for item in display_order}
+        print(f"Display map: {display_map}")
+
+        for entry in display_list:
+            medal_id = entry.get("achieveNumId")
+            medal_level = entry.get("level")
+            
+            if not medal_id:
+                continue
+                
+            medal_info = self._resolver.medals.get(str(medal_id), {})
+            if not medal_info:
+                logger.warning(f"Medal ID not found: {medal_id}")
+                continue
+            
+            medal_name = medal_info.get("Name", "unknown")
+            level_infos = medal_info.get("LevelInfos", {})
+
+            description = ""
+            print(f"Processing medal {medal_name} (ID: {medal_id}) with level {medal_level}")
+            print(f"Level infos: {level_infos}")
+            if level_infos:
+                description= level_infos.get(str(medal_level), {}).get("ConditionDesc", "")
+                icon_id = level_infos.get(str(medal_level), {}).get("Icon", "")
+            medal_url = self._resolver.get_medal_url(icon_id)
+            
+            medals.append(Medal(
+                index=display_map.get(medal_id, 0),
+                name=medal_name,
+                description=description,
+                icon_url=medal_url,
+            ))
+        
+        return Medals(medals=medals)
+    
     async def _build_equip(self, equip_raw: dict) -> EquipData:
         slot_id = equip_raw.get("key", 0)
         template_id = equip_raw.get("value", {}).get("templateid", 0)

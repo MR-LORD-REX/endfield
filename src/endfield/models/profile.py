@@ -6,7 +6,15 @@ class DomainProgress(BaseModel):
     domain_id: str
     level: int
     name: str = "unknown"
-
+    
+class Medal(BaseModel):
+    index: int
+    name: str
+    description: str
+    icon_url: str
+    
+class Medals(BaseModel):
+    medals: list[Medal]
 
 class ProfileCharacter(BaseModel):
     template_id: int
@@ -32,5 +40,6 @@ class PlayerProfile(BaseModel):
     weapon_count: int
     doc_count: int
     domain_progress: list[DomainProgress]
+    medals: Medals
     characters: list[ProfileCharacter]
     ttl: int | None = None

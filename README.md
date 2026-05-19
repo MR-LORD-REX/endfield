@@ -241,13 +241,11 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.0.4
+### Version 1.0.5
 
-- Initial release
-- Basic player data fetching
-- Character, weapon, and equipment support
-- Stat computation
-- Update checking
+- Added medals data to player profile
+- Updated data models to include medals
+- Improved error handling for character processing
 
 ---
 

@@ -15,6 +15,7 @@ ROUND_ICON_BASE = "https://enka.network/ui/ef/charroundicon/icon_round_{tempId}.
 SPLASH_BASE = "https://enka.network/ui/ef/splash/{tempId}.webp"
 BG_BASE = "https://enka.network/ui/ef/charinfo/bg_charinfo_{str_id}.png"
 ATTRIBUTE_BASE = "https://enka.network/ui/ef/attributeicon/{name}.png"
+MEDAL_BASE="https://enka.network/ui/ef/{medal}.png"
 
 domains={
     "domain_1": "Valley IV",
@@ -66,6 +67,7 @@ class AssetResolver:
         self.weapon:                   dict = self._load_json("weapon.json")
         self.effects_map:              dict = self._load_json("effects_map.json")
         self.name_map:                 dict = self._load_json("nameMap.json")
+        self.medals:                   dict = self._load_json("medals.json")
     
     def resolve_domain(self, domain_id: str) -> str:
         return domains.get(domain_id, domain_id)
@@ -78,6 +80,9 @@ class AssetResolver:
     
     def get_bg_url(self, str_id: str) -> str:
         return BG_BASE.format(str_id=str_id)
+    
+    def get_medal_url(self, medal: str) -> str:
+        return MEDAL_BASE.format(medal=medal)
     
     def get_attribute_url(self, attri_id:str) -> str:
         attri=self.prop_by_id.get(str(attri_id), "Atk")
