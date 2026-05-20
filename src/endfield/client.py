@@ -55,10 +55,9 @@ class Endfield:
 
     async def __aexit__(self, *_) -> None:
         await self.close()
-        
+
     def __exit__(self, exc_type, exc, tb):
-        if self._session :
-            asyncio.run(self.close())
+        pass
 
     async def _init_session(self) -> None:
         if self._external_session:
@@ -349,7 +348,6 @@ class Endfield:
             values    = attr_mod.get("Values", [0])
 
             if index in enhance_map:
-                # This index has its own explicit enhance key
                 enhance_level  = enhance_map[index]
                 prev_level     = enhance_level
                 prev_index     = index
@@ -845,6 +843,3 @@ class Endfield:
         stats= compute_final_stats(c_data)
         c_data.stats= stats
         return c_data
-    
-
-            

@@ -241,11 +241,12 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.0.6
+### Version 1.0.7
 
 - Added medals data to player profile
 - Updated data models to include medals
 - Improved error handling for character processing
+- fixed session management 
 
 ---
 
