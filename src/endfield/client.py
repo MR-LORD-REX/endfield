@@ -9,9 +9,10 @@ from collections import Counter
 import aiohttp
 import asyncio
 
-from .decoder import DataDecoder
-from .resolver import AssetResolver
-from .calculator import compute_final_stats
+from .normal.decoder import DataDecoder
+from .normal.resolver import AssetResolver
+from .normal.calculator import compute_final_stats
+from .auth.api import perform_daily_sign, game_stats
 from .errors import APIError, CharacterNotFoundError, WeaponNotFoundError
 from .models import (
     ShowcaseData, PlayerProfile, ProfileCharacter, DomainProgress,
@@ -21,13 +22,18 @@ from .models import (
     EquipData, AttrModifier, SuitSet, SuitSetEffect,PropMap ,
     StatDetail , ComputedStatsWithDetails , Gem , Medal , Medals
 )
+from .models.auth.game_stats import GameStats
+from .data_cache import CacheManager
 from .update import check_update, download_update
-from .calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
+from .normal.calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
 
 logger = logging.getLogger(__name__)
 
+
+
 _ENKA_API = "https://enka.network/ef/{uid}/__data.json?x-sveltekit-invalidated=01"
 
+game_stats_cache = CacheManager[GameStats]()
 
 class Endfield:
 
@@ -41,6 +47,7 @@ class Endfield:
         self._session: Optional[aiohttp.ClientSession] = None
         self._resolver: Optional[AssetResolver] = None
         self._debug = debug
+        self.stat_cache = game_stats_cache
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
@@ -141,6 +148,26 @@ class Endfield:
         raw = await self._fetch_api(str(uid))
         decoded = DataDecoder(raw).decode()
         return await self._build_player_profile(decoded)
+    
+    async def get_game_stats(self, token: str, server: int = 3) -> GameStats | None:
+        try:
+            cached_stats = self.stat_cache.get(token)
+            if cached_stats:
+                logger.debug("Using cached game stats")
+                return cached_stats
+            else:
+                logger.debug("No cached stats found, fetching new data")
+                stats = await game_stats(self._session, token, server)
+                if stats:
+                    self.stat_cache.set(token, stats, ttl=300)  # Cache for 5 minutes
+            return stats
+        except Exception as e:
+            logger.error(f"Error fetching game stats: {e}")
+            return None
+        
+    async def perform_daily_sign(self, token: str) -> str:
+        msg = await perform_daily_sign(self._session, token)
+        return msg
     
     async def check_for_updates(self) :
         return await check_update()

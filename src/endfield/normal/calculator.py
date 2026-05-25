@@ -1,11 +1,11 @@
 from typing import Optional, Union, List, Dict, Literal
 
-from .models.character import (
+from ..models.character import (
     ComputedStats, TalentInfo, SkillInfo, CharacterData,
     TalentPassiveNode, TalentFactoryNode, ComputedStatsWithDetails , StatDetail
 )
-from .models.equipment import EquipData, SuitSet
-from .models.weapon import WeaponData
+from ..models.equipment import EquipData, SuitSet
+from ..models.weapon import WeaponData
 
 
 F_TYPES   = Literal["BaseAddition", "BaseMultiplier", "BaseFinalAddition", "BaseFinalMultiplier"]

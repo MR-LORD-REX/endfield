@@ -59,7 +59,7 @@ from endfield import Endfield
 
 async def main():
     async with Endfield() as client:
-        # Fetch player showcase data
+        await client.update_assets()
         showcase = await client.get_showcase(uid=4225399080)
         print(showcase)
 
@@ -190,25 +190,31 @@ async with Endfield() as client:
             print(f"{char.name}'s Weapon: {char.weapon.name}")
             print(f"Level: {char.weapon.level}")
 ```
-
-## Error Handling
-
-The library provides specific exceptions for error handling:
+### get live in game stats
 
 ```python
-from endfield.errors import APIError, CharacterNotFoundError, WeaponNotFoundError
+async with Endfield() as ef:
+    stats = await ef.get_game_stats(token="your_token_here")
+    if stats:
+        print(stats.sanity_point.model_dump_json(indent=2))
+        print(stats.battle_pass.model_dump_json(indent=2))
+        print(stats.daily_points.model_dump_json(indent=2))
+        print(stats.weekly_points.model_dump_json(indent=2))
+    else:
+        print("Failed to fetch game stats.")
+```
+### Perform daily sign-in rewards collection
 
-try:
-    async with Endfield() as client:
-        showcase = await client.get_showcase(uid="invalid_uid")
-except APIError as e:
-    print(f"API Error: {e}")
-except CharacterNotFoundError as e:
-    print(f"Character not found: {e}")
-except WeaponNotFoundError as e:
-    print(f"Weapon not found: {e}")
+```python
+async with Endfield() as ef:
+    msg = await ef.perform_daily_sign(token="your_token_here")
+    print(msg)
 ```
 
+#### How to get the token?
+
+- Open the [skport](https://www.skport.com/) website (official endfield website) and log in with game account
+- Then go to [THIS API](https://web-api.skport.com/cookie_store/account_token) endpoint (official internal API) to get the token
 
 ## Contributing
 
@@ -241,12 +247,12 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.0.7
+### Version 1.0.8
 
-- Added medals data to player profile
-- Updated data models to include medals
-- Improved error handling for character processing
-- fixed session management 
+- Added `perform_daily_sign` method to automate daily sign-in rewards collection.
+- Added `get_game_stats` method to fetch current game statistics for a player.
+- Added caching mechanism for game stats to reduce redundant API calls and improve performance.
+
 
 ---
 
