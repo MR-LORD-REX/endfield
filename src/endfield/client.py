@@ -33,6 +33,8 @@ logger = logging.getLogger(__name__)
 
 _ENKA_API = "https://enka.network/ef/{uid}/__data.json?x-sveltekit-invalidated=01"
 
+MY_API="https://endfield-api.onrender.com/get/{uid}"
+
 game_stats_cache = CacheManager[GameStats]()
 
 class Endfield:
@@ -41,6 +43,7 @@ class Endfield:
         self,
         session: Optional[aiohttp.ClientSession] = None,
         debug: bool = False,
+        timeout: int = 5
     ) -> None:
         self._assets_path = Path(__file__).parent / "assets"
         self._external_session = session
@@ -48,6 +51,7 @@ class Endfield:
         self._resolver: Optional[AssetResolver] = None
         self._debug = debug
         self.stat_cache = game_stats_cache
+        self._timeout = timeout
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
@@ -241,12 +245,18 @@ class Endfield:
             logger.debug(f"Character ID: {char_id}, Full Data: {char_full_data}")
             
     async def _fetch_api(self, uid: str) -> dict:
-        url = _ENKA_API.format(uid=uid)
-        logger.debug(f"Fetching API: {url}")
-        async with self._session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
-            if resp.status != 200:
-                raise APIError(resp.status, url)
-            return await resp.json(content_type=None)
+        official_url = _ENKA_API.format(uid=uid)
+        my_url= MY_API.format(uid=uid)
+        for attempt in range(4):
+            if attempt % 2 == 0:
+                url = official_url
+            else:
+                url = my_url
+                logger.debug(f"Fetching API: {url}")
+                async with self._session.get(url, timeout=aiohttp.ClientTimeout(total=self._timeout)) as resp:
+                    if resp.status != 200:
+                        raise APIError(resp.status, url)
+                    return await resp.json(content_type=None)
 
     async def _build_player_profile(self, decoded: dict) -> PlayerProfile:
         player= decoded["playerInfo"].get("businessCard", {}) 
