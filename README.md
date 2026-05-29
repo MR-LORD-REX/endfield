@@ -247,11 +247,12 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.0.8
+### Version 1.0.9
 
 - Added `perform_daily_sign` method to automate daily sign-in rewards collection.
 - Added `get_game_stats` method to fetch current game statistics for a player.
 - Added caching mechanism for game stats to reduce redundant API calls and improve performance.
+- Added self made API endpoint to fetch game stats if the official API is not working or rate limited.
 
 
 ---
