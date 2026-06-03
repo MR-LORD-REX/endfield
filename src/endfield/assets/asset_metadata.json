@@ -24,5 +24,8 @@
   "weapon_skill": "weapon_skill.json",
   "weapon_type": "weapon_type.json",
   "weapon": "weapon.json",
-  "medals": "medals.json"
+  "medals": "medals.json",
+  "fact_meta": "fact_meta.json",
+  "blueprints": "blueprints.json",
+  "slugs": "slugs.json"
 }

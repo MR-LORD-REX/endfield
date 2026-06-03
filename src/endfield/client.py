@@ -2,17 +2,16 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
-from typing import Optional
+from typing import Optional , Literal
 import json
 from collections import Counter
 
 import aiohttp
 import asyncio
 
-from .normal.decoder import DataDecoder
-from .normal.resolver import AssetResolver
-from .normal.calculator import compute_final_stats
-from .auth.api import perform_daily_sign, game_stats
+from .basic.decoder import DataDecoder
+from .resolver import AssetResolver
+
 from .errors import APIError, CharacterNotFoundError, WeaponNotFoundError
 from .models import (
     ShowcaseData, PlayerProfile, ProfileCharacter, DomainProgress,
@@ -22,10 +21,17 @@ from .models import (
     EquipData, AttrModifier, SuitSet, SuitSetEffect,PropMap ,
     StatDetail , ComputedStatsWithDetails , Gem , Medal , Medals
 )
+from .models.factory.blueprint import Blueprint, OutputItems , FactoryPlans
 from .models.auth.game_stats import GameStats
 from .data_cache import CacheManager
+from .basic.calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
+
 from .update import check_update, download_update
-from .normal.calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
+from .basic.calculator import compute_final_stats
+from .auth.api import perform_daily_sign, game_stats
+from .factory.api import get_or_update_blueprints
+from .factory.factory import format_blueprints , items
+
 
 logger = logging.getLogger(__name__)
 
@@ -880,3 +886,57 @@ class Endfield:
         stats= compute_final_stats(c_data)
         c_data.stats= stats
         return c_data
+    
+    async def get_factory_blueprints(
+        self,
+        region:Literal["Americas/Europe","Asia","Both"]="Both",
+        item: Literal["all"] | items = "all",
+        start:int=0,
+        end:int=10
+    ) -> FactoryPlans :
+        data= await get_or_update_blueprints()
+        blueprints= format_blueprints(
+            data=data,
+            region=region,
+            by_views=True,
+            item_filter=item,
+            _from=start,
+            _to=end
+        )
+        bps=[]
+        for bp in blueprints:
+            id= bp.get("id", "")
+            name= bp.get("name", "")
+            description= bp.get("short_description", "") or ""
+            s_url= bp.get("thumbnail_url", "") or ""
+            code=bp.get("ingame_code", "") or ""
+            region= bp.get("ingame_region", "") or ""
+            output= bp.get("output_items_with_rates", [])
+            ot=[]
+            for i , o in enumerate(output):
+                if isinstance(o,dict):
+                    o_id= o.get("itemId", "")
+                elif isinstance(o,list) and len(o) > 0:
+                    o_id= o[0].get("itemId", "")
+                else:
+                    logger.warning(f"Unexpected output item format in blueprint {id} at index {i}: {o}")
+                    continue   
+                o_name= self._resolver.get_fact_slug_by_id(o_id) or "unknown"
+                icon_url= self._resolver.get_fact_item_icon_url(o_id)
+                rate= o.get("ratePerMinute", 0)
+                ot.append(OutputItems(
+                    id=o_id,    
+                    name=o_name,
+                    icon_url=icon_url,
+                    per_minute=round(rate)
+                ))
+            bps.append(Blueprint(
+                id=id,
+                name=name,
+                description=description,
+                code=code,
+                region=region,
+                output_items=ot,
+                screenshot_url=s_url
+            ))
+        return FactoryPlans(blueprints=bps)

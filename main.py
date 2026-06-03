@@ -1,4 +1,4 @@
-from endfield import Endfield
+from src.endfield import Endfield
 import asyncio
 
 uid=4225399080
@@ -24,6 +24,13 @@ async def main():
             print(stats.weekly_points.model_dump_json(indent=2))
         else:
             print("Failed to fetch game stats.")
-        
+    async with Endfield() as ef:
+        blueprints = await ef.get_factory_blueprints(
+            region='Asia',
+            item='heavy-xiranite',
+            start=0,
+            end=10
+        )
+        print(blueprints.model_dump_json(indent=2))
 if __name__ == "__main__":
     asyncio.run(main())

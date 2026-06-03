@@ -1,6 +1,6 @@
 {
     "6": {
-        "Name": "Anchored to Wuling Ⅰ",
+        "Name": "Anchored to Wuling \u2160",
         "LevelInfos": {
             "1": {
                 "Icon": "medalicon/achv_adv_wuling_campfire_1_lv01",
@@ -9,7 +9,7 @@
         }
     },
     "7": {
-        "Name": "Wuling Crate Master Ⅰ",
+        "Name": "Wuling Crate Master \u2160",
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_adv_wuling_box_1_lv03",
@@ -301,7 +301,7 @@
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_quest_e3m5_lv03",
-                "ConditionDesc": "Complete the main mission [Chapter Ⅰ Process Ⅳ: Undying Cinders]"
+                "ConditionDesc": "Complete the main mission [Chapter \u2160 Process \u2163: Undying Cinders]"
             }
         }
     },
@@ -323,7 +323,7 @@
         }
     },
     "36": {
-        "Name": "\"Re-Congregated Fragments\" Ⅰ",
+        "Name": "\"Re-Congregated Fragments\" \u2160",
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_adv_wuling_ether_1_lv03",
@@ -402,7 +402,7 @@
         }
     },
     "43": {
-        "Name": "Wuling Factory Pioneer Ⅰ",
+        "Name": "Wuling Factory Pioneer \u2160",
         "LevelInfos": {
             "1": {
                 "Icon": "medalicon/achv_fac_techtree_jinlong_1_lv01",
@@ -468,7 +468,7 @@
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_quest_e2m8_lv03",
-                "ConditionDesc": "Complete the main mission [Chapter Ⅰ Process Ⅲ: Cradle of the Ages]"
+                "ConditionDesc": "Complete the main mission [Chapter \u2160 Process \u2162: Cradle of the Ages]"
             }
         }
     },
@@ -598,7 +598,7 @@
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_quest_e1m8_lv03",
-                "ConditionDesc": "Complete the main mission [Chapter Ⅰ Process Ⅰ: Fort Showdown]"
+                "ConditionDesc": "Complete the main mission [Chapter \u2160 Process \u2160: Fort Showdown]"
             }
         }
     },
@@ -696,7 +696,7 @@
         }
     },
     "72": {
-        "Name": "\"Protocol ε 20.00m\"",
+        "Name": "\"Protocol \u03b5 20.00m\"",
         "LevelInfos": {
             "2": {
                 "Icon": "medalicon/achv_hide_jump_hit_lv02",
@@ -772,7 +772,7 @@
         }
     },
     "82": {
-        "Name": "Wuling Investigator Ⅰ",
+        "Name": "Wuling Investigator \u2160",
         "LevelInfos": {
             "2": {
                 "Icon": "medalicon/achv_adv_wuling_documents_1_lv02",
@@ -871,7 +871,7 @@
         }
     },
     "96": {
-        "Name": "Wuling Stock Redistributor Ⅱ",
+        "Name": "Wuling Stock Redistributor \u2161",
         "LevelInfos": {
             "2": {
                 "Icon": "medalicon/achv_fac_coupon_wuling_2_lv02",
@@ -893,12 +893,12 @@
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_quest_e7m4_lv03",
-                "ConditionDesc": "Complete the main mission [Chapter Ⅱ Process Ⅲ: No Retreat]"
+                "ConditionDesc": "Complete the main mission [Chapter \u2161 Process \u2162: No Retreat]"
             }
         }
     },
     "100": {
-        "Name": "Wuling Factory Pioneer Ⅱ",
+        "Name": "Wuling Factory Pioneer \u2161",
         "LevelInfos": {
             "1": {
                 "Icon": "medalicon/achv_fac_techtree_jinlong_2_lv01",
@@ -907,7 +907,7 @@
         }
     },
     "101": {
-        "Name": "Wuling Outpost Builder Ⅰ",
+        "Name": "Wuling Outpost Builder \u2160",
         "LevelInfos": {
             "2": {
                 "Icon": "medalicon/achv_fac_settlement_wuling_1_lv02",
@@ -938,7 +938,7 @@
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_quest_e9m3_lv03",
-                "ConditionDesc": "Complete the main mission [Chapter Ⅱ Process Ⅴ: Battle of the Main Pillar]"
+                "ConditionDesc": "Complete the main mission [Chapter \u2161 Process \u2164: Battle of the Main Pillar]"
             }
         }
     },
@@ -965,12 +965,12 @@
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_quest_e10m3_lv03",
-                "ConditionDesc": "Complete the main mission [Chapter Ⅱ Process Ⅵ: Forged at the Very Beginning]"
+                "ConditionDesc": "Complete the main mission [Chapter \u2161 Process \u2165: Forged at the Very Beginning]"
             }
         }
     },
     "112": {
-        "Name": "Wuling Stock Redistributor Ⅲ",
+        "Name": "Wuling Stock Redistributor \u2162",
         "LevelInfos": {
             "3": {
                 "Icon": "medalicon/achv_fac_coupon_wuling_3_lv03",
@@ -979,7 +979,7 @@
         }
     },
     "114": {
-        "Name": "Wuling Factory Pioneer Ⅲ",
+        "Name": "Wuling Factory Pioneer \u2162",
         "LevelInfos": {
             "1": {
                 "Icon": "medalicon/achv_fac_techtree_jinlong_3_lv01",
@@ -1006,11 +1006,11 @@
         }
     },
     "118": {
-        "Name": "\"Unstable Æthillu\"",
+        "Name": "\"Unstable \u00c6thillu\"",
         "LevelInfos": {
             "2": {
                 "Icon": "medalicon/achv_bat_defeat_ethillu_lv02",
-                "ConditionDesc": "During battle, defeat an \"Æthillu\" within 2s of its revival"
+                "ConditionDesc": "During battle, defeat an \"\u00c6thillu\" within 2s of its revival"
             }
         }
     },
