@@ -1,4 +1,4 @@
-from src.endfield import Endfield
+from endfield import Endfield
 import asyncio
 
 uid=4225399080
@@ -6,7 +6,7 @@ token=""
 
 async def main():
     async with Endfield() as ef:
-        await ef.update_assets()
+        # await ef.update_assets()
         data = await ef.get_showcase(uid)
         print(data.profile.model_dump_json(indent=2))
     for char in data.characters:
@@ -24,13 +24,15 @@ async def main():
             print(stats.weekly_points.model_dump_json(indent=2))
         else:
             print("Failed to fetch game stats.")
+    
     async with Endfield() as ef:
         blueprints = await ef.get_factory_blueprints(
             region='Asia',
-            item='heavy-xiranite',
+            item='xiranite',
             start=0,
             end=10
         )
         print(blueprints.model_dump_json(indent=2))
+        
 if __name__ == "__main__":
     asyncio.run(main())

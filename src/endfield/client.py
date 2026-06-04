@@ -894,8 +894,23 @@ class Endfield:
         start:int=0,
         end:int=10
     ) -> FactoryPlans :
+        """
+        Gets factory blueprints from the Endfieldtools API, 
+        with optional filtering by region and output item, and pagination support.
+        
+        Args:
+            region: Filter blueprints by region ("Americas/Europe", "Asia", or "Both"). Default is "Both".
+            item: Filter blueprints by output item (e.g., "xiranite", "heavy-xiranite", or "all"). Default is "all".
+            start: The starting index for pagination (0-based). Default is 0.
+            end: The ending index for pagination (exclusive). Default is 10.
+            
+        Returns:
+            FactoryPlans: An object containing a list of blueprints and the total count of blueprints matching the filters.
+            (Note: The total count is the number of blueprints that match the filters, regardless of pagination.)
+        """
+        
         data= await get_or_update_blueprints()
-        blueprints= format_blueprints(
+        blueprints,total= format_blueprints(
             data=data,
             region=region,
             by_views=True,
@@ -939,4 +954,9 @@ class Endfield:
                 output_items=ot,
                 screenshot_url=s_url
             ))
-        return FactoryPlans(blueprints=bps)
+        return FactoryPlans(
+            blueprints=bps,
+            total=total
+            )
+        
+        

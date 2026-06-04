@@ -180,7 +180,7 @@ def format_blueprints(
     item_filter: Literal["all"] | items = "all",
     _from:int=0,
     _to:int=10
-)-> List[Dict[str, Any]]:
+)-> tuple[List[Dict[str, Any]], int]:
     """Format and filter blueprints.
 
     item_filter may be:
@@ -205,4 +205,4 @@ def format_blueprints(
     if by_likes:
         data = sorted(data, key=lambda x: x.get(like_key, 0), reverse=True)
 
-    return data[_from:_to]
+    return data[_from:_to] , len(data)

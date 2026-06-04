@@ -18,3 +18,4 @@ class Blueprint(BaseModel):
     
 class FactoryPlans(BaseModel):
     blueprints: List[Blueprint]
+    total: int
