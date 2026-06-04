@@ -211,6 +211,19 @@ async with Endfield() as ef:
     print(msg)
 ```
 
+### Fetch factory blueprints
+
+```python
+async with Endfield() as ef:
+    blueprints = await ef.get_factory_blueprints(
+        region='Asia',
+        item='xiranite',
+        start=0,
+        end=10
+    )
+    print(blueprints.model_dump_json(indent=2))
+```
+
 #### How to get the token?
 
 - Open the [skport](https://www.skport.com/) website (official endfield website) and log in with game account
