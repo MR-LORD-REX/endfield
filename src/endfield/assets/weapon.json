@@ -456,6 +456,20 @@
             2200
         ]
     },
+    "1807": {
+        "Rarity": 6,
+        "NameHash": "-7463985990780935363",
+        "WeaponType": "Lance",
+        "Icon": "/ui/ef/wpn_lance_0007.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_0.98",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_E_1",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1241,
+            1260,
+            2238
+        ]
+    },
     "1808": {
         "Rarity": 6,
         "NameHash": "504161328765825530",
@@ -890,6 +904,20 @@
             2913
         ]
     },
+    "3523": {
+        "Rarity": 6,
+        "NameHash": "-5791977492452726594",
+        "WeaponType": "Claymores",
+        "Icon": "/ui/ef/wpn_claym_0016.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_0.99",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_C_1",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1243,
+            2253,
+            2245
+        ]
+    },
     "3524": {
         "Rarity": 6,
         "NameHash": "180869350560216944",
@@ -944,6 +972,20 @@
             1241,
             1249,
             2668
+        ]
+    },
+    "3792": {
+        "Rarity": 6,
+        "NameHash": "-6952910894413212860",
+        "WeaponType": "Claymores",
+        "Icon": "/ui/ef/wpn_claym_0017.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_1.03",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_D_1",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1243,
+            1249,
+            3268
         ]
     }
 }
