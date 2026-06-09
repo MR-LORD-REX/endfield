@@ -10312,5 +10312,381 @@
                 ]
             }
         ]
+    },
+    "4443": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_crush_fracture_body_02.png",
+        "SuitId": "suit_crush_fracture",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    87,
+                    95,
+                    104,
+                    113
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    58,
+                    63,
+                    69,
+                    75
+                ]
+            },
+            {
+                "AttrType": 87,
+                "Formula": "BaseAddition",
+                "Values": [
+                    20.7,
+                    22.77,
+                    24.84,
+                    26.91
+                ]
+            }
+        ]
+    },
+    "4445": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_crush_fracture_edc_01.png",
+        "SuitId": "suit_crush_fracture",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    21,
+                    21,
+                    21
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    32,
+                    35,
+                    38,
+                    41
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    23,
+                    25,
+                    27
+                ]
+            },
+            {
+                "AttrType": 50,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.22999999999999998,
+                    0.253,
+                    0.27599999999999997,
+                    0.299
+                ]
+            }
+        ]
+    },
+    "4446": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_combo_cd01_edc_04.png",
+        "SuitId": "suit_combo_cd01",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    21,
+                    21,
+                    21
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    32,
+                    35,
+                    38,
+                    41
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    23,
+                    25,
+                    27
+                ]
+            },
+            {
+                "AttrType": 50,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.22999999999999998,
+                    0.253,
+                    0.27599999999999997,
+                    0.299
+                ]
+            }
+        ]
+    },
+    "4447": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_crush_fracture_hand_02.png",
+        "SuitId": "suit_crush_fracture",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    65,
+                    71,
+                    78,
+                    84
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 87,
+                "Formula": "BaseAddition",
+                "Values": [
+                    34.5,
+                    37.95,
+                    41.4,
+                    44.85
+                ]
+            }
+        ]
+    },
+    "4449": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_crush_fracture_edc_02.png",
+        "SuitId": "suit_crush_fracture",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    21,
+                    21,
+                    21
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    32,
+                    35,
+                    38,
+                    41
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    23,
+                    25,
+                    27
+                ]
+            },
+            {
+                "AttrType": 50,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.22999999999999998,
+                    0.253,
+                    0.27599999999999997,
+                    0.299
+                ]
+            }
+        ]
+    },
+    "4453": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_crush_fracture_body_01.png",
+        "SuitId": "suit_crush_fracture",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    87,
+                    95,
+                    104,
+                    113
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    58,
+                    63,
+                    69,
+                    75
+                ]
+            },
+            {
+                "AttrType": 50,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.11499999999999999,
+                    0.1265,
+                    0.13799999999999998,
+                    0.1495
+                ]
+            }
+        ]
+    },
+    "4455": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_phy01_body_04.png",
+        "SuitId": "suit_phy01",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    87,
+                    95,
+                    104,
+                    113
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    58,
+                    63,
+                    69,
+                    75
+                ]
+            },
+            {
+                "AttrType": 50,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.11499999999999999,
+                    0.1265,
+                    0.13799999999999998,
+                    0.1495
+                ]
+            }
+        ]
+    },
+    "4456": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_crush_fracture_hand_01.png",
+        "SuitId": "suit_crush_fracture",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    65,
+                    71,
+                    78,
+                    84
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 87,
+                "Formula": "BaseAddition",
+                "Values": [
+                    34.5,
+                    37.95,
+                    41.4,
+                    44.85
+                ]
+            }
+        ]
     }
 }
