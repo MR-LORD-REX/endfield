@@ -101,7 +101,19 @@
     "36": {
         "Icon": "/ui/ef/playeravatar/icon_user_avatar_activity_4.png"
     },
+    "37": {
+        "Icon": "/ui/ef/playeravatar/icon_user_avatar_activity_5.png"
+    },
     "38": {
         "Icon": "/ui/ef/playeravatar/icon_user_avatar_activity_6.png"
+    },
+    "39": {
+        "Icon": "/ui/ef/playeravatar/icon_user_avatar_bp_1_3.png"
+    },
+    "40": {
+        "Icon": "/ui/ef/playeravatar/item_user_avatar_activity_5_1.png"
+    },
+    "42": {
+        "Icon": "/ui/ef/charremoteicon/icon_chr_0031_mifu.png"
     }
 }
