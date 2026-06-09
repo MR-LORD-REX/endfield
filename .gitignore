@@ -4,3 +4,7 @@ dist/
 __pycache__/
 *.pyc
 *.pyo
+.env
+debug_*.json
+scripts/
+new.js
