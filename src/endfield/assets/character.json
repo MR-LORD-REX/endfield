@@ -23,20 +23,20 @@
             }
         },
         "SkillInfoMap": {
-            "7": {
-                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+            "chr_0007_ikut_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_ikut_01.png",
                 "Element": "Physical"
             },
-            "8": {
+            "chr_0007_ikut_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_ikut_01.png",
                 "Element": "Pulse"
             },
-            "9": {
+            "chr_0007_ikut_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_ikut_01.png",
                 "Element": "Pulse"
             },
-            "56": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_ikut_01.png",
+            "chr_0007_ikut_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             }
         },
@@ -130,20 +130,20 @@
             }
         },
         "SkillInfoMap": {
-            "22": {
-                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-                "Element": "Physical"
-            },
-            "23": {
+            "chr_0009_azrila_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_azrila_01.png",
                 "Element": "Fire"
             },
-            "24": {
+            "chr_0009_azrila_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_azrila_01.png",
                 "Element": "Fire"
             },
-            "54": {
+            "chr_0009_azrila_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_azrila_01.png",
+                "Element": "Physical"
+            },
+            "chr_0009_azrila_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
                 "Element": "Physical"
             }
         },
@@ -237,20 +237,20 @@
             }
         },
         "SkillInfoMap": {
-            "10": {
-                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-                "Element": "Cryst"
-            },
-            "11": {
-                "Icon": "/ui/ef/skillicon/icon_skill_seraph_01.png",
-                "Element": "Cryst"
-            },
-            "12": {
+            "chr_0011_seraph_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_seraph_01.png",
                 "Element": "Cryst"
             },
-            "53": {
+            "chr_0011_seraph_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_seraph_01.png",
+                "Element": "Cryst"
+            },
+            "chr_0011_seraph_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Cryst"
+            },
+            "chr_0011_seraph_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_seraph_01.png",
                 "Element": "Cryst"
             }
         },
@@ -338,19 +338,19 @@
             }
         },
         "SkillInfoMap": {
-            "35": {
-                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-                "Element": "Pulse"
-            },
-            "36": {
+            "chr_0004_pelica_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_pelica_01.png",
                 "Element": "Pulse"
             },
-            "37": {
+            "chr_0004_pelica_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_pelica_01.png",
                 "Element": "Pulse"
             },
-            "38": {
+            "chr_0004_pelica_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Pulse"
+            },
+            "chr_0004_pelica_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_pelica_01.png",
                 "Element": "Pulse"
             }
@@ -425,20 +425,20 @@
             }
         },
         "SkillInfoMap": {
-            "25": {
+            "chr_0012_avywen_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_avywen_01.png",
+                "Element": "Pulse"
+            },
+            "chr_0012_avywen_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
                 "Element": "Physical"
             },
-            "26": {
+            "chr_0012_avywen_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_avywen_01.png",
                 "Element": "Pulse"
             },
-            "27": {
+            "chr_0012_avywen_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_avywen_01.png",
-                "Element": "Pulse"
-            },
-            "51": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_avywen_01.png",
                 "Element": "Pulse"
             }
         },
@@ -532,20 +532,20 @@
             }
         },
         "SkillInfoMap": {
-            "13": {
-                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-                "Element": "Natural"
-            },
-            "14": {
+            "chr_0013_aglina_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_aglina_01.png",
                 "Element": "Natural"
             },
-            "15": {
+            "chr_0013_aglina_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aglina_01.png",
                 "Element": "Natural"
             },
-            "16": {
+            "chr_0013_aglina_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_aglina_01.png",
+                "Element": "Natural"
+            },
+            "chr_0013_aglina_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
                 "Element": "Natural"
             }
         },
@@ -625,20 +625,20 @@
             }
         },
         "SkillInfoMap": {
-            "1": {
+            "chr_0005_chen_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_chen_01.png",
+                "Element": "Physical"
+            },
+            "chr_0005_chen_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             },
-            "2": {
+            "chr_0005_chen_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_chen_01.png",
                 "Element": "Physical"
             },
-            "3": {
+            "chr_0005_chen_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_chen_01.png",
-                "Element": "Physical"
-            },
-            "21": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_chen_01.png",
                 "Element": "Physical"
             }
         },
@@ -732,20 +732,20 @@
             }
         },
         "SkillInfoMap": {
-            "28": {
+            "chr_0006_wolfgd_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_wolfgd_01.png",
+                "Element": "Fire"
+            },
+            "chr_0006_wolfgd_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
                 "Element": "Fire"
             },
-            "29": {
+            "chr_0006_wolfgd_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_wolfgd_01.png",
                 "Element": "Fire"
             },
-            "30": {
+            "chr_0006_wolfgd_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_wolfgd_01.png",
-                "Element": "Fire"
-            },
-            "52": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_wolfgd_01.png",
                 "Element": "Fire"
             }
         },
@@ -839,20 +839,20 @@
             }
         },
         "SkillInfoMap": {
-            "17": {
+            "chr_0018_dapan_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_dapan_01.png",
+                "Element": "Physical"
+            },
+            "chr_0018_dapan_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
                 "Element": "Physical"
             },
-            "18": {
+            "chr_0018_dapan_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_dapan_01.png",
                 "Element": "Physical"
             },
-            "19": {
+            "chr_0018_dapan_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_dapan_01.png",
-                "Element": "Physical"
-            },
-            "55": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_dapan_01.png",
                 "Element": "Physical"
             }
         },
@@ -946,20 +946,20 @@
             }
         },
         "SkillInfoMap": {
-            "31": {
+            "chr_0002_endminm_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "chr_0002_endminm_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             },
-            "32": {
+            "chr_0002_endminm_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
                 "Element": "Physical"
             },
-            "33": {
+            "chr_0002_endminm_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
-                "Element": "Physical"
-            },
-            "34": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
                 "Element": "Physical"
             }
         },
@@ -1033,20 +1033,20 @@
             }
         },
         "SkillInfoMap": {
-            "39": {
-                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-                "Element": "Fire"
-            },
-            "40": {
+            "chr_0016_laevat_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_laevat_01.png",
                 "Element": "Fire"
             },
-            "41": {
+            "chr_0016_laevat_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_laevat_01.png",
                 "Element": "Fire"
             },
-            "49": {
+            "chr_0016_laevat_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_laevat_01.png",
+                "Element": "Fire"
+            },
+            "chr_0016_laevat_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Fire"
             }
         },
@@ -1146,20 +1146,20 @@
             }
         },
         "SkillInfoMap": {
-            "42": {
-                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
-                "Element": "Physical"
-            },
-            "43": {
+            "chr_0014_aurora_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_aurora_01.png",
                 "Element": "Cryst"
             },
-            "44": {
-                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aurora_01.png",
+            "chr_0014_aurora_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_aurora_01.png",
                 "Element": "Cryst"
             },
-            "50": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_aurora_01.png",
+            "chr_0014_aurora_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Physical"
+            },
+            "chr_0014_aurora_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_aurora_01.png",
                 "Element": "Cryst"
             }
         },
@@ -1253,20 +1253,20 @@
             }
         },
         "SkillInfoMap": {
-            "57": {
-                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
-                "Element": "Physical"
-            },
-            "58": {
+            "chr_0015_lifeng_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_lifeng_01.png",
                 "Element": "Physical"
             },
-            "59": {
-                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lifeng_01.png",
+            "chr_0015_lifeng_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_lifeng_01.png",
                 "Element": "Physical"
             },
-            "60": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_lifeng_01.png",
+            "chr_0015_lifeng_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+                "Element": "Physical"
+            },
+            "chr_0015_lifeng_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lifeng_01.png",
                 "Element": "Physical"
             }
         },
@@ -1368,20 +1368,20 @@
             }
         },
         "SkillInfoMap": {
-            "61": {
-                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
-                "Element": "Cryst"
-            },
-            "62": {
+            "chr_0017_yvonne_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_yvonne_01.png",
                 "Element": "Cryst"
             },
-            "63": {
-                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_yvonne_01.png",
+            "chr_0017_yvonne_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_yvonne_01.png",
                 "Element": "Cryst"
             },
-            "64": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_yvonne_01.png",
+            "chr_0017_yvonne_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
+                "Element": "Cryst"
+            },
+            "chr_0017_yvonne_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_yvonne_01.png",
                 "Element": "Cryst"
             }
         },
@@ -1475,20 +1475,20 @@
             }
         },
         "SkillInfoMap": {
-            "45": {
-                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-                "Element": "Physical"
-            },
-            "46": {
+            "chr_0003_endminf_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
                 "Element": "Physical"
             },
-            "47": {
+            "chr_0003_endminf_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
                 "Element": "Physical"
             },
-            "48": {
+            "chr_0003_endminf_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "chr_0003_endminf_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             }
         },
@@ -1562,21 +1562,21 @@
             }
         },
         "SkillInfoMap": {
-            "65": {
+            "chr_0019_karin_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_karin_01.png",
+                "Element": "Physical"
+            },
+            "chr_0019_karin_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             },
-            "66": {
+            "chr_0019_karin_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_karin_01.png",
                 "Element": "Fire"
             },
-            "67": {
+            "chr_0019_karin_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_karin_01.png",
                 "Element": "Fire"
-            },
-            "68": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_karin_01.png",
-                "Element": "Physical"
             }
         },
         "NodeSkillMap": {
@@ -1663,20 +1663,20 @@
             }
         },
         "SkillInfoMap": {
-            "77": {
-                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+            "chr_0021_whiten_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_whiten_01.png",
                 "Element": "Physical"
             },
-            "78": {
+            "chr_0021_whiten_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_whiten_01.png",
                 "Element": "Cryst"
             },
-            "79": {
+            "chr_0021_whiten_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_whiten_01.png",
                 "Element": "Physical"
             },
-            "80": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_whiten_01.png",
+            "chr_0021_whiten_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
                 "Element": "Physical"
             }
         },
@@ -1770,20 +1770,20 @@
             }
         },
         "SkillInfoMap": {
-            "69": {
-                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
-                "Element": "Natural"
-            },
-            "70": {
+            "chr_0022_bounda_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_bounda_01.png",
                 "Element": "Natural"
             },
-            "71": {
-                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_bounda_01.png",
+            "chr_0022_bounda_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_bounda_01.png",
                 "Element": "Natural"
             },
-            "72": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_bounda_01.png",
+            "chr_0022_bounda_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
+                "Element": "Natural"
+            },
+            "chr_0022_bounda_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_bounda_01.png",
                 "Element": "Natural"
             }
         },
@@ -1877,20 +1877,20 @@
             }
         },
         "SkillInfoMap": {
-            "85": {
+            "chr_0023_antal_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_antal_01.png",
+                "Element": "Pulse"
+            },
+            "chr_0023_antal_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
                 "Element": "Pulse"
             },
-            "86": {
-                "Icon": "/ui/ef/skillicon/icon_skill_antal_01.png",
-                "Element": "Pulse"
-            },
-            "87": {
+            "chr_0023_antal_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_antal_01.png",
                 "Element": "Pulse"
             },
-            "88": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_antal_01.png",
+            "chr_0023_antal_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_antal_01.png",
                 "Element": "Pulse"
             }
         },
@@ -1984,20 +1984,20 @@
             }
         },
         "SkillInfoMap": {
-            "89": {
-                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+            "chr_0020_meurs_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_meurs_01.png",
                 "Element": "Physical"
             },
-            "90": {
+            "chr_0020_meurs_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_meurs_01.png",
                 "Element": "Physical"
             },
-            "91": {
+            "chr_0020_meurs_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_meurs_01.png",
                 "Element": "Physical"
             },
-            "92": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_meurs_01.png",
+            "chr_0020_meurs_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
                 "Element": "Physical"
             }
         },
@@ -2091,20 +2091,20 @@
             }
         },
         "SkillInfoMap": {
-            "73": {
-                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-                "Element": "Physical"
-            },
-            "74": {
+            "chr_9000_endmin_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_endmin_01.png",
                 "Element": "Physical"
             },
-            "75": {
+            "chr_9000_endmin_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_endmin_01.png",
                 "Element": "Physical"
             },
-            "76": {
+            "chr_9000_endmin_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_endmin_01.png",
+                "Element": "Physical"
+            },
+            "chr_9000_endmin_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             }
         },
@@ -2178,21 +2178,21 @@
             }
         },
         "SkillInfoMap": {
-            "81": {
-                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
-                "Element": "Physical"
-            },
-            "82": {
+            "chr_0024_deepfin_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_deepfin_01.png",
                 "Element": "Physical"
             },
-            "83": {
-                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_deepfin_01.png",
-                "Element": "Cryst"
-            },
-            "84": {
+            "chr_0024_deepfin_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_deepfin_01.png",
                 "Element": "Physical"
+            },
+            "chr_0024_deepfin_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
+                "Element": "Physical"
+            },
+            "chr_0024_deepfin_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_deepfin_01.png",
+                "Element": "Cryst"
             }
         },
         "NodeSkillMap": {
@@ -2285,20 +2285,20 @@
             }
         },
         "SkillInfoMap": {
-            "109": {
+            "chr_0028_wulfa_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_wulfa_01.png",
+                "Element": "Physical"
+            },
+            "chr_0028_wulfa_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             },
-            "110": {
-                "Icon": "/ui/ef/skillicon/icon_skill_wulfa_01.png",
-                "Element": "Physical"
-            },
-            "111": {
+            "chr_0028_wulfa_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_wulfa_01.png",
                 "Element": "Fire"
             },
-            "112": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_wulfa_01.png",
+            "chr_0028_wulfa_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_wulfa_01.png",
                 "Element": "Physical"
             }
         },
@@ -2392,19 +2392,19 @@
             }
         },
         "SkillInfoMap": {
-            "93": {
+            "chr_0026_lastrite_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
                 "Element": "Cryst"
             },
-            "94": {
+            "chr_0026_lastrite_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_lastrite_01.png",
                 "Element": "Cryst"
             },
-            "95": {
+            "chr_0026_lastrite_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_lastrite_01.png",
                 "Element": "Cryst"
             },
-            "96": {
+            "chr_0026_lastrite_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_lastrite_01.png",
                 "Element": "Cryst"
             }
@@ -2499,20 +2499,20 @@
             }
         },
         "SkillInfoMap": {
-            "97": {
+            "chr_0029_pograni_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_pograni_01.png",
+                "Element": "Physical"
+            },
+            "chr_0029_pograni_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_sword.png",
                 "Element": "Physical"
             },
-            "98": {
+            "chr_0029_pograni_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_pograni_01.png",
                 "Element": "Physical"
             },
-            "99": {
+            "chr_0029_pograni_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_pograni_01.png",
-                "Element": "Physical"
-            },
-            "100": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_pograni_01.png",
                 "Element": "Physical"
             }
         },
@@ -2606,20 +2606,20 @@
             }
         },
         "SkillInfoMap": {
-            "101": {
+            "chr_0025_ardelia_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_ardelia_01.png",
+                "Element": "Natural"
+            },
+            "chr_0025_ardelia_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
                 "Element": "Natural"
             },
-            "102": {
+            "chr_0025_ardelia_NormalSkill": {
                 "Icon": "/ui/ef/skillicon/icon_skill_ardelia_01.png",
                 "Element": "Natural"
             },
-            "103": {
+            "chr_0025_ardelia_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_ardelia_01.png",
-                "Element": "Natural"
-            },
-            "104": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_ardelia_01.png",
                 "Element": "Natural"
             }
         },
@@ -2699,20 +2699,20 @@
             }
         },
         "SkillInfoMap": {
-            "113": {
+            "chr_0027_tangtang_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_tangtang_01.png",
+                "Element": "Cryst"
+            },
+            "chr_0027_tangtang_NormalAttack": {
                 "Icon": "/ui/ef/skillicon/icon_attack_pistol.png",
                 "Element": "Cryst"
             },
-            "114": {
-                "Icon": "/ui/ef/skillicon/icon_skill_tangtang_01.png",
-                "Element": "Cryst"
-            },
-            "115": {
+            "chr_0027_tangtang_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_tangtang_01.png",
                 "Element": "Cryst"
             },
-            "116": {
-                "Icon": "/ui/ef/skillicon/icon_combo_skill_tangtang_01.png",
+            "chr_0027_tangtang_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_tangtang_01.png",
                 "Element": "Cryst"
             }
         },
@@ -2806,20 +2806,20 @@
             }
         },
         "SkillInfoMap": {
-            "105": {
-                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
-                "Element": "Pulse"
-            },
-            "106": {
-                "Icon": "/ui/ef/skillicon/icon_skill_zhuangfy_01.png",
-                "Element": "Pulse"
-            },
-            "107": {
+            "chr_0030_zhuangfy_UltimateSkill": {
                 "Icon": "/ui/ef/skillicon/icon_ultimate_skill_zhuangfy_01.png",
                 "Element": "Pulse"
             },
-            "108": {
+            "chr_0030_zhuangfy_ComboSkill": {
                 "Icon": "/ui/ef/skillicon/icon_combo_skill_zhuangfy_01.png",
+                "Element": "Pulse"
+            },
+            "chr_0030_zhuangfy_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_funnel.png",
+                "Element": "Pulse"
+            },
+            "chr_0030_zhuangfy_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_zhuangfy_01.png",
                 "Element": "Pulse"
             }
         },
@@ -2883,6 +2883,113 @@
                     },
                     "42": {
                         "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
+    },
+    "47": {
+        "StrId": "chr_0031_mifu",
+        "NameHash": "-2122629787715908989",
+        "Rarity": 6,
+        "Element": "Physical",
+        "Profession": "GUARD",
+        "WeaponType": "Claymores",
+        "MainAttrId": 39,
+        "SubAttrId": 42,
+        "AttributeNodes": {
+            "chr_0031_mifu_3": {
+                "39": 15
+            },
+            "chr_0031_mifu_1": {
+                "39": 10
+            },
+            "chr_0031_mifu_7": {
+                "39": 20
+            },
+            "chr_0031_mifu_5": {
+                "39": 15
+            }
+        },
+        "SkillInfoMap": {
+            "chr_0031_mifu_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_mifu_01.png",
+                "Element": "Physical"
+            },
+            "chr_0031_mifu_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_mifu_01.png",
+                "Element": "Physical"
+            },
+            "chr_0031_mifu_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_mifu_01.png",
+                "Element": "Physical"
+            },
+            "chr_0031_mifu_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_claym.png",
+                "Element": "Physical"
+            }
+        },
+        "NodeSkillMap": {
+            "fac_chr_0031_mifu_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0031_mifu_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_fungus.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0031_mifu_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0031_mifu_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_guestroom_clue.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "chr_0031_mifu_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_mifu_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "chr_0031_mifu_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_mifu_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0031_mifu_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_mifu_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0031_mifu_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_mifu_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "39": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "87": {
+                        "Value": 16,
                         "Formula": "BaseAddition"
                     }
                 }

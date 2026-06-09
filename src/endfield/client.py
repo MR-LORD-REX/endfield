@@ -618,7 +618,6 @@ class Endfield:
         )
         
     async def _build_skill_meta(self, skill_info: dict , char_temp_id: str) -> SkillMeta:
-        char_skill_info = self._resolver.get_character(str(char_temp_id)).get("SkillInfoMap", {})
         n_skill_id = skill_info.get("normalSkill", "")
         u_skill_id = skill_info.get("ultimateSkill", "")
         c_skill_id = skill_info.get("comboSkill", "")
@@ -626,7 +625,9 @@ class Endfield:
         skills = []
         for skill in skill_info.get("levelInfo", []):
             skill_id= skill.get("skillId", "")
-            skill_data = char_skill_info.get(str(skill_id), {})
+            skill_data = self._resolver.get_skill_info_map_entry(
+                char_temp_id, skill_id, skill_info
+            )
             if not skill_data:
                 logger.warning(f"Skill {skill_id} not found in SkillInfoMap for character {char_temp_id}")
                 continue

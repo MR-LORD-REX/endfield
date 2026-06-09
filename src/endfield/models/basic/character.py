@@ -7,7 +7,7 @@ from .equipment import EquipData, SuitSet
 
 
 class SkillInfo(BaseModel):
-    skill_id: int
+    skill_id: str
     icon_url: str
     element: str
     level: int

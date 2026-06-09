@@ -24,6 +24,13 @@ domains={
     "domain_2": "Wuling",
 }
 
+_SKILL_FIELD_SUFFIX = {
+    "dispNormalAttackSkill": "NormalAttack",
+    "normalSkill": "NormalSkill",
+    "comboSkill": "ComboSkill",
+    "ultimateSkill": "UltimateSkill",
+}
+
 
 class AssetResolver:
     """
@@ -118,6 +125,25 @@ class AssetResolver:
     
     def get_character(self, char_id: str) -> dict:
         return self.character.get(str(char_id), {})
+
+    def get_skill_info_map_entry(
+        self,
+        char_id: str,
+        skill_id: str | int,
+        skill_info: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        char = self.get_character(str(char_id))
+        skill_map = char.get("SkillInfoMap", {})
+        skill_key = str(skill_id)
+        if skill_key in skill_map:
+            return skill_map[skill_key]
+        str_id = char.get("StrId", "")
+        if not str_id or not skill_info:
+            return {}
+        for field, suffix in _SKILL_FIELD_SUFFIX.items():
+            if str(skill_info.get(field, "")) == skill_key:
+                return skill_map.get(f"{str_id}_{suffix}", {})
+        return {}
     
     def get_weapon(self, weapon_id: str) -> dict:
         return self.weapon.get(str(weapon_id), {})
