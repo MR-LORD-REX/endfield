@@ -52,5 +52,11 @@
     },
     "20": {
         "Icon": "/ui/ef/friendlistbg/business_card_topic_normal_4.png"
+    },
+    "21": {
+        "Icon": "/ui/ef/friendlistbg/business_card_topic_bp_1_3.png"
+    },
+    "22": {
+        "Icon": "/ui/ef/friendlistbg/business_card_topic_chr_0031_mifu.png"
     }
 }

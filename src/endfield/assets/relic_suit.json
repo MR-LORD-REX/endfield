@@ -103,5 +103,10 @@
         "Icon": "/ui/ef/equipmentlogobigwhite/icon_pack_tundra_suit_wisdwill01.png",
         "NameHash": "7450612431920625701",
         "SkillId": 1912
+    },
+    "suit_crush_fracture": {
+        "Icon": "/ui/ef/equipmentlogobigwhite/icon_pack_wuling_suit_usp02.png",
+        "NameHash": "3789200506194814524",
+        "SkillId": 3226
     }
 }
