@@ -8,3 +8,4 @@ __pycache__/
 debug_*.json
 scripts/
 new.js
+nameMap.js

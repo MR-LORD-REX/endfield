@@ -1,0 +1,1079 @@
+{
+    "6": {
+        "Name": "Anchored to Wuling \u2160",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_wuling_campfire_1_lv01",
+                "ConditionDesc": "Unlock 19 TP Points in Jingyu Valley and Wuling City"
+            }
+        }
+    },
+    "7": {
+        "Name": "Wuling Crate Master \u2160",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_adv_wuling_box_1_lv03",
+                "ConditionDesc": "Open 227 storage crates in Jingyu Valley and Wuling City"
+            }
+        }
+    },
+    "8": {
+        "Name": "Smart Annihilation",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_eny_building_kill_lv01",
+                "ConditionDesc": "Defeat 10 enemies with combat facilities"
+            },
+            "2": {
+                "Icon": "medalicon/achv_bat_eny_building_kill_lv02",
+                "ConditionDesc": "Defeat 100 enemies with combat facilities"
+            },
+            "3": {
+                "Icon": "medalicon/achv_bat_eny_building_kill_lv03",
+                "ConditionDesc": "Defeat 500 enemies with combat facilities"
+            }
+        }
+    },
+    "9": {
+        "Name": "Hardened Veteran",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_growth_adventure_level_lv01",
+                "ConditionDesc": "Reach Authority Level 20"
+            },
+            "2": {
+                "Icon": "medalicon/achv_growth_adventure_level_lv02",
+                "ConditionDesc": "Reach Authority Level 40"
+            },
+            "3": {
+                "Icon": "medalicon/achv_growth_adventure_level_lv03",
+                "ConditionDesc": "Reach Authority Level 60"
+            }
+        }
+    },
+    "10": {
+        "Name": "Arts and Flow",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_physical_AS_lv01",
+                "ConditionDesc": "Apply 50 Arts Reactions during combat"
+            },
+            "2": {
+                "Icon": "medalicon/achv_bat_physical_AS_lv02",
+                "ConditionDesc": "Apply 300 Arts Reactions during combat"
+            },
+            "3": {
+                "Icon": "medalicon/achv_bat_physical_AS_lv03",
+                "ConditionDesc": "Apply 500 Arts Reactions during combat"
+            }
+        }
+    },
+    "11": {
+        "Name": "Perfect Gearing",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_growth_equip_enhance_lv03",
+                "ConditionDesc": "Upgrade all stats of 1 piece of gear to Fully Artificed"
+            }
+        }
+    },
+    "12": {
+        "Name": "\"Returning Signs of Ill Omen\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e4m1_lv03",
+                "ConditionDesc": "Complete the main mission [Intermission: Conference of the Four]"
+            }
+        }
+    },
+    "13": {
+        "Name": "\"First Visit to Wuling\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e6m1_lv03",
+                "ConditionDesc": "Reach an all-new city"
+            }
+        }
+    },
+    "14": {
+        "Name": "\"Let Fire Consume the Ashen Past\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_quest_laevat_lv02",
+                "ConditionDesc": "Complete the side mission [Let Fire Consume the Ashen Past]"
+            }
+        }
+    },
+    "15": {
+        "Name": "Combined Arms",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_comboskill_lv01",
+                "ConditionDesc": "Perform 500 combos during combat"
+            },
+            "2": {
+                "Icon": "medalicon/achv_bat_comboskill_lv02",
+                "ConditionDesc": "Perform 1000 combos during combat"
+            },
+            "3": {
+                "Icon": "medalicon/achv_bat_comboskill_lv03",
+                "ConditionDesc": "Perform 2000 combos during combat"
+            }
+        }
+    },
+    "16": {
+        "Name": "Material Gathering",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_dung_resource_lv02",
+                "ConditionDesc": "Complete these Protocol Spaces:\nOperator EXP - Manifested Nightmares;\nT-Creds - Blessing of Oros;\nPromotions - Tacit Maelstrom;\nSkill Up - Mirage of the Tower;\nWeapon EXP - Gunsmith's Mound;\nWeapon Tune - Forge Trials Lv.5."
+            }
+        }
+    },
+    "17": {
+        "Name": "Skill Master",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_growth_char_skill_level_1_lv01",
+                "ConditionDesc": "Upgrade 5 operator skills to Mastery 3"
+            },
+            "2": {
+                "Icon": "medalicon/achv_growth_char_skill_level_1_lv02",
+                "ConditionDesc": "Upgrade 10 operator skills to Mastery 3"
+            },
+            "3": {
+                "Icon": "medalicon/achv_growth_char_skill_level_1_lv03",
+                "ConditionDesc": "Upgrade 20 operator skills to Mastery 3"
+            }
+        }
+    },
+    "19": {
+        "Name": "Valley Factory Pioneer",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_fac_techtree_tundra_lv03",
+                "ConditionDesc": "Research every technology in the Basic AIC Plan"
+            }
+        }
+    },
+    "20": {
+        "Name": "Master Interceptor",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_charged_lv01",
+                "ConditionDesc": "Interrupt the enemies' charging states 30 times during combat"
+            },
+            "2": {
+                "Icon": "medalicon/achv_bat_charged_lv02",
+                "ConditionDesc": "Interrupt the enemies' charging states 50 times during combat"
+            },
+            "3": {
+                "Icon": "medalicon/achv_bat_charged_lv03",
+                "ConditionDesc": "Interrupt the enemies' charging states 100 times during combat"
+            }
+        }
+    },
+    "21": {
+        "Name": "Goods Delivery",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_fac_domain_depot_lv02",
+                "ConditionDesc": "Complete Goods Delivery 20 times"
+            }
+        }
+    },
+    "22": {
+        "Name": "\"Letter From a Messenger\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_quest_aglina_lv02",
+                "ConditionDesc": "Complete the side mission [Letter From a Messenger]"
+            }
+        }
+    },
+    "23": {
+        "Name": "\"The Refugees Strike Back?!\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e2m1_lv03",
+                "ConditionDesc": "Witness an attack in progress"
+            }
+        }
+    },
+    "25": {
+        "Name": "Valley Outpost Builder",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_fac_settlement_tundra_lv02",
+                "ConditionDesc": "Add all Valley IV outposts into the Endfield support program"
+            }
+        }
+    },
+    "26": {
+        "Name": "Deep Explorer",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_growth_world_level_lv01",
+                "ConditionDesc": "Reach Exploration Level 2"
+            },
+            "2": {
+                "Icon": "medalicon/achv_growth_world_level_lv02",
+                "ConditionDesc": "Reach Exploration Level 4"
+            },
+            "3": {
+                "Icon": "medalicon/achv_growth_world_level_lv03",
+                "ConditionDesc": "Reach Exploration Level 7"
+            }
+        }
+    },
+    "27": {
+        "Name": "Resource Recycler",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_recycle_station_lv01",
+                "ConditionDesc": "Gather resources from Recycling Stations 50 times"
+            }
+        }
+    },
+    "28": {
+        "Name": "Friendly Giveaway",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_spaceship_gift_lv01",
+                "ConditionDesc": "Offer 300 gifts that your operators prefer"
+            },
+            "2": {
+                "Icon": "medalicon/achv_fac_spaceship_gift_lv02",
+                "ConditionDesc": "Offer 500 gifts that your operators prefer"
+            },
+            "3": {
+                "Icon": "medalicon/achv_fac_spaceship_gift_lv03",
+                "ConditionDesc": "Offer 1000 gifts that your operators prefer"
+            }
+        }
+    },
+    "29": {
+        "Name": "Operator Contact",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_growth_char_count_1_lv01",
+                "ConditionDesc": "Acquire 5 operators"
+            },
+            "2": {
+                "Icon": "medalicon/achv_growth_char_count_1_lv02",
+                "ConditionDesc": "Acquire 10 operators"
+            },
+            "3": {
+                "Icon": "medalicon/achv_growth_char_count_1_lv03",
+                "ConditionDesc": "Acquire 20 operators"
+            }
+        }
+    },
+    "31": {
+        "Name": "\"Collapse of Her Pale Image\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_bat_defeat_palesent_lv03",
+                "ConditionDesc": "Complete Crisis Calamity: Marble Aggelomoirai"
+            }
+        }
+    },
+    "32": {
+        "Name": "Total Obliterator",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_eny_ace_lv02",
+                "ConditionDesc": "Defeat at least 5 enemies with a single damaging hit"
+            }
+        }
+    },
+    "33": {
+        "Name": "Ultimate Immobilizer",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_eny_cannot_move_lv02",
+                "ConditionDesc": "Immobilize the same enemy continuously for 20s during combat"
+            }
+        }
+    },
+    "34": {
+        "Name": "\"Rift Sealing\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e3m5_lv03",
+                "ConditionDesc": "Complete the main mission [Chapter \u2160 Process \u2163: Undying Cinders]"
+            }
+        }
+    },
+    "35": {
+        "Name": "True Altruist",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_side_mission_count_lv01",
+                "ConditionDesc": "Complete 30 exploration missions"
+            },
+            "2": {
+                "Icon": "medalicon/achv_side_mission_count_lv02",
+                "ConditionDesc": "Complete 40 exploration missions"
+            },
+            "3": {
+                "Icon": "medalicon/achv_side_mission_count_lv03",
+                "ConditionDesc": "Complete 50 exploration missions"
+            }
+        }
+    },
+    "36": {
+        "Name": "\"Re-Congregated Fragments\" \u2160",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_adv_wuling_ether_1_lv03",
+                "ConditionDesc": "Gather 74 Aurylenes in Jingyu Valley and Wuling City"
+            }
+        }
+    },
+    "37": {
+        "Name": "Valley Stock Redistributor",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_coupon_tundra_lv01",
+                "ConditionDesc": "Earn 20,000,000 Valley Stock Bills"
+            },
+            "2": {
+                "Icon": "medalicon/achv_fac_coupon_tundra_lv02",
+                "ConditionDesc": "Earn 40,000,000 Valley Stock Bills"
+            },
+            "3": {
+                "Icon": "medalicon/achv_fac_coupon_tundra_lv03",
+                "ConditionDesc": "Earn 80,000,000 Valley Stock Bills"
+            }
+        }
+    },
+    "38": {
+        "Name": "Potential Unleashed",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_growth_char_potential_1_lv01",
+                "ConditionDesc": "Raise 1 operator to full potential"
+            },
+            "2": {
+                "Icon": "medalicon/achv_growth_char_potential_1_lv02",
+                "ConditionDesc": "Raise 10 operators to full potential"
+            },
+            "3": {
+                "Icon": "medalicon/achv_growth_char_potential_1_lv03",
+                "ConditionDesc": "Raise 15 operators to full potential"
+            }
+        }
+    },
+    "39": {
+        "Name": "\"Lone Wolf\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_quest_wolfgd_lv02",
+                "ConditionDesc": "Complete the side mission: [Lone Wolf]"
+            }
+        }
+    },
+    "40": {
+        "Name": "Operator Guide",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_dung_char_lv01",
+                "ConditionDesc": "Complete any 5 Operator Guide stages"
+            }
+        }
+    },
+    "41": {
+        "Name": "\"Awaken\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e0m2_lv03",
+                "ConditionDesc": "Complete the main mission [Prologue - Process: Awakening]"
+            }
+        }
+    },
+    "42": {
+        "Name": "\"Core ex Machina\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e1m2_lv03",
+                "ConditionDesc": "Summon the fruit of a great technological endeavor"
+            }
+        }
+    },
+    "43": {
+        "Name": "Wuling Factory Pioneer \u2160",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_techtree_jinlong_1_lv01",
+                "ConditionDesc": "Research every technology in Wuling AIC I"
+            }
+        }
+    },
+    "44": {
+        "Name": "\"Shoulder to Shoulder Delivery\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_tundra_running_lv01",
+                "ConditionDesc": "In Valley IV, win Athletic Race 4 times"
+            }
+        }
+    },
+    "45": {
+        "Name": "Environment Monitor",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_fac_kite_station_lv02",
+                "ConditionDesc": "Complete environment monitoring 5 times"
+            }
+        }
+    },
+    "46": {
+        "Name": "Nexus Upgrader",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_fac_spaceship_level_1_lv03",
+                "ConditionDesc": "Upgrade the Control Nexus of Dijiang to Level 5"
+            }
+        }
+    },
+    "47": {
+        "Name": "Superb Physicals",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_magical_AS_lv01",
+                "ConditionDesc": "Apply 50 Physical Statuses during combat"
+            },
+            "2": {
+                "Icon": "medalicon/achv_bat_magical_AS_lv02",
+                "ConditionDesc": "Apply 300 Physical Statuses during combat"
+            },
+            "3": {
+                "Icon": "medalicon/achv_bat_magical_AS_lv03",
+                "ConditionDesc": "Apply 500 Physical Statuses during combat"
+            }
+        }
+    },
+    "48": {
+        "Name": "Ultimate Weapon",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_growth_wpn_skill_level_lv03",
+                "ConditionDesc": "Upgrade 1 weapon to a total skill rank of 18"
+            }
+        }
+    },
+    "49": {
+        "Name": "\"Shards of the Crushed Star\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e2m8_lv03",
+                "ConditionDesc": "Complete the main mission [Chapter \u2160 Process \u2162: Cradle of the Ages]"
+            }
+        }
+    },
+    "50": {
+        "Name": "\"Love, Scream & The Prototype\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_quest_yvonne_lv02",
+                "ConditionDesc": "Complete the side mission: [Love, Scream & The Prototype]"
+            }
+        }
+    },
+    "51": {
+        "Name": "\"DELTA Savior\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_tundra_fixablerobot_lv01",
+                "ConditionDesc": "Repair 25 Delta Robots in Valley IV"
+            },
+            "2": {
+                "Icon": "medalicon/achv_adv_tundra_fixablerobot_lv02",
+                "ConditionDesc": "Repair 35 Delta Robots in Valley IV"
+            },
+            "3": {
+                "Icon": "medalicon/achv_adv_tundra_fixablerobot_lv03",
+                "ConditionDesc": "In Valley IV, repair 43 Delta robots"
+            }
+        }
+    },
+    "53": {
+        "Name": "Alluvium Dredger",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_enemyspawner_lv02",
+                "ConditionDesc": "Reach Exploration Level 7, then complete 5 different Severe Energy Alluvium sites"
+            }
+        }
+    },
+    "54": {
+        "Name": "\"Reunited Fragments\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_tundra_ether_lv01",
+                "ConditionDesc": "Gather 80 Aurylenes in Valley IV"
+            },
+            "2": {
+                "Icon": "medalicon/achv_adv_tundra_ether_lv02",
+                "ConditionDesc": "Gather 120 Aurylenes in Valley IV"
+            },
+            "3": {
+                "Icon": "medalicon/achv_adv_tundra_ether_lv03",
+                "ConditionDesc": "Gather 166 Aurylenes in Valley IV"
+            }
+        }
+    },
+    "55": {
+        "Name": "Wuling Stock Redistributor",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_coupon_wuling_1_lv01",
+                "ConditionDesc": "Earn 2,000,000 Wuling Stock Bills"
+            }
+        }
+    },
+    "56": {
+        "Name": "Arsenal Collection",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_growth_wpn_count_1_lv01",
+                "ConditionDesc": "Acquire 10 different weapons"
+            },
+            "2": {
+                "Icon": "medalicon/achv_growth_wpn_count_1_lv02",
+                "ConditionDesc": "Acquire 20 different weapons"
+            },
+            "3": {
+                "Icon": "medalicon/achv_growth_wpn_count_1_lv03",
+                "ConditionDesc": "Acquire 40 different weapons"
+            }
+        }
+    },
+    "57": {
+        "Name": "Valley Crate Master",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_tundra_box_lv01",
+                "ConditionDesc": "Open 120 storage crates in Valley IV"
+            },
+            "2": {
+                "Icon": "medalicon/achv_adv_tundra_box_lv02",
+                "ConditionDesc": "Open 180 storage crates in Valley IV"
+            },
+            "3": {
+                "Icon": "medalicon/achv_adv_tundra_box_lv03",
+                "ConditionDesc": "Open 288 storage crates in Valley IV"
+            }
+        }
+    },
+    "58": {
+        "Name": "\"Crushed the Bony Fist\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_bat_defeat_rodin_lv03",
+                "ConditionDesc": "Complete Crisis Pandemonium: Rhodagn"
+            }
+        }
+    },
+    "59": {
+        "Name": "Immense Trust",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_spaceship_fever_point_lv01",
+                "ConditionDesc": "Raise the trust of 5 operators to 100%"
+            },
+            "2": {
+                "Icon": "medalicon/achv_fac_spaceship_fever_point_lv02",
+                "ConditionDesc": "Raise the trust of 10 operators to 100%"
+            },
+            "3": {
+                "Icon": "medalicon/achv_fac_spaceship_fever_point_lv03",
+                "ConditionDesc": "Raise the trust of 20 operators to 100%"
+            }
+        }
+    },
+    "60": {
+        "Name": "\"The Fist Misses\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e1m8_lv03",
+                "ConditionDesc": "Complete the main mission [Chapter \u2160 Process \u2160: Fort Showdown]"
+            }
+        }
+    },
+    "61": {
+        "Name": "Valley Anchorer",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_tundra_campfire_lv01",
+                "ConditionDesc": "Unlock 14 TP Points in Valley IV"
+            },
+            "2": {
+                "Icon": "medalicon/achv_adv_tundra_campfire_lv02",
+                "ConditionDesc": "Unlock 28 TP Points in Valley IV"
+            }
+        }
+    },
+    "62": {
+        "Name": "\"Broken Remains of Astarron\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_bat_defeat_agtrinit_lv03",
+                "ConditionDesc": "Complete Crisis Calamity: Triaggelos"
+            }
+        }
+    },
+    "63": {
+        "Name": "Steady Sales",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_fac_domain_shop_lv02",
+                "ConditionDesc": "Sell supplies at Stock Redistribution 15 times"
+            }
+        }
+    },
+    "64": {
+        "Name": "\"We Built the Southern Bastion\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_rebellious_lv02",
+                "ConditionDesc": "Use the defensive parry to intercept the Axe Armorbeast's ramming assault"
+            }
+        }
+    },
+    "66": {
+        "Name": "Generous Helper",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_social_spaceship_help_lv01",
+                "ConditionDesc": "Give 50 production assists to your friends"
+            }
+        }
+    },
+    "67": {
+        "Name": "Assist Recipient",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_social_spaceship_be_helped_lv02",
+                "ConditionDesc": "Receive 100 production assists from your friends"
+            }
+        }
+    },
+    "68": {
+        "Name": "Clue Exchanger",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_social_spaceship_info_exchange_lv01",
+                "ConditionDesc": "Participate in a total of 50 clue exchanges."
+            }
+        }
+    },
+    "70": {
+        "Name": "Can't Do Without It",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_social_building_lv01",
+                "ConditionDesc": "Shared facility receives 50 repairs"
+            },
+            "2": {
+                "Icon": "medalicon/achv_social_building_lv02",
+                "ConditionDesc": "Shared facility receives 200 repairs"
+            },
+            "3": {
+                "Icon": "medalicon/achv_social_building_lv03",
+                "ConditionDesc": "Shared facility receives 500 repairs"
+            }
+        }
+    },
+    "71": {
+        "Name": "\"Unconventional Movement\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_hide_fly_lv03",
+                "ConditionDesc": "Travel 10000 meters using ziplines, bounce pads, and ropes"
+            }
+        }
+    },
+    "72": {
+        "Name": "\"Protocol \u03b5 20.00m\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_jump_hit_lv02",
+                "ConditionDesc": "Fall from a height of at least 20 meters and hit an enemy"
+            }
+        }
+    },
+    "73": {
+        "Name": "\"Battle of the Four Emperors\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_slime_lv02",
+                "ConditionDesc": "Kick 4 Originium Slugs till they fall"
+            }
+        }
+    },
+    "74": {
+        "Name": "\"Auditors Trapped\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_cave_lv02",
+                "ConditionDesc": "Break all weak surfaces of the Origin Lodespring"
+            }
+        }
+    },
+    "75": {
+        "Name": "\"In the Cryptics of the Valley\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_event_tundra_challenge_dung_lv02",
+                "ConditionDesc": "Complete all Cryptic First Revealed Protocol Spaces"
+            }
+        }
+    },
+    "76": {
+        "Name": "\"Fowlbeast Water Prancer\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_wuling_floor_1_lv01",
+                "ConditionDesc": "Complete 8 pressure plate challenges in Jingyu Valley and Wuling City"
+            }
+        }
+    },
+    "77": {
+        "Name": "\"Swat the Lanky and Pass the Bug\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_wuling_frog_1_lv01",
+                "ConditionDesc": "Complete 6 glowbug passing challenges in Jingyu Valley and Wuling City"
+            }
+        }
+    },
+    "78": {
+        "Name": "Advanced Progression",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_dung_ss_lv02",
+                "ConditionDesc": "Complete all Protocol Space: Advanced Progression"
+            }
+        }
+    },
+    "81": {
+        "Name": "Valley Investigator",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_adv_tundra_documents_lv02",
+                "ConditionDesc": "Gather 4 investigation reports in Valley IV"
+            },
+            "3": {
+                "Icon": "medalicon/achv_adv_tundra_documents_lv03",
+                "ConditionDesc": "Gather 6 investigation reports in Valley IV"
+            }
+        }
+    },
+    "82": {
+        "Name": "Wuling Investigator \u2160",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_adv_wuling_documents_1_lv02",
+                "ConditionDesc": "Gather 2 investigation reports in Jingyu Valley and Wuling City"
+            }
+        }
+    },
+    "84": {
+        "Name": "\"Those Forsaken by the Land\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_hard_2_lv02",
+                "ConditionDesc": "In [Umbral Monument], complete all \"Those Forsaken by the Land\" stages at Normal mode"
+            }
+        }
+    },
+    "85": {
+        "Name": "\"Inorganic Construct\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_hard_1_lv02",
+                "ConditionDesc": "In [Umbral Monument], complete all \"Inorganic Construct\" stages at Normal mode"
+            }
+        }
+    },
+    "86": {
+        "Name": "\"Thus Withers the Branch of Fury\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_bat_defeat_ruanyi_lv03",
+                "ConditionDesc": "Complete \"Crisis Calamity: Ruan Yi\""
+            }
+        }
+    },
+    "87": {
+        "Name": "\"Entropic Reduction\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_bat_frozen_lv01",
+                "ConditionDesc": "Have any operators becoming Solidified during battle 10 times"
+            }
+        }
+    },
+    "88": {
+        "Name": "\"NO MORE KIDNAPPING!\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_rescue_from_geyunweng_lv02",
+                "ConditionDesc": "Rescue a teammate trapped by Nimbus Razor 1 time"
+            }
+        }
+    },
+    "89": {
+        "Name": "\"Searing Scars\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_hard_3_lv02",
+                "ConditionDesc": "In [Umbral Monument], complete all \"Searing Scars\" stages at Normal mode"
+            }
+        }
+    },
+    "90": {
+        "Name": "\"Traveler of the Deathly Realms\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_ruanyi_lv02",
+                "ConditionDesc": "While Ruan Yi is Infuriated, keep his Withering Touch active for at least 60s"
+            }
+        }
+    },
+    "91": {
+        "Name": "\"Water Flows from the Sky\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_waterwheel_top_lv02",
+                "ConditionDesc": "Reach the top of the Qingbo Stockade waterwheel"
+            }
+        }
+    },
+    "94": {
+        "Name": "\"Delver of the Grottoes\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_event_wuling_challenge_dung_lv02",
+                "ConditionDesc": "Complete all Grotto Survey Protocol Spaces"
+            }
+        }
+    },
+    "95": {
+        "Name": "\"Purger of the Turbid\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_wuling_clean_lv01",
+                "ConditionDesc": "Eliminate every Blight mass in Qingbo Stockade"
+            }
+        }
+    },
+    "96": {
+        "Name": "Wuling Stock Redistributor \u2161",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_fac_coupon_wuling_2_lv02",
+                "ConditionDesc": "Earn 10,000,000 Wuling Stock Bills"
+            }
+        }
+    },
+    "98": {
+        "Name": "\"The Red Knight\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_quest_wulfa_lv02",
+                "ConditionDesc": "Complete the side mission [The Red Knight]"
+            }
+        }
+    },
+    "99": {
+        "Name": "\"Drowning in Water\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e7m4_lv03",
+                "ConditionDesc": "Complete the main mission [Chapter \u2161 Process \u2162: No Retreat]"
+            }
+        }
+    },
+    "100": {
+        "Name": "Wuling Factory Pioneer \u2161",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_techtree_jinlong_2_lv01",
+                "ConditionDesc": "Research 25 technologies in the Wuling AIC Plan"
+            }
+        }
+    },
+    "101": {
+        "Name": "Wuling Outpost Builder \u2160",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_fac_settlement_wuling_1_lv02",
+                "ConditionDesc": "Add Sky King Flats Construction Site and Cardiac Remediation Station into the Endfield support program"
+            }
+        }
+    },
+    "103": {
+        "Name": "\"Palm Top Deliverer\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_event_formula_lv02",
+                "ConditionDesc": "During [AIC Support: Palm-Top Savior], acquire 800,000 Fruits of Altruism Certs"
+            }
+        }
+    },
+    "104": {
+        "Name": "\"Fully Revealed\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_hide_paralyze_lv02",
+                "ConditionDesc": "Let [Nefarith, \"Conqueror\"] hold the place in stasis and lock your controlled operator in mid-air"
+            }
+        }
+    },
+    "105": {
+        "Name": "\"Conqueror's Fall\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e9m3_lv03",
+                "ConditionDesc": "Complete the main mission [Chapter \u2161 Process \u2164: Battle of the Main Pillar]"
+            }
+        }
+    },
+    "108": {
+        "Name": "\"The Final Lord I Served\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e8m4_lv03",
+                "ConditionDesc": "Part ways with Ardashir at a certain key location"
+            }
+        }
+    },
+    "109": {
+        "Name": "\"Dwelling Upon Wilted Glory\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_hide_root_lv01",
+                "ConditionDesc": "Explore the base of Type-C Tianshi Pillar"
+            }
+        }
+    },
+    "110": {
+        "Name": "\"Gently Down the Stream\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_quest_e10m3_lv03",
+                "ConditionDesc": "Complete the main mission [Chapter \u2161 Process \u2165: Forged at the Very Beginning]"
+            }
+        }
+    },
+    "112": {
+        "Name": "Wuling Stock Redistributor \u2162",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_fac_coupon_wuling_3_lv03",
+                "ConditionDesc": "Earn 25,000,000 Wuling Stock Bills"
+            }
+        }
+    },
+    "114": {
+        "Name": "Wuling Factory Pioneer \u2162",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_techtree_jinlong_3_lv01",
+                "ConditionDesc": "Research 34 technologies in the Wuling AIC Plan"
+            }
+        }
+    },
+    "115": {
+        "Name": "\"Track Sprayer\"",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_adv_wuling_watergun_1_lv01",
+                "ConditionDesc": "Restore 8 Xiranflow Track Systems in Wuling City"
+            }
+        }
+    },
+    "117": {
+        "Name": "\"Silencing the Drum\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_defeat_hsbear_lv02",
+                "ConditionDesc": "Defeat the Skydrummer"
+            }
+        }
+    },
+    "118": {
+        "Name": "\"Unstable \u00c6thillu\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_defeat_ethillu_lv02",
+                "ConditionDesc": "During battle, defeat an \"\u00c6thillu\" within 2s of its revival"
+            }
+        }
+    },
+    "119": {
+        "Name": "\"Interceptor of Thunder\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_charged_hsbear_lv02",
+                "ConditionDesc": "Interrupt the Skydrummer's roaring shockwave during combat"
+            }
+        }
+    },
+    "120": {
+        "Name": "\"Turbidity Manifest\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_bat_hard_4_lv02",
+                "ConditionDesc": "In [Umbral Monument], complete all \"Turbidity Manifest\" stages at Normal mode"
+            }
+        }
+    },
+    "121": {
+        "Name": "\"Conqueror's Grief\"",
+        "LevelInfos": {
+            "3": {
+                "Icon": "medalicon/achv_bat_defeat_nefarp_lv03",
+                "ConditionDesc": "Complete \"Crisis Calamity: Nefarith\""
+            }
+        }
+    },
+    "122": {
+        "Name": "\"Totally Cleansed and Rinsed\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_event_clean_lv02",
+                "ConditionDesc": "Complete all Cleanse and Rinse missions"
+            }
+        }
+    },
+    "123": {
+        "Name": "\"Expert Survivor\"",
+        "LevelInfos": {
+            "2": {
+                "Icon": "medalicon/achv_event_dungfight_lv02",
+                "ConditionDesc": "Complete all Survival Training stages"
+            }
+        }
+    },
+    "126": {
+        "Name": "Factory Simulation",
+        "LevelInfos": {
+            "1": {
+                "Icon": "medalicon/achv_fac_blackbox_1_lv01",
+                "ConditionDesc": "Manually start and complete 5 simulations"
+            },
+            "2": {
+                "Icon": "medalicon/achv_fac_blackbox_1_lv02",
+                "ConditionDesc": "Manually start and complete 10 simulations"
+            },
+            "3": {
+                "Icon": "medalicon/achv_fac_blackbox_1_lv03",
+                "ConditionDesc": "Manually start and complete 20 simulations"
+            }
+        }
+    }
+}

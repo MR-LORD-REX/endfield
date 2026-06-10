@@ -1,4 +1,5 @@
 from __future__ import annotations
+from importlib.metadata import version
 
 import logging
 from pathlib import Path
@@ -12,7 +13,7 @@ import asyncio
 from .basic.decoder import DataDecoder
 from .resolver import AssetResolver
 
-from .errors import APIError, CharacterNotFoundError, WeaponNotFoundError
+from .errors import APIError, CharacterNotFoundError, WeaponNotFoundError, DecodeError
 from .models import (
     ShowcaseData, PlayerProfile, ProfileCharacter, DomainProgress,
     CharacterData, ComputedStats, SkillInfo, SkillMeta , TalentInfo, 
@@ -43,6 +44,23 @@ MY_API="https://endfield-api.onrender.com/get/{uid}"
 
 game_stats_cache = CacheManager[GameStats]()
 
+async def _retry_with_backoff(coro_func, max_retries: int = 3, initial_delay: float = 0.5):
+    """Helper function to retry async operations with exponential backoff."""
+    last_error = None
+    for attempt in range(max_retries):
+        try:
+            return await coro_func()
+        except DecodeError as e:
+            last_error = e
+            if attempt < max_retries - 1:
+                delay = initial_delay * (2 ** attempt)
+                logger.warning(f"Decode failed (attempt {attempt + 1}/{max_retries}), retrying in {delay}s: {e}")
+                await asyncio.sleep(delay)
+            else:
+                logger.error(f"Decode failed after {max_retries} attempts")
+    if last_error:
+        raise last_error
+
 class Endfield:
 
     def __init__(
@@ -58,6 +76,7 @@ class Endfield:
         self._debug = debug
         self.stat_cache = game_stats_cache
         self._timeout = timeout
+        self.__version__ = version("endfield-py")
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
@@ -110,8 +129,12 @@ class Endfield:
     async def get_showcase(self, uid: int | str) -> ShowcaseData:
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         if self._debug:
             with open(f"debug_{uid}.json", "w", encoding="utf-8") as f:
@@ -142,8 +165,12 @@ class Endfield:
     async def get_character_showcase(self, uid: int | str, index: int = 0) -> CharacterData:
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         if index < 0 or index >= len(char_data):
             raise CharacterNotFoundError(f"Character index {index} out of range for user {uid}")
@@ -155,8 +182,12 @@ class Endfield:
     async def get_profile(self, uid: int | str) -> PlayerProfile:
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         return await self._build_player_profile(decoded)
     
     async def get_game_stats(self, token: str, server: int = 3) -> GameStats | None:
@@ -188,8 +219,12 @@ class Endfield:
     async def test_equip(self, uid: int | str):
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         char_data= char_data[0] 
         equip= char_data["equip"][0]
@@ -203,8 +238,12 @@ class Endfield:
     async def test_weapon(self, uid: int | str):
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         for cd in char_data:
             char_id= cd.get("templateId", 0)
@@ -217,8 +256,12 @@ class Endfield:
     async def test_skill_meta(self, uid: int | str):
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         for cd in char_data:
             char_id= cd.get("templateId", 0)
@@ -229,8 +272,12 @@ class Endfield:
     async def test_talent_info(self, uid: int | str):
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         for cd in char_data:
             char_id= cd.get("templateId", 0)
@@ -242,8 +289,12 @@ class Endfield:
     async def test_full_character_data(self, uid: int | str):
         if not self._session:
             await self._init_session()
-        raw = await self._fetch_api(str(uid))
-        decoded = DataDecoder(raw).decode()
+        
+        async def _fetch_and_decode():
+            raw = await self._fetch_api(str(uid))
+            return DataDecoder(raw).decode()
+        
+        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
         for cd in char_data:
             char_id= cd.get("templateId", 0)

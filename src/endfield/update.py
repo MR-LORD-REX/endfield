@@ -33,11 +33,14 @@ async def download_update():
             files=files.values()
         for file in files:
             print("Downloading " + file + "...")
+            file_path = assets_path / file
+            # Create subdirectories if they don't exist
+            os.makedirs(file_path.parent, exist_ok=True)
             async with session.get(BASE_URL + file) as response:
                 if response.status == 200:
                     content = await response.read()
                     content = json.loads(content) 
-                    with open(assets_path / file, "w") as f:
+                    with open(file_path, "w") as f:
                         json.dump(content, f, indent=4)
                 else:
                     print("Failed to download " + file + ". Status code: " + str(response.status))

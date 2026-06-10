@@ -261,13 +261,11 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.1.0
+### Version 1.1.1
 
-- Added `perform_daily_sign` method to automate daily sign-in rewards collection.
-- Added `get_game_stats` method to fetch current game statistics for a player.
-- Added caching mechanism for game stats to reduce redundant API calls and improve performance.
-- Added self made API endpoint to fetch game stats if the official API is not working or rate limited.
-- Added factory blueprints fetching method to retrieve blueprint codes from [endfieldtools.dev](https://endfieldtools.dev/)
+- game V1.3 asset update
+- folder structure changed 
+- older versions " before v1.1.1 " will not support auto update anymore, you will have to manually update the library to get the latest assets or just update the library to the latest version
 
 
 ---

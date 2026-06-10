@@ -8,7 +8,7 @@ from datetime import datetime , timedelta , timezone
 asset_path=Path(__file__).parent.parent/"assets"
 
 def check_last():
-    meta_path=asset_path/"fact_meta.json"
+    meta_path=asset_path/"factory/fact_meta.json"
     if not meta_path.exists():
         return False
     with open(meta_path,"r",encoding="utf-8") as f:
@@ -19,7 +19,7 @@ def check_last():
     return True
 
 def get_token():
-    meta_path=asset_path/"fact_meta.json"
+    meta_path=asset_path/"factory/fact_meta.json"
     if not meta_path.exists():
         return None
     with open(meta_path,"r",encoding="utf-8") as f:
@@ -27,8 +27,8 @@ def get_token():
     return meta_data.get("id",None)
 
 async def get_or_update_blueprints()-> dict:
-    path=asset_path/"blueprints.json"
-    meta_path=asset_path/"fact_meta.json"
+    path=asset_path/"factory/blueprints.json"
+    meta_path=asset_path/"factory/fact_meta.json"
     if not check_last():
         token=get_token()
         if token:

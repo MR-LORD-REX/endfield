@@ -4,7 +4,7 @@ build-backend="setuptools.build_meta"
 
 [project]
 name="endfield-py"
-version="1.1.0"
+version="1.1.1"
 description="A Python library for fetching player data from the Enka Network API, Performing daily sign-in rewards collection and fetching current game statistics for a player."
 authors=[
     {name="sora", email="sahikast07@gmail.com"}
