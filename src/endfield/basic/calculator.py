@@ -34,6 +34,7 @@ ID_TO_PROP: Dict[str, str] = {
     "53": "CrystDamageIncrease_base",
     "54": "NaturalDamageIncrease_base",
     "55": "EtherDamageIncrease_base",
+    "47": "ArtsIntensity_base",
     "87": "PhysicalAndSpellInflictionEnhance_base",
     "10000": "Main_ratio",
     "10001": "Sub_ratio",
@@ -62,6 +63,7 @@ ID_TO_OBJ_MAP: Dict[str, str] = {
     "53": "cryst_dmg_bonus",
     "54": "natural_dmg_bonus",
     "55": "ether_dmg_bonus",
+    "47": "arts_intensity",
     "87": "infliction_enhance",
     "10000": "main_attri_ratio",
     "10001": "sub_attri_ratio",
@@ -111,7 +113,7 @@ class _HpState:
         self.flat:       float = 0.0  
         self.final_mult: float = 0.0   
 
-pending_attri_multipliers: list[tuple[str, float, str]] = []
+
 
 def apply_prop(
     computed: ComputedStats,
@@ -120,12 +122,13 @@ def apply_prop(
     formula: F_TYPES = "BaseAddition",
     main_attri_id: ATTRI_IDS = "39",
     sub_attri_id:  ATTRI_IDS = "40",
-    base_attri_value: int | float = 0,   
-    sub_attri_value:  int | float = 0,  
+    base_attri_value: int | float = 0,
+    sub_attri_value:  int | float = 0,
     base_atk: int = 0,
     base_hp:  int = 0,
-    base_attributes: dict | None = None, 
+    base_attributes: dict | None = None,
     hp_state: _HpState | None = None,
+    pending_attri_multipliers: list | None = None,
 ) -> None:
 
     if prop_id in SPECIAL_IDS:
@@ -136,7 +139,8 @@ def apply_prop(
         obj      = ID_TO_OBJ_MAP[attri_id]
         cur      = getattr(computed, obj, 0) or 0
         if value <= 1.5 or formula == "BaseMultiplier":
-            pending_attri_multipliers.append((attri_id, value, formula))
+            if pending_attri_multipliers is not None:
+                pending_attri_multipliers.append((attri_id, value, formula, base_val))
         else:
             new_val = cur + value
             setattr(computed, obj, int(new_val) if obj in INT_FIELDS else new_val)
@@ -243,6 +247,7 @@ def compute_final_stats(character: CharacterData) -> ComputedStats:
     )
 
     hp_state = _HpState()
+    pending_attri_multipliers: list[tuple[str, float, str]] = []
 
     def _apply(prop_id, value, formula):
         apply_prop(
@@ -251,6 +256,7 @@ def compute_final_stats(character: CharacterData) -> ComputedStats:
             main_attri_value, sub_attri_value,
             int(total_base_atk), int(base_hp),
             all_base_attri, hp_state,
+            pending_attri_multipliers,
         )
 
                 
@@ -283,10 +289,18 @@ def compute_final_stats(character: CharacterData) -> ComputedStats:
                 formula = skill.formula[i]
                 _apply(prop_id, val, formula)
 
-    for attri_id, value, formula in pending_attri_multipliers:
-        cur=getattr(computed, ID_TO_OBJ_MAP[attri_id], 0) or 0
-        new_val = cur + cur * value
-        setattr(computed, ID_TO_OBJ_MAP[attri_id], int(new_val))
+    # Group pending multipliers by attri_id, sum their ratio contributions
+    # against the flat-only running total (not compounding each ratio into the next).
+    from collections import defaultdict
+    pending_by_attri: dict = defaultdict(float)
+    pending_base_by_attri: dict = {}
+    for attri_id, value, formula, base_val in pending_attri_multipliers:
+        pending_by_attri[attri_id] += value
+        pending_base_by_attri[attri_id] = base_val
+    for attri_id, total_ratio in pending_by_attri.items():
+        cur = getattr(computed, ID_TO_OBJ_MAP[attri_id], 0) or 0
+        new_val = cur + cur * total_ratio
+        setattr(computed, ID_TO_OBJ_MAP[attri_id], round(new_val))
        
     pending_attri_multipliers.clear()
 

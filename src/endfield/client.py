@@ -303,17 +303,23 @@ class Endfield:
             
     async def _fetch_api(self, uid: str) -> dict:
         official_url = _ENKA_API.format(uid=uid)
-        my_url= MY_API.format(uid=uid)
-        for attempt in range(4):
-            if attempt % 2 == 0:
-                url = official_url
-            else:
-                url = my_url
-                logger.debug(f"Fetching API: {url}")
+        my_url = MY_API.format(uid=uid)
+        urls = [official_url, my_url, official_url, my_url]
+        last_error: Exception | None = None
+        for attempt, url in enumerate(urls):
+            try:
+                logger.debug(f"Fetching API (attempt {attempt + 1}/4): {url}")
                 async with self._session.get(url, timeout=aiohttp.ClientTimeout(total=self._timeout)) as resp:
                     if resp.status != 200:
                         raise APIError(resp.status, url)
                     return await resp.json(content_type=None)
+            except APIError as e:
+                last_error = e
+                logger.warning(f"API error on attempt {attempt + 1} ({url}): {e}, trying next source")
+            except Exception as e:
+                last_error = e
+                logger.warning(f"Request failed on attempt {attempt + 1} ({url}): {e}, trying next source")
+        raise last_error or APIError(0, uid)
 
     async def _build_player_profile(self, decoded: dict) -> PlayerProfile:
         player= decoded["playerInfo"].get("businessCard", {}) 
@@ -871,8 +877,8 @@ class Endfield:
                 attri_id=str(key),
                 attri_name=self._resolver.prop_by_id.get(str(key), "unknown"),
                 url=self._resolver.get_attribute_url(str(key)),
-                value=value.get("BaseValue", 0) + (value.get("AddValue", 0) * lvl-1),
-                is_float= type(value.get("BaseValue", 0) + (value.get("AddValue", 0) * lvl-1)) == float
+                value=value.get("BaseValue", 0) + (value.get("AddValue", 0) * (lvl-1)),
+                is_float= type(value.get("BaseValue", 0) + (value.get("AddValue", 0) * (lvl-1))) == float
             ))
         
         sub_attribute=str(char_info.get("SubAttrId", "0"))

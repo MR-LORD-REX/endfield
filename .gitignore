@@ -9,3 +9,6 @@ debug_*.json
 scripts/
 new.js
 nameMap.js
+call.md
+assets_usage.md
+calculator.md
