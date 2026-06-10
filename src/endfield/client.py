@@ -1,5 +1,5 @@
 from __future__ import annotations
-from importlib.metadata import version
+# from importlib.metadata import version
 
 import logging
 from pathlib import Path
@@ -76,7 +76,7 @@ class Endfield:
         self._debug = debug
         self.stat_cache = game_stats_cache
         self._timeout = timeout
-        self.__version__ = version("endfield-py")
+        # self.__version__ = version("endfield-py")
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
