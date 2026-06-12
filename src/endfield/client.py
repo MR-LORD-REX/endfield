@@ -3,7 +3,7 @@ from importlib.metadata import version
 
 import logging
 from pathlib import Path
-from typing import Optional , Literal
+from typing import Optional , Literal , List
 import json
 from collections import Counter
 
@@ -26,6 +26,7 @@ from .models.factory.blueprint import Blueprint, OutputItems , FactoryPlans
 from .models.auth.game_stats import GameStats
 from .data_cache import CacheManager
 from .basic.calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
+from .proxy_pool import ProxyPool , ProxySession
 
 from .update import check_update, download_update
 from .basic.calculator import compute_final_stats
@@ -37,12 +38,12 @@ from .factory.factory import format_blueprints , items
 logger = logging.getLogger(__name__)
 
 
-
 _ENKA_API = "https://enka.network/ef/{uid}/__data.json?x-sveltekit-invalidated=01"
 
 MY_API="https://endfield-api.onrender.com/get/{uid}"
 
 game_stats_cache = CacheManager[GameStats]()
+enka_data_cache= CacheManager()
 
 async def _retry_with_backoff(coro_func, max_retries: int = 3, initial_delay: float = 0.5):
     """Helper function to retry async operations with exponential backoff."""
@@ -67,8 +68,21 @@ class Endfield:
         self,
         session: Optional[aiohttp.ClientSession] = None,
         debug: bool = False,
-        timeout: int = 5
+        timeout: int = 5,
+        proxy_pool: Optional[ProxyPool] = None
     ) -> None:
+        """
+        Initialize the Endfield client.
+        
+        Args:
+            session: Optional aiohttp.ClientSession to use for requests.
+            debug: Enable debug logging.
+            timeout: Timeout in seconds for requests.
+
+            proxy_pool: Optional ProxyPool to use for auth requests
+                (from endfield.proxy_pool import ProxyPool)
+        """
+
         self._assets_path = Path(__file__).parent / "assets"
         self._external_session = session
         self._session: Optional[aiohttp.ClientSession] = None
@@ -76,7 +90,8 @@ class Endfield:
         self._debug = debug
         self.stat_cache = game_stats_cache
         self._timeout = timeout
-        self.__version__ = version("endfield-py")
+        self.proxies=proxy_pool
+        self.enka_data_cache= enka_data_cache
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
@@ -198,7 +213,13 @@ class Endfield:
                 return cached_stats
             else:
                 logger.debug("No cached stats found, fetching new data")
-                stats = await game_stats(self._session, token, server)
+                if self.proxies:
+                    async with self.proxies.get_proxy() as p:
+                        logger.debug(f"Using proxy: {p.proxy}")
+                        stats = await game_stats(p.session, token, server)
+                else:
+                    logger.debug("No proxies found, using direct connection")
+                    stats = await game_stats(self._session, token, server)
                 if stats:
                     self.stat_cache.set(token, stats, ttl=300)  # Cache for 5 minutes
             return stats
@@ -302,17 +323,26 @@ class Endfield:
             logger.debug(f"Character ID: {char_id}, Full Data: {char_full_data}")
             
     async def _fetch_api(self, uid: str) -> dict:
+        cached= self.enka_data_cache.get(uid)
+        if cached:
+            logger.debug("Using cached enka data")
+            return cached
         official_url = _ENKA_API.format(uid=uid)
         my_url = MY_API.format(uid=uid)
-        urls = [official_url, my_url, official_url, my_url]
+        urls = [ my_url, official_url, my_url,official_url]
         last_error: Exception | None = None
         for attempt, url in enumerate(urls):
             try:
                 logger.debug(f"Fetching API (attempt {attempt + 1}/4): {url}")
                 async with self._session.get(url, timeout=aiohttp.ClientTimeout(total=self._timeout)) as resp:
-                    if resp.status != 200:
+                    if resp.status != 200 :
                         raise APIError(resp.status, url)
-                    return await resp.json(content_type=None)
+                    data= await resp.json(content_type=None)
+                    if not data.get("nodes", [])[1].get("data"):
+                        logger.warning(f"Invalid data format on attempt {attempt + 1} ({url})")
+                        continue
+                    self.enka_data_cache.set(uid, data, ttl=300)
+                    return data
             except APIError as e:
                 last_error = e
                 logger.warning(f"API error on attempt {attempt + 1} ({url}): {e}, trying next source")
