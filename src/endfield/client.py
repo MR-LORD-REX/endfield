@@ -151,6 +151,7 @@ class Endfield:
         
         decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
+        gender= decoded["playerInfo"].get("businessCard",{}).get("gender",1) or 1
         if self._debug:
             with open(f"debug_{uid}.json", "w", encoding="utf-8") as f:
                 json.dump(decoded, f, ensure_ascii=False, indent=2)
@@ -159,7 +160,7 @@ class Endfield:
         
         c_tasks = []
         for cd in char_data:
-            c_tasks.append(self._build_character_data(cd))
+            c_tasks.append(self._build_character_data(cd,gender))
         characters = await asyncio.gather(*c_tasks)
         c_tasks.clear()
         
@@ -187,10 +188,11 @@ class Endfield:
         
         decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
         char_data = decoded["playerInfo"].get("charData", [])
+        gender= decoded["playerInfo"].get("businessCard",{}).get("gender",1) or 1
         if index < 0 or index >= len(char_data):
             raise CharacterNotFoundError(f"Character index {index} out of range for user {uid}")
         char_data= char_data[index]
-        character = await self._build_character_data(char_data)
+        character = await self._build_character_data(char_data, gender)
         character.detailed_stats= self.get_detailed_stats(character)
         return character
     
@@ -352,7 +354,9 @@ class Endfield:
         raise last_error or APIError(0, uid)
 
     async def _build_player_profile(self, decoded: dict) -> PlayerProfile:
-        player= decoded["playerInfo"].get("businessCard", {}) 
+        
+        player= decoded["playerInfo"].get("businessCard", {})
+        gender=int(player.get("gender", 1))
         stats= player.get("statistic", {})
         char_list = player.get("charList", [])
         char_data_list = decoded["playerInfo"].get("charData", [])
@@ -367,7 +371,15 @@ class Endfield:
         for cl , cd in zip(char_list, char_data_list):
             try:
                 temp_id = cd.get("templateId", 27)
+                if temp_id == 38: # special case for main character
+                    mc_id=[22,29]
+                    temp_id= mc_id[gender-1]
+                    logger.debug(f"Using main character template ID {temp_id} for gender {gender}")
                 temp_id_str = cl.get("templateId", "unknown")
+                if temp_id_str == "chr_9000_endmin":
+                    mc_id=["chr_0002_endminm","chr_0003_endminf"]
+                    temp_id_str=mc_id[gender-1]
+                    
                 char_info = self._resolver.get_character(str(temp_id))
                 characters.append(ProfileCharacter(
                     template_id=temp_id,
@@ -842,14 +854,25 @@ class Endfield:
             factory_nodes=factory_nodes
         )
         
-    async def _build_character_data(self, char_data: dict) -> CharacterData:
+    async def _build_character_data(self, char_data: dict , gender:int) -> CharacterData:
         char_id = char_data.get("templateId", 0)
         if not char_id:
             logger.warning(f"No templateId found in char_data")
-        char_info = self._resolver.get_character(str(char_id))
+        # data_char_id: used for talent/skill/stat lookups 
+        # display_char_id: gender-specific ID for name, icons, splash URLs
+        data_char_id = char_id
+        display_char_id = char_id
+        if char_id == 38:  # special case for main character (Endministrator)
+            mc_id = [22, 29]
+            display_char_id = mc_id[gender - 1]
+            logger.debug(f"Using display character template ID {display_char_id} for gender {gender}")
+        char_info = self._resolver.get_character(str(display_char_id))
         if not char_info:
-            logger.warning(f"Character info not found for char_id: {char_id}")
-        char_full= self._resolver.character_full.get(str(char_id), {})
+            logger.warning(f"Character info not found for char_id: {display_char_id}")
+        char_full= self._resolver.character_full.get(str(display_char_id), {})
+        if not char_full:
+            # Fallback to data_char_id if display_char_id has no full data
+            char_full= self._resolver.character_full.get(str(data_char_id), {})
         if not char_full:
             logger.warning(f"Character full data not found for char_id: {char_id}")
         pote= char_data.get("potentialLevel", 0)
@@ -943,12 +966,14 @@ class Endfield:
         
         tasks= []
         tasks.append(self._build_weapon(weapon_raw))
-        tasks.append(self._build_skill_meta(skill_info_raw, str(char_id)))
-        tasks.append(self._build_talent_info(potential=pote,talent_info=talent_info_raw,char_temp_id=str(char_id)))
+        # Use data_char_id for skill/talent lookups so raw attrNode key names (e.g. chr_9000_endmin_*)
+        # continue to match the character's AttributeNodes map even when display_char_id differs (gender).
+        tasks.append(self._build_skill_meta(skill_info_raw, str(data_char_id)))
+        tasks.append(self._build_talent_info(potential=pote,talent_info=talent_info_raw,char_temp_id=str(data_char_id)))
         weapon, skill_meta, talent_info = await asyncio.gather(*tasks)
 
         c_data=CharacterData(
-            template_id=char_id,
+            template_id=display_char_id,
             str_id=str_id,
             name=name,
             rarity=rarity,

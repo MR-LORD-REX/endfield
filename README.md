@@ -261,9 +261,10 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.1.2
+### Version 1.1.3
 
 - game V1.3 asset update
+- Fixed issue where stats were not being computed correctly
 - folder structure changed 
 - older versions " before v1.1.1 " will not support auto update anymore, you will have to manually update the library to get the latest assets or just update the library to the latest version
 - added proxies 

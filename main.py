@@ -3,7 +3,7 @@ from src.endfield.proxy_pool import ProxyPool
 import asyncio
 
 # uid=6452216126
-uid=6580184840
+uid=4984219022
 token=""
 
 p=[
