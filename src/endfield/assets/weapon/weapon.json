@@ -974,6 +974,20 @@
             2668
         ]
     },
+    "3791": {
+        "Rarity": 6,
+        "NameHash": "-7231185351000722799",
+        "WeaponType": "Lance",
+        "Icon": "/ui/ef/wpn_lance_0015.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_1.01",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_B_2",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1241,
+            1254,
+            3255
+        ]
+    },
     "3792": {
         "Rarity": 6,
         "NameHash": "-6952910894413212860",

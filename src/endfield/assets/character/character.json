@@ -2995,5 +2995,112 @@
                 }
             }
         ]
+    },
+    "49": {
+        "StrId": "chr_0033_camille",
+        "NameHash": "6825636278913292360",
+        "Rarity": 6,
+        "Element": "Fire",
+        "Profession": "VANGUARD",
+        "WeaponType": "Lance",
+        "MainAttrId": 40,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0033_camille_1": {
+                "40": 10
+            },
+            "chr_0033_camille_7": {
+                "40": 20
+            },
+            "chr_0033_camille_5": {
+                "40": 15
+            },
+            "chr_0033_camille_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "chr_0033_camille_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_camille_01.png",
+                "Element": "Fire"
+            },
+            "chr_0033_camille_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+                "Element": "Fire"
+            },
+            "chr_0033_camille_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_camille_01.png",
+                "Element": "Fire"
+            },
+            "chr_0033_camille_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_camille_01.png",
+                "Element": "Fire"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0033_camille_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_camille_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0033_camille_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_camille_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0033_camille_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0033_camille_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_camille_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0033_camille_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_camille_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0033_camille_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0033_camille_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0033_camille_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "40": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ]
     }
 }

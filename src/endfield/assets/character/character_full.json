@@ -10999,5 +10999,388 @@
                 "AddValue": 0
             }
         }
+    },
+    "49": {
+        "StrId": "chr_0033_camille",
+        "NameHash": "6825636278913292360",
+        "Rarity": 6,
+        "Element": "Fire",
+        "Profession": "VANGUARD",
+        "WeaponType": "Lance",
+        "MainAttrId": 40,
+        "SubAttrId": 41,
+        "AttributeNodes": {
+            "chr_0033_camille_1": {
+                "40": 10
+            },
+            "chr_0033_camille_7": {
+                "40": 20
+            },
+            "chr_0033_camille_5": {
+                "40": 15
+            },
+            "chr_0033_camille_3": {
+                "40": 15
+            }
+        },
+        "SkillInfoMap": {
+            "chr_0033_camille_ComboSkill": {
+                "Icon": "/ui/ef/skillicon/icon_combo_skill_camille_01.png",
+                "Element": "Fire"
+            },
+            "chr_0033_camille_NormalAttack": {
+                "Icon": "/ui/ef/skillicon/icon_attack_lance.png",
+                "Element": "Fire"
+            },
+            "chr_0033_camille_NormalSkill": {
+                "Icon": "/ui/ef/skillicon/icon_skill_camille_01.png",
+                "Element": "Fire"
+            },
+            "chr_0033_camille_UltimateSkill": {
+                "Icon": "/ui/ef/skillicon/icon_ultimate_skill_camille_01.png",
+                "Element": "Fire"
+            }
+        },
+        "NodeSkillMap": {
+            "chr_0033_camille_passive_skill_1_2": {
+                "Icon": "/ui/ef/icon_talent_camille_02.png",
+                "Level": 2,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0033_camille_passive_skill_0_1": {
+                "Icon": "/ui/ef/icon_talent_camille_01.png",
+                "Level": 1,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0033_camille_1_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 2,
+                "Index": 3,
+                "Type": 5
+            },
+            "chr_0033_camille_passive_skill_1_1": {
+                "Icon": "/ui/ef/icon_talent_camille_02.png",
+                "Level": 1,
+                "Index": 1,
+                "Type": 4
+            },
+            "chr_0033_camille_passive_skill_0_2": {
+                "Icon": "/ui/ef/icon_talent_camille_01.png",
+                "Level": 2,
+                "Index": 0,
+                "Type": 4
+            },
+            "fac_chr_0033_camille_0_2": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 2,
+                "Index": 2,
+                "Type": 5
+            },
+            "fac_chr_0033_camille_1_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_manufacture_efficiency.png",
+                "Level": 1,
+                "Index": 3,
+                "Type": 5
+            },
+            "fac_chr_0033_camille_0_1": {
+                "Icon": "/ui/ef/spaceshipskillicon/facskill_spaceship_plant_flower.png",
+                "Level": 1,
+                "Index": 2,
+                "Type": 5
+            }
+        },
+        "PotAttributes": [
+            {
+                "Level": 2,
+                "Attrs": {
+                    "40": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    },
+                    "41": {
+                        "Value": 20,
+                        "Formula": "BaseAddition"
+                    }
+                }
+            }
+        ],
+        "BaseHpByLevel": [
+            500,
+            556,
+            612,
+            668,
+            724,
+            781,
+            837,
+            893,
+            949,
+            1005,
+            1061,
+            1117,
+            1173,
+            1230,
+            1286,
+            1342,
+            1398,
+            1454,
+            1510,
+            1566,
+            1622,
+            1679,
+            1735,
+            1791,
+            1847,
+            1903,
+            1959,
+            2015,
+            2071,
+            2128,
+            2184,
+            2240,
+            2296,
+            2352,
+            2408,
+            2464,
+            2520,
+            2577,
+            2633,
+            2689,
+            2745,
+            2801,
+            2857,
+            2913,
+            2969,
+            3026,
+            3082,
+            3138,
+            3194,
+            3250,
+            3306,
+            3362,
+            3418,
+            3474,
+            3531,
+            3587,
+            3643,
+            3699,
+            3755,
+            3811,
+            3867,
+            3923,
+            3980,
+            4036,
+            4092,
+            4148,
+            4204,
+            4260,
+            4316,
+            4372,
+            4429,
+            4485,
+            4541,
+            4597,
+            4653,
+            4709,
+            4765,
+            4821,
+            4878,
+            4934,
+            4990,
+            5046,
+            5102,
+            5158,
+            5214,
+            5270,
+            5327,
+            5383,
+            5439,
+            5495,
+            5551,
+            5607,
+            5663,
+            5719,
+            5776,
+            5832,
+            5888,
+            5944,
+            6000
+        ],
+        "BaseAtkByLevel": [
+            30,
+            33,
+            36,
+            40,
+            43,
+            46,
+            49,
+            52,
+            56,
+            59,
+            62,
+            65,
+            68,
+            72,
+            75,
+            78,
+            81,
+            84,
+            88,
+            91,
+            94,
+            97,
+            100,
+            104,
+            107,
+            110,
+            113,
+            116,
+            120,
+            123,
+            126,
+            129,
+            132,
+            136,
+            139,
+            142,
+            145,
+            148,
+            152,
+            155,
+            158,
+            161,
+            164,
+            168,
+            171,
+            174,
+            177,
+            180,
+            184,
+            187,
+            190,
+            193,
+            196,
+            200,
+            203,
+            206,
+            209,
+            212,
+            216,
+            219,
+            222,
+            225,
+            228,
+            231,
+            235,
+            238,
+            241,
+            244,
+            247,
+            251,
+            254,
+            257,
+            260,
+            263,
+            267,
+            270,
+            273,
+            276,
+            279,
+            283,
+            286,
+            289,
+            292,
+            295,
+            299,
+            302,
+            305,
+            308,
+            311,
+            315,
+            318,
+            321,
+            324,
+            327,
+            331,
+            334,
+            337,
+            340,
+            343
+        ],
+        "BaseAttributes": {
+            "4": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "5": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "6": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "7": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "8": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "9": {
+                "BaseValue": 0.05,
+                "AddValue": 0
+            },
+            "11": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "12": {
+                "BaseValue": 3,
+                "AddValue": 0
+            },
+            "15": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "25": {
+                "BaseValue": 1,
+                "AddValue": 0.002551020408163265
+            },
+            "39": {
+                "BaseValue": 13.402061855670151,
+                "AddValue": 0.999368819692825
+            },
+            "40": {
+                "BaseValue": 17.78350515463918,
+                "AddValue": 1.6079318325268304
+            },
+            "41": {
+                "BaseValue": 14.17525773195875,
+                "AddValue": 1.2925520723753452
+            },
+            "42": {
+                "BaseValue": 11.340206185567052,
+                "AddValue": 0.9067957079739106
+            },
+            "48": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "49": {
+                "BaseValue": 1,
+                "AddValue": 0.00510204081632653
+            },
+            "60": {
+                "BaseValue": 1,
+                "AddValue": 0
+            },
+            "90": {
+                "BaseValue": 3,
+                "AddValue": 0
+            }
+        }
     }
 }

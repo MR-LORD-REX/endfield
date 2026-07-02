@@ -400,9 +400,13 @@ class Endfield:
         medals = await self._build_medals(player.get("achievement", {}))
         
         bg_url = self._resolver.business_card_bg.get(str(player.get("businessCardTopicId", ""))).get("Icon", "")
-        bg_url = self._resolver.get_pfp_bg_url(bg_url) 
-        avatar_url = self._resolver.avatar_icon.get(str(player.get("userAvatarId", ""))).get("Icon", "")
-        avatar_url = self._resolver.get_item_icon_url(avatar_url) 
+        bg_url = self._resolver.get_pfp_bg_url(bg_url)
+        try: 
+            avatar_url = self._resolver.avatar_icon.get(str(player.get("userAvatarId", ""))).get("Icon", "")
+            avatar_url = self._resolver.get_item_icon_url(avatar_url) 
+        except Exception as e:
+            logger.warning(f"Failed to resolve avatar icon for userAvatarId {player.get('userAvatarId', '')}: {e}")
+            avatar_url = ""
         
         return PlayerProfile(
             uid=decoded.get("uid", "unknown"),

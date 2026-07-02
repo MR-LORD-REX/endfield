@@ -113,7 +113,13 @@
     "40": {
         "Icon": "/ui/ef/playeravatar/item_user_avatar_activity_5_1.png"
     },
+    "41": {
+        "Icon": "/ui/ef/charremoteicon/icon_chr_0033_camille.png"
+    },
     "42": {
         "Icon": "/ui/ef/charremoteicon/icon_chr_0031_mifu.png"
+    },
+    "43": {
+        "Icon": "/ui/ef/playeravatar/icon_user_avatar_activity_7.png"
     }
 }
