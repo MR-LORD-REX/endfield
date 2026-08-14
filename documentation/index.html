@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endfield Client Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Endfield SDK</h2>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search methods & models..." aria-label="Search">
+            </div>
+            <div class="sidebar-menu">
+                <h3 class="menu-heading">Methods</h3>
+                <ul class="nav-list" id="methods-list">
+                    <li><a href="#init" class="nav-item">__init__</a></li>
+                    <li><a href="#close" class="nav-item">close</a></li>
+                    <li><a href="#get_detailed_stats" class="nav-item">get_detailed_stats</a></li>
+                    <li><a href="#get_showcase" class="nav-item">get_showcase</a></li>
+                    <li><a href="#get_character_showcase" class="nav-item">get_character_showcase</a></li>
+                    <li><a href="#get_profile" class="nav-item">get_profile</a></li>
+                    <li><a href="#get_game_stats" class="nav-item">get_game_stats</a></li>
+                    <li><a href="#perform_daily_sign" class="nav-item">perform_daily_sign</a></li>
+                    <li><a href="#check_for_updates" class="nav-item">check_for_updates</a></li>
+                    <li><a href="#update_assets" class="nav-item">update_assets</a></li>
+                    <li><a href="#get_factory_blueprints" class="nav-item">get_factory_blueprints</a></li>
+                </ul>
+
+                <h3 class="menu-heading">Models</h3>
+                <ul class="nav-list" id="models-list">
+                    <li><a href="#model_ShowcaseData" class="nav-item">ShowcaseData</a></li>
+                    <li><a href="#model_PlayerProfile" class="nav-item">PlayerProfile</a></li>
+                    <li><a href="#model_CharacterData" class="nav-item">CharacterData</a></li>
+                    <li><a href="#model_WeaponData" class="nav-item">WeaponData</a></li>
+                    <li><a href="#model_EquipData" class="nav-item">EquipData</a></li>
+                    <li><a href="#model_TalentInfo" class="nav-item">TalentInfo</a></li>
+                    <li><a href="#model_ComputedStats" class="nav-item">ComputedStats</a></li>
+                    <li><a href="#model_GameStats" class="nav-item">GameStats</a></li>
+                    <li><a href="#model_FactoryPlans" class="nav-item">FactoryPlans</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <button id="mobile-toggle" class="mobile-toggle">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <h1>Endfield Client API Reference</h1>
+            </header>
+            
+            <div class="content-wrapper">
+                <section class="intro">
+                    <p>Welcome to the <strong>Endfield SDK Documentation</strong>. This page provides a detailed reference for all publicly available methods on the <code>Endfield</code> client and the data models they return.</p>
+                </section>
+
+                <div class="divider"></div>
+
+                <!-- Methods Section -->
+                <section id="methods" class="section-group">
+                    <h2 class="section-title">Methods</h2>
+
+                    <div class="card" id="init">
+                        <h3><code class="language-python">__init__(session=None, debug=False, timeout=5, proxy_pool=None)</code></h3>
+                        <p class="description">Initialize the Endfield client.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>session</code> <em>(Optional[aiohttp.ClientSession])</em>: Optional aiohttp.ClientSession to use for requests.</li>
+                                <li><code>debug</code> <em>(bool)</em>: Enable debug logging. Default is <code>False</code>.</li>
+                                <li><code>timeout</code> <em>(int)</em>: Timeout in seconds for requests. Default is <code>5</code>.</li>
+                                <li><code>proxy_pool</code> <em>(Optional[ProxyPool])</em>: Optional ProxyPool to use for auth requests.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="close">
+                        <h3><code class="language-python">close() -> None</code></h3>
+                        <p class="description">Close the internal aiohttp client session if it was not provided externally.</p>
+                    </div>
+
+                    <div class="card" id="get_detailed_stats">
+                        <h3><code class="language-python">get_detailed_stats(char_data: CharacterData) -> ComputedStatsWithDetails</code></h3>
+                        <p class="description">Get detailed computed stats for a given character.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>char_data</code> <em>(CharacterData)</em>: The CharacterData object to compute details for.</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><a href="#model_ComputedStatsWithDetails"><code>ComputedStatsWithDetails</code></a>: An object containing detailed stats, names, and icons.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="get_showcase">
+                        <h3><code class="language-python">async get_showcase(uid: int | str) -> ShowcaseData</code></h3>
+                        <p class="description">Retrieve showcase data (profile and characters) for a specific user ID.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>uid</code> <em>(int | str)</em>: The user ID (UID) to fetch the showcase for.</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><a href="#model_ShowcaseData"><code>ShowcaseData</code></a>: The retrieved showcase data including profile and all showcased characters.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="get_character_showcase">
+                        <h3><code class="language-python">async get_character_showcase(uid: int | str, index: int = 0) -> CharacterData</code></h3>
+                        <p class="description">Retrieve character showcase data for a specific user ID and character index.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>uid</code> <em>(int | str)</em>: The user ID (UID) to fetch the showcase for.</li>
+                                <li><code>index</code> <em>(int)</em>: The index of the character in the showcase (default 0).</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><a href="#model_CharacterData"><code>CharacterData</code></a>: Detailed data for the specified character.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="get_profile">
+                        <h3><code class="language-python">async get_profile(uid: int | str) -> PlayerProfile</code></h3>
+                        <p class="description">Retrieve only the player profile data for a specific user ID.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>uid</code> <em>(int | str)</em>: The user ID (UID) to fetch the profile for.</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><a href="#model_PlayerProfile"><code>PlayerProfile</code></a>: The player's profile data.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="get_game_stats">
+                        <h3><code class="language-python">async get_game_stats(token: str, server: int = 3) -> GameStats | None</code></h3>
+                        <p class="description">Fetch game statistics using an authentication token.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>token</code> <em>(str)</em>: The authentication token.</li>
+                                <li><code>server</code> <em>(int)</em>: The server ID (default 3).</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><a href="#model_GameStats"><code>GameStats | None</code></a>: Game statistics if successful, None otherwise.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="perform_daily_sign">
+                        <h3><code class="language-python">async perform_daily_sign(token: str) -> str</code></h3>
+                        <p class="description">Perform daily sign-in using an authentication token.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>token</code> <em>(str)</em>: The authentication token.</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><code>str</code>: A message indicating the result of the sign-in.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="check_for_updates">
+                        <h3><code class="language-python">async check_for_updates() -> Any</code></h3>
+                        <p class="description">Check for available asset updates.</p>
+                        <div class="params">
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><code>Any</code>: The update check result based on the underlying check_update implementation.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="update_assets">
+                        <h3><code class="language-python">async update_assets() -> None</code></h3>
+                        <p class="description">Download and apply updates for assets.</p>
+                    </div>
+
+                    <div class="card" id="get_factory_blueprints">
+                        <h3><code class="language-python">async get_factory_blueprints(region="Both", item="all", start=0, end=10) -> FactoryPlans</code></h3>
+                        <p class="description">Gets factory blueprints from the Endfieldtools API, with optional filtering by region and output item, and pagination support.</p>
+                        <div class="params">
+                            <h4>Parameters</h4>
+                            <ul>
+                                <li><code>region</code> <em>(Literal["Americas/Europe", "Asia", "Both"])</em>: Filter blueprints by region. Default is "Both".</li>
+                                <li><code>item</code> <em>(Literal["all"] | items)</em>: Filter blueprints by output item. Default is "all".</li>
+                                <li><code>start</code> <em>(int)</em>: The starting index for pagination (0-based). Default is 0.</li>
+                                <li><code>end</code> <em>(int)</em>: The ending index for pagination (exclusive). Default is 10.</li>
+                            </ul>
+                            <h4>Returns</h4>
+                            <ul>
+                                <li><a href="#model_FactoryPlans"><code>FactoryPlans</code></a>: An object containing a list of blueprints and the total count of blueprints matching the filters.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+
+                <!-- Models Section -->
+                <section id="models" class="section-group">
+                    <h2 class="section-title">Models</h2>
+
+                    <div class="card" id="model_ShowcaseData">
+                        <h3>ShowcaseData</h3>
+                        <p class="description">The master object representing a player's showcase data.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>profile</code> <em>(<a href="#model_PlayerProfile">PlayerProfile</a>)</em>: The basic player profile and statistics.</li>
+                                <li><code>characters</code> <em>(List[<a href="#model_CharacterData">CharacterData</a>])</em>: The list of characters in the player's showcase.</li>
+                                <li><code>ttl</code> <em>(int | null)</em>: Time-to-live for cache.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_PlayerProfile">
+                        <h3>PlayerProfile</h3>
+                        <p class="description">Information regarding a player's profile in the game.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>uid</code> <em>(str)</em>: The player UID.</li>
+                                <li><code>name</code> <em>(str)</em>: The player's name.</li>
+                                <li><code>short_id</code> <em>(str)</em>: Short identifier.</li>
+                                <li><code>signature</code> <em>(str)</em>: Player's signature.</li>
+                                <li><code>avatar_url</code> <em>(str)</em>: Avatar image URL.</li>
+                                <li><code>bg_url</code> <em>(str)</em>: Profile background URL.</li>
+                                <li><code>adventure_level</code> <em>(int)</em>: The adventure level of the player.</li>
+                                <li><code>world_level</code> <em>(int)</em>: The world level of the player.</li>
+                                <li><code>char_count</code>, <code>weapon_count</code>, <code>doc_count</code> <em>(int)</em>: Statistics.</li>
+                                <li><code>domain_progress</code> <em>(List[<a href="#model_DomainProgress">DomainProgress</a>])</em>: Progress across various domains.</li>
+                                <li><code>medals</code> <em>(<a href="#model_Medals">Medals</a>)</em>: Player's achievements/medals.</li>
+                                <li><code>characters</code> <em>(List[<a href="#model_ProfileCharacter">ProfileCharacter</a>])</em>: The characters configured in the player's profile display.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_DomainProgress">
+                        <h3>DomainProgress</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>domain_id</code> <em>(str)</em>: Unique domain identifier.</li>
+                                <li><code>level</code> <em>(int)</em>: Current progress level.</li>
+                                <li><code>name</code> <em>(str)</em>: Display name of the domain.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_Medals">
+                        <h3>Medals</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>medals</code> <em>(List[<a href="#model_Medal">Medal</a>])</em>: Collection of medals.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="model_Medal">
+                        <h3>Medal</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>index</code> <em>(int)</em>: Display index/order.</li>
+                                <li><code>name</code> <em>(str)</em>: Name of the medal.</li>
+                                <li><code>description</code> <em>(str)</em>: Achievement description.</li>
+                                <li><code>icon_url</code> <em>(str)</em>: Medal image URL.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_ProfileCharacter">
+                        <h3>ProfileCharacter</h3>
+                        <p class="description">Lightweight character data displayed on the user's profile card.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>template_id</code> <em>(int)</em>: Character template ID.</li>
+                                <li><code>str_id</code> <em>(str)</em>: String identifier (e.g., "chr_0030_zhuangfy").</li>
+                                <li><code>name</code> <em>(str)</em>: Character name.</li>
+                                <li><code>level</code> <em>(int)</em>: Character level.</li>
+                                <li><code>potential_level</code> <em>(int)</em>: Character potential level.</li>
+                                <li><code>rarity</code> <em>(int)</em>: Character rarity (e.g., 6).</li>
+                                <li><code>element</code> <em>(str)</em>: Elemental affinity.</li>
+                                <li><code>profession</code> <em>(str)</em>: Class or profession (e.g., "ASSAULT").</li>
+                                <li><code>splash_url</code> <em>(str)</em>: Character splash art URL.</li>
+                                <li><code>round_icon_url</code> <em>(str)</em>: Round avatar icon URL.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_CharacterData">
+                        <h3>CharacterData</h3>
+                        <p class="description">Extensive data describing a character's stats, level, equipment, and talents.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>template_id</code>, <code>str_id</code>, <code>name</code>, <code>rarity</code>, <code>element</code>, <code>profession</code>, <code>weapon_type</code></li>
+                                <li><code>level</code>, <code>potential_level</code> <em>(int)</em></li>
+                                <li><code>splash_url</code>, <code>bg_url</code>, <code>round_icon_url</code> <em>(str)</em></li>
+                                <li><code>main_attribute</code>, <code>sub_attribute</code> <em>(<a href="#model_CharAttr">CharAttr</a>)</em>: Primary/Secondary base attributes.</li>
+                                <li><code>base_atk</code>, <code>base_hp</code> <em>(<a href="#model_BaseAttr">BaseAttr</a>)</em></li>
+                                <li><code>base_attribute</code> <em>(List[<a href="#model_BaseAttr">BaseAttr</a>])</em>: Full list of base attribute modifiers.</li>
+                                <li><code>weapon</code> <em>(<a href="#model_WeaponData">WeaponData</a>)</em>: Information regarding the equipped weapon.</li>
+                                <li><code>equips</code> <em>(List[<a href="#model_EquipData">EquipData</a>])</em>: Information regarding equipped relics/items.</li>
+                                <li><code>suit_sets</code> <em>(<a href="#model_SuitSet">SuitSet</a> | null)</em>: Active relic suit set bonuses.</li>
+                                <li><code>skills</code> <em>(<a href="#model_SkillMeta">SkillMeta</a>)</em>: Character active skills.</li>
+                                <li><code>talents</code> <em>(<a href="#model_TalentInfo">TalentInfo</a>)</em>: Character talent trees and nodes.</li>
+                                <li><code>stats</code> <em>(<a href="#model_ComputedStats">ComputedStats</a>)</em>: Final computed statistical map.</li>
+                                <li><code>detailed_stats</code> <em>(<a href="#model_ComputedStatsWithDetails">ComputedStatsWithDetails</a>)</em>: Expanded view of <code>stats</code> with icons.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_CharAttr">
+                        <h3>CharAttr</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>attri_id</code> <em>(str)</em></li>
+                                <li><code>attri_name</code> <em>(str)</em></li>
+                                <li><code>url</code> <em>(str)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_BaseAttr">
+                        <h3>BaseAttr</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>attri_id</code>, <code>attri_name</code>, <code>url</code> <em>(str)</em></li>
+                                <li><code>value</code> <em>(float)</em></li>
+                                <li><code>is_float</code> <em>(bool)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_WeaponData">
+                        <h3>WeaponData</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>weapon_id</code>, <code>name</code>, <code>weapon_type</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>rarity</code>, <code>level</code>, <code>refine_lv</code>, <code>breakthrough_lv</code> <em>(int)</em></li>
+                                <li><code>base_atk</code> <em>(float)</em></li>
+                                <li><code>skill_levels</code> <em>(List[int])</em></li>
+                                <li><code>skills</code> <em>(List[<a href="#model_WeaponSkill">WeaponSkill</a>])</em>: Weapon passive skill enhancements.</li>
+                                <li><code>main_stat</code> <em>(<a href="#model_MainStat">MainStat</a>)</em>: Main attribute addition.</li>
+                                <li><code>gem</code> <em>(<a href="#model_Gem">Gem</a> | null)</em>: Slotted weapon gem info.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_WeaponSkill">
+                        <h3>WeaponSkill</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>skill_id</code>, <code>tag_id</code>, <code>prop_id</code>, <code>formula</code>, <code>prop_name</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>base_lvl</code>, <code>max_lvl</code>, <code>current_lvl</code> <em>(int)</em></li>
+                                <li><code>value</code> <em>(float)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_MainStat">
+                        <h3>MainStat</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>prop_id</code>, <code>prop_name</code>, <code>formula</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>value</code> <em>(float)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_Gem">
+                        <h3>Gem</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>rarity</code> <em>(int)</em></li>
+                                <li><code>name</code>, <code>inner_icon_url</code>, <code>cover_icon_url</code> <em>(str)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_EquipData">
+                        <h3>EquipData</h3>
+                        <p class="description">Equipped relic item.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>slot_id</code>, <code>template_id</code>, <code>rarity</code> <em>(int)</em></li>
+                                <li><code>suit_id</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>attr_modifiers</code> <em>(List[<a href="#model_AttrModifier">AttrModifier</a>])</em>: Refined substats and main stats.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_AttrModifier">
+                        <h3>AttrModifier</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>index</code>, <code>attr_type</code>, <code>enhance_level</code> <em>(int)</em></li>
+                                <li><code>attr_name</code>, <code>formula</code>, <code>icon</code> <em>(str)</em></li>
+                                <li><code>value</code> <em>(float)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_SuitSet">
+                        <h3>SuitSet</h3>
+                        <p class="description">Set bonuses for equipped relics.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>suit_id</code>, <code>name</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>pieces_equipped</code> <em>(int)</em></li>
+                                <li><code>is_active</code> <em>(bool)</em></li>
+                                <li><code>active_bonus</code> <em>(<a href="#model_SuitSetEffect">SuitSetEffect</a> | null)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_SuitSetEffect">
+                        <h3>SuitSetEffect</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>tagid</code> <em>(str)</em></li>
+                                <li><code>propmap</code> <em>(List[<a href="#model_PropMap">PropMap</a>])</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_PropMap">
+                        <h3>PropMap</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>prop_id</code>, <code>prop_name</code>, <code>formula</code> <em>(str)</em></li>
+                                <li><code>value</code> <em>(float)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_SkillMeta">
+                        <h3>SkillMeta</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>normal_skill</code>, <code>ultimate_skill</code>, <code>combo_skill</code>, <code>disp_normal_atk_skill</code> <em>(str)</em></li>
+                                <li><code>skills</code> <em>(List[<a href="#model_SkillInfo">SkillInfo</a>])</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_SkillInfo">
+                        <h3>SkillInfo</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>skill_id</code>, <code>icon_url</code>, <code>element</code> <em>(str)</em></li>
+                                <li><code>level</code>, <code>max_level</code>, <code>enhanced_level</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_TalentInfo">
+                        <h3>TalentInfo</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>latest_break_node</code> <em>(str)</em></li>
+                                <li><code>attr_nodes</code> <em>(<a href="#model_AttrNode">AttrNode</a>)</em></li>
+                                <li><code>passive_nodes</code>, <code>factory_nodes</code> <em>(List[<a href="#model_TalentNode">TalentNode</a>])</em></li>
+                                <li><code>potential_attributes</code> <em>(List[Any])</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="model_AttrNode">
+                        <h3>AttrNode</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>attri_id</code>, <code>attri_name</code>, <code>formula</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>values</code> <em>(List[int])</em></li>
+                                <li><code>total_value</code>, <code>level</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_TalentNode">
+                        <h3>TalentNode (Passive/Factory)</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>node_id</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>level</code>, <code>index</code>, <code>type</code> <em>(int)</em></li>
+                                <li><code>is_max</code> <em>(bool)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_ComputedStats">
+                        <h3>ComputedStats</h3>
+                        <p class="description">Flat key-value pairs representing the final computed values of every stat (e.g. <code>str</code>, <code>atk</code>, <code>hp</code>, <code>crit_rate</code>, <code>pulse_dmg_bonus</code>).</p>
+                    </div>
+
+                    <div class="card" id="model_ComputedStatsWithDetails">
+                        <h3>ComputedStatsWithDetails</h3>
+                        <p class="description">Detailed stats output which maps individual computed stats to their display properties.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>all</code> <em>(List[<a href="#model_StatDetail">StatDetail</a>])</em>: The list of stat details, including name, value, and icon URLs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_StatDetail">
+                        <h3>StatDetail</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>value</code> <em>(float)</em></li>
+                                <li><code>icon_url</code>, <code>stat_id</code>, <code>name</code> <em>(str)</em></li>
+                                <li><code>main_attri</code>, <code>sub_attri</code> <em>(bool)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_GameStats">
+                        <h3>GameStats</h3>
+                        <p class="description">Authenticated game statistics for the user.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>regions</code> <em>(Dict[str, List[<a href="#model_RegionData">RegionData</a>]])</em>: Factory and settlement stats mapped by region.</li>
+                                <li><code>sanity_point</code> <em>(<a href="#model_SanityPoint">SanityPoint</a>)</em></li>
+                                <li><code>battle_pass</code> <em>(<a href="#model_BattlePass">BattlePass</a>)</em></li>
+                                <li><code>daily_points</code> <em>(<a href="#model_Points">Points</a>)</em></li>
+                                <li><code>weekly_points</code> <em>(<a href="#model_WeeklyPoints">WeeklyPoints</a>)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_RegionData">
+                        <h3>RegionData</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>region_id</code>, <code>region_name</code> <em>(str)</em></li>
+                                <li><code>factory_level</code> <em>(int)</em></li>
+                                <li><code>factory_money</code> <em>(<a href="#model_Money">Money</a>)</em></li>
+                                <li><code>settlements</code> <em>(List[<a href="#model_Settlement">Settlement</a>])</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_Money">
+                        <h3>Money</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>current</code>, <code>max</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_Settlement">
+                        <h3>Settlement</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>id</code>, <code>name</code>, <code>char_icon</code>, <code>last_ticked</code> <em>(str)</em></li>
+                                <li><code>level</code>, <code>exp_to_level_up</code>, <code>current_exp</code> <em>(int)</em></li>
+                                <li><code>max_money</code>, <code>remaining_money</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_SanityPoint">
+                        <h3>SanityPoint</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>current</code>, <code>max</code> <em>(int)</em></li>
+                                <li><code>full_recover_at</code> <em>(str)</em>: ISO Date string.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="model_BattlePass">
+                        <h3>BattlePass</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>max_level</code>, <code>current_level</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="model_Points">
+                        <h3>Points</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>current</code>, <code>max</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card" id="model_WeeklyPoints">
+                        <h3>WeeklyPoints</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>score</code>, <code>total</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_FactoryPlans">
+                        <h3>FactoryPlans</h3>
+                        <p class="description">Contains data for Endfield factory blueprints retrieved from Endfieldtools API.</p>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>blueprints</code> <em>(List[<a href="#model_Blueprint">Blueprint</a>])</em>: The list of blueprint definitions and their output rates.</li>
+                                <li><code>total</code> <em>(int)</em>: The total count of matched blueprints across all pages.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_Blueprint">
+                        <h3>Blueprint</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>id</code>, <code>name</code>, <code>description</code>, <code>code</code>, <code>screenshot_url</code>, <code>region</code> <em>(str)</em></li>
+                                <li><code>output_items</code> <em>(List[<a href="#model_OutputItem">OutputItem</a>])</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="model_OutputItem">
+                        <h3>OutputItem</h3>
+                        <div class="params">
+                            <h4>Attributes</h4>
+                            <ul>
+                                <li><code>id</code>, <code>name</code>, <code>icon_url</code> <em>(str)</em></li>
+                                <li><code>per_minute</code> <em>(int)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <footer>
+                    <p>Generated by Endfield SDK Documentation Generator.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

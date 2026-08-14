@@ -74,155 +74,11 @@ async with Endfield(debug=True) as client:
     showcase = await client.get_showcase(uid=4225399080)
 ```
 
-## API Reference
+## Documentation
 
-### Endfield Client
+Comprehensive documentation for all classes, methods, and data models is hosted on GitHub Pages:
 
-#### Constructor
-
-```python
-Endfield(
-    session: Optional[aiohttp.ClientSession] = None,
-    debug: bool = False
-)
-```
-
-**Parameters:**
-
-- `session`: Optional external aiohttp session
-- `debug`: Enable debug logging (default: False)
-
-#### Methods
-
-##### `get_showcase(uid: int | str)`
-
-Fetch complete player showcase data including all characters, equipment, and weapons.
-
-```python
-showcase = await client.get_showcase(uid=4225399080)
-```
-
-**Returns:** `ShowcaseData` - Complete player showcase information with all characters
-
-##### `get_character_showcase(uid: int | str, index: int = 0)`
-
-Fetch detailed data for a specific character in the player's showcase.
-
-```python
-char_data = await client.get_character_showcase(uid=4225399080, index=0)
-```
-
-**Parameters:**
-
-- `uid`: Player UID
-- `index`: Character index (0-based, default: 0)
-
-**Returns:** `CharacterData` - Detailed character data including skills, talents, and computed statistics
-
-##### `get_profile(uid: int | str)`
-
-Fetch player profile information only.
-
-```python
-profile = await client.get_profile(uid=4225399080)
-```
-
-**Returns:** `PlayerProfile` - Player account and character list information
-
-##### `check_for_updates()`
-
-Check for library updates.
-
-```python
-await client.check_for_updates()
-```
-
-##### `close()`
-
-Close the client session.
-
-```python
-await client.close()
-```
-
-## Data Models
-
-The library provides comprehensive Pydantic models for type-safe data handling:
-
-- **ShowcaseData**: Complete player showcase information
-- **PlayerProfile**: Player account information
-- **ProfileCharacter**: Character showcase data
-- **CharacterData**: Detailed character information including skills and talents
-- **WeaponData**: Weapon information and skills
-- **EquipData**: Equipment data with stat modifiers
-- **ComputedStats**: Final calculated character statistics
-
-## Examples
-
-### Fetch Player Profile
-
-```python
-async with Endfield() as client:
-    showcase = await client.get_showcase(uid="your_uid_here")
-    profile = showcase.player_info
-    print(f"Player: {profile.player_name}")
-    print(f"Level: {profile.level}")
-```
-
-### Get Character Information
-
-```python
-async with Endfield() as client:
-    showcase = await client.get_showcase(uid="your_uid_here")
-    for char in showcase.characters:
-        print(f"Character: {char.name}")
-        print(f"Level: {char.level}")
-        print(f"Stats: {char.stats}")
-```
-
-### Check Weapon Information
-
-```python
-async with Endfield() as client:
-    showcase = await client.get_showcase(uid="your_uid_here")
-    for char in showcase.characters:
-        if char.weapon:
-            print(f"{char.name}'s Weapon: {char.weapon.name}")
-            print(f"Level: {char.weapon.level}")
-```
-### get live in game stats
-
-```python
-async with Endfield() as ef:
-    stats = await ef.get_game_stats(token="your_token_here")
-    if stats:
-        print(stats.sanity_point.model_dump_json(indent=2))
-        print(stats.battle_pass.model_dump_json(indent=2))
-        print(stats.daily_points.model_dump_json(indent=2))
-        print(stats.weekly_points.model_dump_json(indent=2))
-    else:
-        print("Failed to fetch game stats.")
-```
-### Perform daily sign-in rewards collection
-
-```python
-async with Endfield() as ef:
-    msg = await ef.perform_daily_sign(token="your_token_here")
-    print(msg)
-```
-
-### Fetch factory blueprints
-
-```python
-async with Endfield() as ef:
-    blueprints = await ef.get_factory_blueprints(
-        region='Asia',
-        item='xiranite',
-        start=0,
-        end=10
-    )
-    print(blueprints.model_dump_json(indent=2))
-```
+👉 **[Endfield SDK Documentation](https://MR-LORD-REX.github.io/endfield/)**
 
 #### How to get the token?
 
@@ -261,9 +117,9 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.1.3
+### Version 1.1.4
 
-- game V1.3 asset update
+- game V1.4 asset update
 - Fixed issue where stats were not being computed correctly
 - folder structure changed 
 - older versions " before v1.1.1 " will not support auto update anymore, you will have to manually update the library to get the latest assets or just update the library to the latest version

@@ -120,10 +120,20 @@ class Endfield:
             self._resolver = AssetResolver(self._assets_path, self._session)
 
     async def close(self) -> None:
+        """Close the internal aiohttp client session if it was not provided externally."""
         if self._session and not self._external_session:
             await self._session.close()
             
     def get_detailed_stats(self, char_data: CharacterData) -> ComputedStatsWithDetails:
+        """
+        Get detailed computed stats for a given character.
+        
+        Args:
+            char_data: The CharacterData object to compute details for.
+            
+        Returns:
+            ComputedStatsWithDetails: An object containing detailed stats, names, and icons.
+        """
         details = []
         main_att= char_data.main_attribute.attri_id
         sub_att= char_data.sub_attribute.attri_id
@@ -142,6 +152,15 @@ class Endfield:
         return ComputedStatsWithDetails(all=details)
 
     async def get_showcase(self, uid: int | str) -> ShowcaseData:
+        """
+        Retrieve showcase data (profile and characters) for a specific user ID.
+        
+        Args:
+            uid: The user ID (UID) to fetch the showcase for.
+            
+        Returns:
+            ShowcaseData: The retrieved showcase data including profile and all showcased characters.
+        """
         if not self._session:
             await self._init_session()
         
@@ -179,6 +198,16 @@ class Endfield:
         return sk
     
     async def get_character_showcase(self, uid: int | str, index: int = 0) -> CharacterData:
+        """
+        Retrieve character showcase data for a specific user ID and character index.
+        
+        Args:
+            uid: The user ID (UID) to fetch the showcase for.
+            index: The index of the character in the showcase (default 0).
+            
+        Returns:
+            CharacterData: Detailed data for the specified character.
+        """
         if not self._session:
             await self._init_session()
         
@@ -197,6 +226,15 @@ class Endfield:
         return character
     
     async def get_profile(self, uid: int | str) -> PlayerProfile:
+        """
+        Retrieve only the player profile data for a specific user ID.
+        
+        Args:
+            uid: The user ID (UID) to fetch the profile for.
+            
+        Returns:
+            PlayerProfile: The player's profile data.
+        """
         if not self._session:
             await self._init_session()
         
@@ -208,6 +246,16 @@ class Endfield:
         return await self._build_player_profile(decoded)
     
     async def get_game_stats(self, token: str, server: int = 3) -> GameStats | None:
+        """
+        Fetch game statistics using an authentication token.
+        
+        Args:
+            token: The authentication token.
+            server: The server ID (default 3).
+            
+        Returns:
+            GameStats | None: Game statistics if successful, None otherwise.
+        """
         try:
             cached_stats = self.stat_cache.get(token)
             if cached_stats:
@@ -230,13 +278,29 @@ class Endfield:
             return None
         
     async def perform_daily_sign(self, token: str) -> str:
+        """
+        Perform daily sign-in using an authentication token.
+        
+        Args:
+            token: The authentication token.
+            
+        Returns:
+            str: A message indicating the result of the sign-in.
+        """
         msg = await perform_daily_sign(self._session, token)
         return msg
     
-    async def check_for_updates(self) :
+    async def check_for_updates(self):
+        """
+        Check for available asset updates.
+        
+        Returns:
+            Any: The update check result based on the underlying check_update implementation.
+        """
         return await check_update()
     
     async def update_assets(self) -> None:
+        """Download and apply updates for assets."""
         await download_update()
 
     async def test_equip(self, uid: int | str):
