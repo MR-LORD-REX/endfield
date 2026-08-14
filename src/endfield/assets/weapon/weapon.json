@@ -974,6 +974,34 @@
             2668
         ]
     },
+    "3789": {
+        "Rarity": 6,
+        "NameHash": "-2735870224020104334",
+        "WeaponType": "Wand",
+        "Icon": "/ui/ef/wpn_funnel_0016.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_1.02",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_E_3",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1247,
+            1260,
+            3629
+        ]
+    },
+    "3790": {
+        "Rarity": 6,
+        "NameHash": "1888163072515909538",
+        "WeaponType": "Lance",
+        "Icon": "/ui/ef/wpn_lance_0014.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_1.01",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_A_3",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1245,
+            2449,
+            3582
+        ]
+    },
     "3791": {
         "Rarity": 6,
         "NameHash": "-7231185351000722799",
@@ -1000,6 +1028,48 @@
             1243,
             1249,
             3268
+        ]
+    },
+    "4438": {
+        "Rarity": 6,
+        "NameHash": "-4479707996615038325",
+        "WeaponType": "Wand",
+        "Icon": "/ui/ef/wpn_funnel_0018.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_0.99",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_B_1",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1247,
+            1260,
+            3630
+        ]
+    },
+    "4439": {
+        "Rarity": 6,
+        "NameHash": "-8377369896996769567",
+        "WeaponType": "Lance",
+        "Icon": "/ui/ef/wpn_lance_0016.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_0.98",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_D_2",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1245,
+            2449,
+            3639
+        ]
+    },
+    "4700": {
+        "Rarity": 6,
+        "NameHash": "-813093858070235161",
+        "WeaponType": "Sword",
+        "Icon": "/ui/ef/wpn_sword_0026.png",
+        "LevelTemplateId": "weapon_upgrade_curve_6star_1.01",
+        "BreakthroughTemplateId": "weapon_breakthrough_456star_C_3",
+        "TalentTemplateId": "wpn_potential_456star",
+        "SkillList": [
+            1391,
+            2253,
+            3759
         ]
     }
 }

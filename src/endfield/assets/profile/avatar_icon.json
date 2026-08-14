@@ -121,5 +121,20 @@
     },
     "43": {
         "Icon": "/ui/ef/playeravatar/icon_user_avatar_activity_7.png"
+    },
+    "44": {
+        "Icon": "/ui/ef/charremoteicon/icon_chr_0035_liino.png"
+    },
+    "45": {
+        "Icon": "/ui/ef/charremoteicon/icon_chr_0032_lizhiyan.png"
+    },
+    "46": {
+        "Icon": "/ui/ef/playeravatar/icon_user_avatar_bp_1_4.png"
+    },
+    "47": {
+        "Icon": "/ui/ef/playeravatar/icon_user_avatar_activity_8.png"
+    },
+    "51": {
+        "Icon": "/ui/ef/playeravatar/icon_user_avatar_giftpack_1.png"
     }
 }

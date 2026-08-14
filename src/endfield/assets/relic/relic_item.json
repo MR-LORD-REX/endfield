@@ -10688,5 +10688,1136 @@
                 ]
             }
         ]
+    },
+    "4647": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling02_body_02.png",
+        "SuitId": "",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    115,
+                    126,
+                    138,
+                    149
+                ]
+            },
+            {
+                "AttrType": 29,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.10799999999999998,
+                    0.11879999999999999,
+                    0.12959999999999997,
+                    0.1404
+                ]
+            }
+        ]
+    },
+    "4649": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling02_body_01.png",
+        "SuitId": "",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 39,
+                "Formula": "BaseAddition",
+                "Values": [
+                    115,
+                    126,
+                    138,
+                    149
+                ]
+            },
+            {
+                "AttrType": 87,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21.599999999999998,
+                    23.759999999999998,
+                    25.919999999999998,
+                    28.08
+                ]
+            }
+        ]
+    },
+    "4650": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_heal01_body_03.png",
+        "SuitId": "suit_heal01",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    87,
+                    95,
+                    104,
+                    113
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    58,
+                    63,
+                    69,
+                    75
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.1232142857142857,
+                    0.1355357142857143,
+                    0.14785714285714285,
+                    0.16017857142857142
+                ]
+            }
+        ]
+    },
+    "4652": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_usp02_body_03.png",
+        "SuitId": "suit_usp02",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    110,
+                    121,
+                    132,
+                    143
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.1232142857142857,
+                    0.1355357142857143,
+                    0.14785714285714285,
+                    0.16017857142857142
+                ]
+            }
+        ]
+    },
+    "4654": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_usp02_edc_04.png",
+        "SuitId": "suit_usp02",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    21,
+                    21,
+                    21
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    41,
+                    45,
+                    49,
+                    53
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseMultiplier",
+                "Values": [
+                    0.2070178350109774,
+                    0.22771961851207514,
+                    0.24842140201317287,
+                    0.2691231855142706
+                ]
+            }
+        ]
+    },
+    "4655": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_usp02_body_04.png",
+        "SuitId": "suit_usp02",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    56,
+                    56,
+                    56,
+                    56
+                ]
+            },
+            {
+                "AttrType": 41,
+                "Formula": "BaseAddition",
+                "Values": [
+                    87,
+                    95,
+                    104,
+                    113
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    58,
+                    63,
+                    69,
+                    75
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseMultiplier",
+                "Values": [
+                    0.1035089175054887,
+                    0.11385980925603757,
+                    0.12421070100658643,
+                    0.1345615927571353
+                ]
+            }
+        ]
+    },
+    "4658": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_usp02_hand_04.png",
+        "SuitId": "suit_usp02",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    65,
+                    71,
+                    78,
+                    84
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.20535714285714285,
+                    0.22589285714285715,
+                    0.2464285714285714,
+                    0.2669642857142857
+                ]
+            }
+        ]
+    },
+    "4666": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling02_hand_01.png",
+        "SuitId": "",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 41,
+                "Formula": "BaseAddition",
+                "Values": [
+                    86,
+                    94,
+                    103,
+                    111
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.21428571428571427,
+                    0.2357142857142857,
+                    0.2571428571428571,
+                    0.2785714285714286
+                ]
+            }
+        ]
+    },
+    "4669": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_usp02_hand_03.png",
+        "SuitId": "suit_usp02",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    65,
+                    71,
+                    78,
+                    84
+                ]
+            },
+            {
+                "AttrType": 41,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.20535714285714285,
+                    0.22589285714285715,
+                    0.2464285714285714,
+                    0.2669642857142857
+                ]
+            }
+        ]
+    },
+    "4672": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling02_hand_02.png",
+        "SuitId": "",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    86,
+                    94,
+                    103,
+                    111
+                ]
+            },
+            {
+                "AttrType": 32,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.36,
+                    0.396,
+                    0.432,
+                    0.46799999999999997
+                ]
+            }
+        ]
+    },
+    "4674": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_heal01_hand_03.png",
+        "SuitId": "suit_heal01",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    65,
+                    71,
+                    78,
+                    84
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.20535714285714285,
+                    0.22589285714285715,
+                    0.2464285714285714,
+                    0.2669642857142857
+                ]
+            }
+        ]
+    },
+    "4676": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling02_edc_01.png",
+        "SuitId": "",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    21,
+                    21,
+                    21
+                ]
+            },
+            {
+                "AttrType": 40,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseMultiplier",
+                "Values": [
+                    0.21601861044623727,
+                    0.23762047149086102,
+                    0.2592223325354847,
+                    0.28082419358010846
+                ]
+            }
+        ]
+    },
+    "4732": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_fire_natr01_edc_04.png",
+        "SuitId": "suit_fire_natr01",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    21,
+                    21,
+                    21
+                ]
+            },
+            {
+                "AttrType": 41,
+                "Formula": "BaseAddition",
+                "Values": [
+                    32,
+                    35,
+                    38,
+                    41
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    21,
+                    23,
+                    25,
+                    27
+                ]
+            },
+            {
+                "AttrType": 32,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.27599999999999997,
+                    0.3036,
+                    0.33119999999999994,
+                    0.35879999999999995
+                ]
+            },
+            {
+                "AttrType": 28,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.27599999999999997,
+                    0.3036,
+                    0.33119999999999994,
+                    0.35879999999999995
+                ]
+            },
+            {
+                "AttrType": 33,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.27599999999999997,
+                    0.3036,
+                    0.33119999999999994,
+                    0.35879999999999995
+                ]
+            }
+        ]
+    },
+    "4734": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_suit_fire_natr01_hand_04.png",
+        "SuitId": "suit_fire_natr01",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    42,
+                    42,
+                    42,
+                    42
+                ]
+            },
+            {
+                "AttrType": 41,
+                "Formula": "BaseAddition",
+                "Values": [
+                    65,
+                    71,
+                    78,
+                    84
+                ]
+            },
+            {
+                "AttrType": 42,
+                "Formula": "BaseAddition",
+                "Values": [
+                    43,
+                    47,
+                    51,
+                    55
+                ]
+            },
+            {
+                "AttrType": 51,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.19166666666666668,
+                    0.21083333333333337,
+                    0.23,
+                    0.2491666666666667
+                ]
+            },
+            {
+                "AttrType": 54,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.19166666666666668,
+                    0.21083333333333337,
+                    0.23,
+                    0.2491666666666667
+                ]
+            }
+        ]
+    },
+    "4775": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_body_02.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    48,
+                    48,
+                    48,
+                    48
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    74,
+                    81,
+                    88,
+                    96
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    49,
+                    53,
+                    58,
+                    63
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.10535714285714286,
+                    0.11589285714285716,
+                    0.12642857142857142,
+                    0.13696428571428573
+                ]
+            }
+        ]
+    },
+    "4776": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_body_03.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    48,
+                    48,
+                    48,
+                    48
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    74,
+                    81,
+                    88,
+                    96
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    49,
+                    53,
+                    58,
+                    63
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseMultiplier",
+                "Values": [
+                    0.08850762511338889,
+                    0.09735838762472779,
+                    0.10620915013606666,
+                    0.11505991264740556
+                ]
+            }
+        ]
+    },
+    "4777": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_edc_02.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    18,
+                    18,
+                    18,
+                    18
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    27,
+                    29,
+                    32,
+                    35
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    18,
+                    19,
+                    21,
+                    23
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.21071428571428572,
+                    0.23178571428571432,
+                    0.25285714285714284,
+                    0.27392857142857147
+                ]
+            }
+        ]
+    },
+    "4778": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_hand_02.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    36,
+                    36,
+                    36,
+                    36
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    55,
+                    60,
+                    66,
+                    71
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    37,
+                    40,
+                    44,
+                    48
+                ]
+            },
+            {
+                "AttrType": 44,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.17559523809523808,
+                    0.1931547619047619,
+                    0.2107142857142857,
+                    0.22827380952380952
+                ]
+            }
+        ]
+    },
+    "4780": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_edc_01.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    18,
+                    18,
+                    18,
+                    18
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    27,
+                    29,
+                    32,
+                    35
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    18,
+                    19,
+                    21,
+                    23
+                ]
+            },
+            {
+                "AttrType": 53,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.1863157894736842,
+                    0.20494736842105266,
+                    0.22357894736842104,
+                    0.2422105263157895
+                ]
+            },
+            {
+                "AttrType": 52,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.1863157894736842,
+                    0.20494736842105266,
+                    0.22357894736842104,
+                    0.2422105263157895
+                ]
+            },
+            {
+                "AttrType": 51,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.1863157894736842,
+                    0.20494736842105266,
+                    0.22357894736842104,
+                    0.2422105263157895
+                ]
+            },
+            {
+                "AttrType": 54,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.1863157894736842,
+                    0.20494736842105266,
+                    0.22357894736842104,
+                    0.2422105263157895
+                ]
+            }
+        ]
+    },
+    "4783": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_hand_03.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    36,
+                    36,
+                    36,
+                    36
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    55,
+                    60,
+                    66,
+                    71
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    37,
+                    40,
+                    44,
+                    48
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseMultiplier",
+                "Values": [
+                    0.14751270852231482,
+                    0.1622639793745463,
+                    0.17701525022677778,
+                    0.19176652107900927
+                ]
+            }
+        ]
+    },
+    "4785": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_edc_03.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    18,
+                    18,
+                    18,
+                    18
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    27,
+                    29,
+                    32,
+                    35
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    18,
+                    19,
+                    21,
+                    23
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseMultiplier",
+                "Values": [
+                    0.17701525022677778,
+                    0.19471677524945558,
+                    0.21241830027213332,
+                    0.23011982529481112
+                ]
+            }
+        ]
+    },
+    "4786": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_body_01.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    48,
+                    48,
+                    48,
+                    48
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    74,
+                    81,
+                    88,
+                    96
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    49,
+                    53,
+                    58,
+                    63
+                ]
+            },
+            {
+                "AttrType": 53,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.0931578947368421,
+                    0.10247368421052633,
+                    0.11178947368421052,
+                    0.12110526315789474
+                ]
+            },
+            {
+                "AttrType": 52,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.0931578947368421,
+                    0.10247368421052633,
+                    0.11178947368421052,
+                    0.12110526315789474
+                ]
+            },
+            {
+                "AttrType": 51,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.0931578947368421,
+                    0.10247368421052633,
+                    0.11178947368421052,
+                    0.12110526315789474
+                ]
+            },
+            {
+                "AttrType": 54,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.0931578947368421,
+                    0.10247368421052633,
+                    0.11178947368421052,
+                    0.12110526315789474
+                ]
+            }
+        ]
+    },
+    "4790": {
+        "Rarity": 5,
+        "Icon": "/ui/ef/itemicon/item_equip_t4_parts_wuling00_hand_01.png",
+        "SuitId": "suit_generaltype",
+        "AttrModifiers": [
+            {
+                "AttrType": 3,
+                "Formula": "BaseAddition",
+                "Values": [
+                    36,
+                    36,
+                    36,
+                    36
+                ]
+            },
+            {
+                "AttrType": 10000,
+                "Formula": "BaseAddition",
+                "Values": [
+                    55,
+                    60,
+                    66,
+                    71
+                ]
+            },
+            {
+                "AttrType": 10001,
+                "Formula": "BaseAddition",
+                "Values": [
+                    37,
+                    40,
+                    44,
+                    48
+                ]
+            },
+            {
+                "AttrType": 53,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.15526315789473685,
+                    0.17078947368421055,
+                    0.1863157894736842,
+                    0.2018421052631579
+                ]
+            },
+            {
+                "AttrType": 52,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.15526315789473685,
+                    0.17078947368421055,
+                    0.1863157894736842,
+                    0.2018421052631579
+                ]
+            },
+            {
+                "AttrType": 51,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.15526315789473685,
+                    0.17078947368421055,
+                    0.1863157894736842,
+                    0.2018421052631579
+                ]
+            },
+            {
+                "AttrType": 54,
+                "Formula": "BaseAddition",
+                "Values": [
+                    0.15526315789473685,
+                    0.17078947368421055,
+                    0.1863157894736842,
+                    0.2018421052631579
+                ]
+            }
+        ]
     }
 }

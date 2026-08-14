@@ -108,5 +108,10 @@
         "Icon": "/ui/ef/equipmentlogobigwhite/icon_pack_wuling_suit_usp02.png",
         "NameHash": "3789200506194814524",
         "SkillId": 3226
+    },
+    "suit_generaltype": {
+        "Icon": "/ui/ef/equipmentlogobigwhite/icon_pack_wuling_suit_fire_natr01.png",
+        "NameHash": "4545517051165535353",
+        "SkillId": 3756
     }
 }
