@@ -1,702 +1,760 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endfield Client Documentation</title>
+    <title>Endfield SDK — API Reference</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-</head>
-<body>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2>Endfield SDK</h2>
-            </div>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search methods & models..." aria-label="Search">
-            </div>
-            <div class="sidebar-menu">
-                <h3 class="menu-heading">Methods</h3>
-                <ul class="nav-list" id="methods-list">
-                    <li><a href="#init" class="nav-item">__init__</a></li>
-                    <li><a href="#close" class="nav-item">close</a></li>
-                    <li><a href="#get_detailed_stats" class="nav-item">get_detailed_stats</a></li>
-                    <li><a href="#get_showcase" class="nav-item">get_showcase</a></li>
-                    <li><a href="#get_character_showcase" class="nav-item">get_character_showcase</a></li>
-                    <li><a href="#get_profile" class="nav-item">get_profile</a></li>
-                    <li><a href="#get_game_stats" class="nav-item">get_game_stats</a></li>
-                    <li><a href="#perform_daily_sign" class="nav-item">perform_daily_sign</a></li>
-                    <li><a href="#check_for_updates" class="nav-item">check_for_updates</a></li>
-                    <li><a href="#update_assets" class="nav-item">update_assets</a></li>
-                    <li><a href="#get_factory_blueprints" class="nav-item">get_factory_blueprints</a></li>
-                </ul>
-
-                <h3 class="menu-heading">Models</h3>
-                <ul class="nav-list" id="models-list">
-                    <li><a href="#model_ShowcaseData" class="nav-item">ShowcaseData</a></li>
-                    <li><a href="#model_PlayerProfile" class="nav-item">PlayerProfile</a></li>
-                    <li><a href="#model_CharacterData" class="nav-item">CharacterData</a></li>
-                    <li><a href="#model_WeaponData" class="nav-item">WeaponData</a></li>
-                    <li><a href="#model_EquipData" class="nav-item">EquipData</a></li>
-                    <li><a href="#model_TalentInfo" class="nav-item">TalentInfo</a></li>
-                    <li><a href="#model_ComputedStats" class="nav-item">ComputedStats</a></li>
-                    <li><a href="#model_GameStats" class="nav-item">GameStats</a></li>
-                    <li><a href="#model_FactoryPlans" class="nav-item">FactoryPlans</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="topbar">
-                <button id="mobile-toggle" class="mobile-toggle">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-                <h1>Endfield Client API Reference</h1>
-            </header>
-            
-            <div class="content-wrapper">
-                <section class="intro">
-                    <p>Welcome to the <strong>Endfield SDK Documentation</strong>. This page provides a detailed reference for all publicly available methods on the <code>Endfield</code> client and the data models they return.</p>
-                </section>
-
-                <div class="divider"></div>
-
-                <!-- Methods Section -->
-                <section id="methods" class="section-group">
-                    <h2 class="section-title">Methods</h2>
-
-                    <div class="card" id="init">
-                        <h3><code class="language-python">__init__(session=None, debug=False, timeout=5, proxy_pool=None)</code></h3>
-                        <p class="description">Initialize the Endfield client.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>session</code> <em>(Optional[aiohttp.ClientSession])</em>: Optional aiohttp.ClientSession to use for requests.</li>
-                                <li><code>debug</code> <em>(bool)</em>: Enable debug logging. Default is <code>False</code>.</li>
-                                <li><code>timeout</code> <em>(int)</em>: Timeout in seconds for requests. Default is <code>5</code>.</li>
-                                <li><code>proxy_pool</code> <em>(Optional[ProxyPool])</em>: Optional ProxyPool to use for auth requests.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="close">
-                        <h3><code class="language-python">close() -> None</code></h3>
-                        <p class="description">Close the internal aiohttp client session if it was not provided externally.</p>
-                    </div>
-
-                    <div class="card" id="get_detailed_stats">
-                        <h3><code class="language-python">get_detailed_stats(char_data: CharacterData) -> ComputedStatsWithDetails</code></h3>
-                        <p class="description">Get detailed computed stats for a given character.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>char_data</code> <em>(CharacterData)</em>: The CharacterData object to compute details for.</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><a href="#model_ComputedStatsWithDetails"><code>ComputedStatsWithDetails</code></a>: An object containing detailed stats, names, and icons.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="get_showcase">
-                        <h3><code class="language-python">async get_showcase(uid: int | str) -> ShowcaseData</code></h3>
-                        <p class="description">Retrieve showcase data (profile and characters) for a specific user ID.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>uid</code> <em>(int | str)</em>: The user ID (UID) to fetch the showcase for.</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><a href="#model_ShowcaseData"><code>ShowcaseData</code></a>: The retrieved showcase data including profile and all showcased characters.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="get_character_showcase">
-                        <h3><code class="language-python">async get_character_showcase(uid: int | str, index: int = 0) -> CharacterData</code></h3>
-                        <p class="description">Retrieve character showcase data for a specific user ID and character index.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>uid</code> <em>(int | str)</em>: The user ID (UID) to fetch the showcase for.</li>
-                                <li><code>index</code> <em>(int)</em>: The index of the character in the showcase (default 0).</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><a href="#model_CharacterData"><code>CharacterData</code></a>: Detailed data for the specified character.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="get_profile">
-                        <h3><code class="language-python">async get_profile(uid: int | str) -> PlayerProfile</code></h3>
-                        <p class="description">Retrieve only the player profile data for a specific user ID.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>uid</code> <em>(int | str)</em>: The user ID (UID) to fetch the profile for.</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><a href="#model_PlayerProfile"><code>PlayerProfile</code></a>: The player's profile data.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="get_game_stats">
-                        <h3><code class="language-python">async get_game_stats(token: str, server: int = 3) -> GameStats | None</code></h3>
-                        <p class="description">Fetch game statistics using an authentication token.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>token</code> <em>(str)</em>: The authentication token.</li>
-                                <li><code>server</code> <em>(int)</em>: The server ID (default 3).</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><a href="#model_GameStats"><code>GameStats | None</code></a>: Game statistics if successful, None otherwise.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="perform_daily_sign">
-                        <h3><code class="language-python">async perform_daily_sign(token: str) -> str</code></h3>
-                        <p class="description">Perform daily sign-in using an authentication token.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>token</code> <em>(str)</em>: The authentication token.</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><code>str</code>: A message indicating the result of the sign-in.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="check_for_updates">
-                        <h3><code class="language-python">async check_for_updates() -> Any</code></h3>
-                        <p class="description">Check for available asset updates.</p>
-                        <div class="params">
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><code>Any</code>: The update check result based on the underlying check_update implementation.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="update_assets">
-                        <h3><code class="language-python">async update_assets() -> None</code></h3>
-                        <p class="description">Download and apply updates for assets.</p>
-                    </div>
-
-                    <div class="card" id="get_factory_blueprints">
-                        <h3><code class="language-python">async get_factory_blueprints(region="Both", item="all", start=0, end=10) -> FactoryPlans</code></h3>
-                        <p class="description">Gets factory blueprints from the Endfieldtools API, with optional filtering by region and output item, and pagination support.</p>
-                        <div class="params">
-                            <h4>Parameters</h4>
-                            <ul>
-                                <li><code>region</code> <em>(Literal["Americas/Europe", "Asia", "Both"])</em>: Filter blueprints by region. Default is "Both".</li>
-                                <li><code>item</code> <em>(Literal["all"] | items)</em>: Filter blueprints by output item. Default is "all".</li>
-                                <li><code>start</code> <em>(int)</em>: The starting index for pagination (0-based). Default is 0.</li>
-                                <li><code>end</code> <em>(int)</em>: The ending index for pagination (exclusive). Default is 10.</li>
-                            </ul>
-                            <h4>Returns</h4>
-                            <ul>
-                                <li><a href="#model_FactoryPlans"><code>FactoryPlans</code></a>: An object containing a list of blueprints and the total count of blueprints matching the filters.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="divider"></div>
-
-                <!-- Models Section -->
-                <section id="models" class="section-group">
-                    <h2 class="section-title">Models</h2>
-
-                    <div class="card" id="model_ShowcaseData">
-                        <h3>ShowcaseData</h3>
-                        <p class="description">The master object representing a player's showcase data.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>profile</code> <em>(<a href="#model_PlayerProfile">PlayerProfile</a>)</em>: The basic player profile and statistics.</li>
-                                <li><code>characters</code> <em>(List[<a href="#model_CharacterData">CharacterData</a>])</em>: The list of characters in the player's showcase.</li>
-                                <li><code>ttl</code> <em>(int | null)</em>: Time-to-live for cache.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_PlayerProfile">
-                        <h3>PlayerProfile</h3>
-                        <p class="description">Information regarding a player's profile in the game.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>uid</code> <em>(str)</em>: The player UID.</li>
-                                <li><code>name</code> <em>(str)</em>: The player's name.</li>
-                                <li><code>short_id</code> <em>(str)</em>: Short identifier.</li>
-                                <li><code>signature</code> <em>(str)</em>: Player's signature.</li>
-                                <li><code>avatar_url</code> <em>(str)</em>: Avatar image URL.</li>
-                                <li><code>bg_url</code> <em>(str)</em>: Profile background URL.</li>
-                                <li><code>adventure_level</code> <em>(int)</em>: The adventure level of the player.</li>
-                                <li><code>world_level</code> <em>(int)</em>: The world level of the player.</li>
-                                <li><code>char_count</code>, <code>weapon_count</code>, <code>doc_count</code> <em>(int)</em>: Statistics.</li>
-                                <li><code>domain_progress</code> <em>(List[<a href="#model_DomainProgress">DomainProgress</a>])</em>: Progress across various domains.</li>
-                                <li><code>medals</code> <em>(<a href="#model_Medals">Medals</a>)</em>: Player's achievements/medals.</li>
-                                <li><code>characters</code> <em>(List[<a href="#model_ProfileCharacter">ProfileCharacter</a>])</em>: The characters configured in the player's profile display.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_DomainProgress">
-                        <h3>DomainProgress</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>domain_id</code> <em>(str)</em>: Unique domain identifier.</li>
-                                <li><code>level</code> <em>(int)</em>: Current progress level.</li>
-                                <li><code>name</code> <em>(str)</em>: Display name of the domain.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_Medals">
-                        <h3>Medals</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>medals</code> <em>(List[<a href="#model_Medal">Medal</a>])</em>: Collection of medals.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card" id="model_Medal">
-                        <h3>Medal</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>index</code> <em>(int)</em>: Display index/order.</li>
-                                <li><code>name</code> <em>(str)</em>: Name of the medal.</li>
-                                <li><code>description</code> <em>(str)</em>: Achievement description.</li>
-                                <li><code>icon_url</code> <em>(str)</em>: Medal image URL.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_ProfileCharacter">
-                        <h3>ProfileCharacter</h3>
-                        <p class="description">Lightweight character data displayed on the user's profile card.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>template_id</code> <em>(int)</em>: Character template ID.</li>
-                                <li><code>str_id</code> <em>(str)</em>: String identifier (e.g., "chr_0030_zhuangfy").</li>
-                                <li><code>name</code> <em>(str)</em>: Character name.</li>
-                                <li><code>level</code> <em>(int)</em>: Character level.</li>
-                                <li><code>potential_level</code> <em>(int)</em>: Character potential level.</li>
-                                <li><code>rarity</code> <em>(int)</em>: Character rarity (e.g., 6).</li>
-                                <li><code>element</code> <em>(str)</em>: Elemental affinity.</li>
-                                <li><code>profession</code> <em>(str)</em>: Class or profession (e.g., "ASSAULT").</li>
-                                <li><code>splash_url</code> <em>(str)</em>: Character splash art URL.</li>
-                                <li><code>round_icon_url</code> <em>(str)</em>: Round avatar icon URL.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_CharacterData">
-                        <h3>CharacterData</h3>
-                        <p class="description">Extensive data describing a character's stats, level, equipment, and talents.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>template_id</code>, <code>str_id</code>, <code>name</code>, <code>rarity</code>, <code>element</code>, <code>profession</code>, <code>weapon_type</code></li>
-                                <li><code>level</code>, <code>potential_level</code> <em>(int)</em></li>
-                                <li><code>splash_url</code>, <code>bg_url</code>, <code>round_icon_url</code> <em>(str)</em></li>
-                                <li><code>main_attribute</code>, <code>sub_attribute</code> <em>(<a href="#model_CharAttr">CharAttr</a>)</em>: Primary/Secondary base attributes.</li>
-                                <li><code>base_atk</code>, <code>base_hp</code> <em>(<a href="#model_BaseAttr">BaseAttr</a>)</em></li>
-                                <li><code>base_attribute</code> <em>(List[<a href="#model_BaseAttr">BaseAttr</a>])</em>: Full list of base attribute modifiers.</li>
-                                <li><code>weapon</code> <em>(<a href="#model_WeaponData">WeaponData</a>)</em>: Information regarding the equipped weapon.</li>
-                                <li><code>equips</code> <em>(List[<a href="#model_EquipData">EquipData</a>])</em>: Information regarding equipped relics/items.</li>
-                                <li><code>suit_sets</code> <em>(<a href="#model_SuitSet">SuitSet</a> | null)</em>: Active relic suit set bonuses.</li>
-                                <li><code>skills</code> <em>(<a href="#model_SkillMeta">SkillMeta</a>)</em>: Character active skills.</li>
-                                <li><code>talents</code> <em>(<a href="#model_TalentInfo">TalentInfo</a>)</em>: Character talent trees and nodes.</li>
-                                <li><code>stats</code> <em>(<a href="#model_ComputedStats">ComputedStats</a>)</em>: Final computed statistical map.</li>
-                                <li><code>detailed_stats</code> <em>(<a href="#model_ComputedStatsWithDetails">ComputedStatsWithDetails</a>)</em>: Expanded view of <code>stats</code> with icons.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_CharAttr">
-                        <h3>CharAttr</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>attri_id</code> <em>(str)</em></li>
-                                <li><code>attri_name</code> <em>(str)</em></li>
-                                <li><code>url</code> <em>(str)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_BaseAttr">
-                        <h3>BaseAttr</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>attri_id</code>, <code>attri_name</code>, <code>url</code> <em>(str)</em></li>
-                                <li><code>value</code> <em>(float)</em></li>
-                                <li><code>is_float</code> <em>(bool)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_WeaponData">
-                        <h3>WeaponData</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>weapon_id</code>, <code>name</code>, <code>weapon_type</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>rarity</code>, <code>level</code>, <code>refine_lv</code>, <code>breakthrough_lv</code> <em>(int)</em></li>
-                                <li><code>base_atk</code> <em>(float)</em></li>
-                                <li><code>skill_levels</code> <em>(List[int])</em></li>
-                                <li><code>skills</code> <em>(List[<a href="#model_WeaponSkill">WeaponSkill</a>])</em>: Weapon passive skill enhancements.</li>
-                                <li><code>main_stat</code> <em>(<a href="#model_MainStat">MainStat</a>)</em>: Main attribute addition.</li>
-                                <li><code>gem</code> <em>(<a href="#model_Gem">Gem</a> | null)</em>: Slotted weapon gem info.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_WeaponSkill">
-                        <h3>WeaponSkill</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>skill_id</code>, <code>tag_id</code>, <code>prop_id</code>, <code>formula</code>, <code>prop_name</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>base_lvl</code>, <code>max_lvl</code>, <code>current_lvl</code> <em>(int)</em></li>
-                                <li><code>value</code> <em>(float)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_MainStat">
-                        <h3>MainStat</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>prop_id</code>, <code>prop_name</code>, <code>formula</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>value</code> <em>(float)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_Gem">
-                        <h3>Gem</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>rarity</code> <em>(int)</em></li>
-                                <li><code>name</code>, <code>inner_icon_url</code>, <code>cover_icon_url</code> <em>(str)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_EquipData">
-                        <h3>EquipData</h3>
-                        <p class="description">Equipped relic item.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>slot_id</code>, <code>template_id</code>, <code>rarity</code> <em>(int)</em></li>
-                                <li><code>suit_id</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>attr_modifiers</code> <em>(List[<a href="#model_AttrModifier">AttrModifier</a>])</em>: Refined substats and main stats.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_AttrModifier">
-                        <h3>AttrModifier</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>index</code>, <code>attr_type</code>, <code>enhance_level</code> <em>(int)</em></li>
-                                <li><code>attr_name</code>, <code>formula</code>, <code>icon</code> <em>(str)</em></li>
-                                <li><code>value</code> <em>(float)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_SuitSet">
-                        <h3>SuitSet</h3>
-                        <p class="description">Set bonuses for equipped relics.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>suit_id</code>, <code>name</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>pieces_equipped</code> <em>(int)</em></li>
-                                <li><code>is_active</code> <em>(bool)</em></li>
-                                <li><code>active_bonus</code> <em>(<a href="#model_SuitSetEffect">SuitSetEffect</a> | null)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_SuitSetEffect">
-                        <h3>SuitSetEffect</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>tagid</code> <em>(str)</em></li>
-                                <li><code>propmap</code> <em>(List[<a href="#model_PropMap">PropMap</a>])</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_PropMap">
-                        <h3>PropMap</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>prop_id</code>, <code>prop_name</code>, <code>formula</code> <em>(str)</em></li>
-                                <li><code>value</code> <em>(float)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_SkillMeta">
-                        <h3>SkillMeta</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>normal_skill</code>, <code>ultimate_skill</code>, <code>combo_skill</code>, <code>disp_normal_atk_skill</code> <em>(str)</em></li>
-                                <li><code>skills</code> <em>(List[<a href="#model_SkillInfo">SkillInfo</a>])</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_SkillInfo">
-                        <h3>SkillInfo</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>skill_id</code>, <code>icon_url</code>, <code>element</code> <em>(str)</em></li>
-                                <li><code>level</code>, <code>max_level</code>, <code>enhanced_level</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_TalentInfo">
-                        <h3>TalentInfo</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>latest_break_node</code> <em>(str)</em></li>
-                                <li><code>attr_nodes</code> <em>(<a href="#model_AttrNode">AttrNode</a>)</em></li>
-                                <li><code>passive_nodes</code>, <code>factory_nodes</code> <em>(List[<a href="#model_TalentNode">TalentNode</a>])</em></li>
-                                <li><code>potential_attributes</code> <em>(List[Any])</em></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card" id="model_AttrNode">
-                        <h3>AttrNode</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>attri_id</code>, <code>attri_name</code>, <code>formula</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>values</code> <em>(List[int])</em></li>
-                                <li><code>total_value</code>, <code>level</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_TalentNode">
-                        <h3>TalentNode (Passive/Factory)</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>node_id</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>level</code>, <code>index</code>, <code>type</code> <em>(int)</em></li>
-                                <li><code>is_max</code> <em>(bool)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_ComputedStats">
-                        <h3>ComputedStats</h3>
-                        <p class="description">Flat key-value pairs representing the final computed values of every stat (e.g. <code>str</code>, <code>atk</code>, <code>hp</code>, <code>crit_rate</code>, <code>pulse_dmg_bonus</code>).</p>
-                    </div>
-
-                    <div class="card" id="model_ComputedStatsWithDetails">
-                        <h3>ComputedStatsWithDetails</h3>
-                        <p class="description">Detailed stats output which maps individual computed stats to their display properties.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>all</code> <em>(List[<a href="#model_StatDetail">StatDetail</a>])</em>: The list of stat details, including name, value, and icon URLs.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_StatDetail">
-                        <h3>StatDetail</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>value</code> <em>(float)</em></li>
-                                <li><code>icon_url</code>, <code>stat_id</code>, <code>name</code> <em>(str)</em></li>
-                                <li><code>main_attri</code>, <code>sub_attri</code> <em>(bool)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_GameStats">
-                        <h3>GameStats</h3>
-                        <p class="description">Authenticated game statistics for the user.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>regions</code> <em>(Dict[str, List[<a href="#model_RegionData">RegionData</a>]])</em>: Factory and settlement stats mapped by region.</li>
-                                <li><code>sanity_point</code> <em>(<a href="#model_SanityPoint">SanityPoint</a>)</em></li>
-                                <li><code>battle_pass</code> <em>(<a href="#model_BattlePass">BattlePass</a>)</em></li>
-                                <li><code>daily_points</code> <em>(<a href="#model_Points">Points</a>)</em></li>
-                                <li><code>weekly_points</code> <em>(<a href="#model_WeeklyPoints">WeeklyPoints</a>)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_RegionData">
-                        <h3>RegionData</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>region_id</code>, <code>region_name</code> <em>(str)</em></li>
-                                <li><code>factory_level</code> <em>(int)</em></li>
-                                <li><code>factory_money</code> <em>(<a href="#model_Money">Money</a>)</em></li>
-                                <li><code>settlements</code> <em>(List[<a href="#model_Settlement">Settlement</a>])</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_Money">
-                        <h3>Money</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>current</code>, <code>max</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_Settlement">
-                        <h3>Settlement</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>id</code>, <code>name</code>, <code>char_icon</code>, <code>last_ticked</code> <em>(str)</em></li>
-                                <li><code>level</code>, <code>exp_to_level_up</code>, <code>current_exp</code> <em>(int)</em></li>
-                                <li><code>max_money</code>, <code>remaining_money</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_SanityPoint">
-                        <h3>SanityPoint</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>current</code>, <code>max</code> <em>(int)</em></li>
-                                <li><code>full_recover_at</code> <em>(str)</em>: ISO Date string.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card" id="model_BattlePass">
-                        <h3>BattlePass</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>max_level</code>, <code>current_level</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card" id="model_Points">
-                        <h3>Points</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>current</code>, <code>max</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card" id="model_WeeklyPoints">
-                        <h3>WeeklyPoints</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>score</code>, <code>total</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_FactoryPlans">
-                        <h3>FactoryPlans</h3>
-                        <p class="description">Contains data for Endfield factory blueprints retrieved from Endfieldtools API.</p>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>blueprints</code> <em>(List[<a href="#model_Blueprint">Blueprint</a>])</em>: The list of blueprint definitions and their output rates.</li>
-                                <li><code>total</code> <em>(int)</em>: The total count of matched blueprints across all pages.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_Blueprint">
-                        <h3>Blueprint</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>id</code>, <code>name</code>, <code>description</code>, <code>code</code>, <code>screenshot_url</code>, <code>region</code> <em>(str)</em></li>
-                                <li><code>output_items</code> <em>(List[<a href="#model_OutputItem">OutputItem</a>])</em></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card" id="model_OutputItem">
-                        <h3>OutputItem</h3>
-                        <div class="params">
-                            <h4>Attributes</h4>
-                            <ul>
-                                <li><code>id</code>, <code>name</code>, <code>icon_url</code> <em>(str)</em></li>
-                                <li><code>per_minute</code> <em>(int)</em></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                
-                <footer>
-                    <p>Generated by Endfield SDK Documentation Generator.</p>
-                </footer>
-            </div>
-        </main>
-    </div>
-
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="brand-mark">E</div>
+                <div class="brand-text">
+                    <div class="brand-name">Endfield SDK</div>
+                    <div class="brand-version">v1.2.0</div>
+                </div>
+            </div>
+            <div class="sidebar-scroll">
+                <details class="nav-group" open>
+                    <summary>
+                        <svg class="chev" viewBox="0 0 16 16" fill="currentColor"><path d="M5.22 10.22L9.04 6.4a.75.75 0 0 0 0-1.06L5.22 1.52a.75.75 0 1 0-1.06 1.06L7.69 8l-3.53 3.52a.75.75 0 1 0 1.06 1.06z"/></svg>
+                        Methods
+                    </summary>
+                    <ul class="nav-list">
+                        <li><a href="#init" class="nav-link"><code>__init__</code></a></li>
+                        <li><a href="#aenter" class="nav-link"><code>__aenter__</code></a></li>
+                        <li><a href="#aexit" class="nav-link"><code>__aexit__</code></a></li>
+                        <li><a href="#close" class="nav-link"><code>close</code></a></li>
+                        <li><a href="#verify_user" class="nav-link"><code>verify_user</code></a></li>
+                        <li><a href="#get_showcase" class="nav-link"><code>get_showcase</code></a></li>
+                        <li><a href="#get_character_showcase" class="nav-link"><code>get_character_showcase</code></a></li>
+                        <li><a href="#get_profile" class="nav-link"><code>get_profile</code></a></li>
+                        <li><a href="#get_detailed_stats" class="nav-link"><code>get_detailed_stats</code></a></li>
+                        <li><a href="#get_game_stats" class="nav-link"><code>get_game_stats</code></a></li>
+                        <li><a href="#get_game_character" class="nav-link"><code>get_game_character</code></a></li>
+                        <li><a href="#get_all_characters" class="nav-link"><code>get_all_characters</code></a></li>
+                        <li><a href="#perform_daily_sign" class="nav-link"><code>perform_daily_sign</code></a></li>
+                        <li><a href="#get_monument" class="nav-link"><code>get_monument</code></a></li>
+                        <li><a href="#check_for_updates" class="nav-link"><code>check_for_updates</code></a></li>
+                        <li><a href="#update_assets" class="nav-link"><code>update_assets</code></a></li>
+                        <li><a href="#get_factory_blueprints" class="nav-link"><code>get_factory_blueprints</code></a></li>
+                    </ul>
+                </details>
+                <details class="nav-group" open>
+                    <summary>
+                        <svg class="chev" viewBox="0 0 16 16" fill="currentColor"><path d="M5.22 10.22L9.04 6.4a.75.75 0 0 0 0-1.06L5.22 1.52a.75.75 0 1 0-1.06 1.06L7.69 8l-3.53 3.52a.75.75 0 1 0 1.06 1.06z"/></svg>
+                        Data Models
+                    </summary>
+                    <ul class="nav-list">
+                        <li><a href="#model_ShowcaseData" class="nav-link">ShowcaseData</a></li>
+                        <li><a href="#model_PlayerProfile" class="nav-link">PlayerProfile</a></li>
+                        <li><a href="#model_CharacterData" class="nav-link">CharacterData</a></li>
+                        <li><a href="#model_WeaponData" class="nav-link">WeaponData</a></li>
+                        <li><a href="#model_EquipData" class="nav-link">EquipData</a></li>
+                        <li><a href="#model_GameStats" class="nav-link">GameStats</a></li>
+                        <li><a href="#model_FactoryPlans" class="nav-link">FactoryPlans</a></li>
+                        <li><a href="#model_UserData" class="nav-link">UserData</a></li>
+                        <li><a href="#model_AllCharacters" class="nav-link">AllCharacters</a></li>
+                        <li><a href="#model_Character" class="nav-link">Character</a></li>
+                    </ul>
+                </details>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main">
+            <!-- Topbar -->
+            <header class="topbar">
+                <button class="drawer-toggle icon-btn" id="drawer-toggle" aria-label="Toggle sidebar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                
+                <div class="search-trigger" id="search-trigger">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                    <span class="label">Search methods...</span>
+                    <kbd>⌘K</kbd>
+                </div>
+
+                <div class="topbar-nav">
+                    <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <svg class="moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <svg class="sun" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page -->
+            <div class="page">
+                <!-- Content -->
+                <div class="content">
+                    <!-- Hero -->
+                    <section class="hero">
+                        <div class="eyebrow">
+                            <span>Python SDK</span>
+                        </div>
+                        <h1>Endfield Client API</h1>
+                        <p class="lede">Complete reference for the Endfield Python SDK. Fetch player profiles, character data, game statistics, and factory blueprints from the Endfield game API.</p>
+                        <div class="hero-actions">
+                            <a href="https://github.com/MR-LORD-REX/endfield" class="btn" target="_blank">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </section>
+
+                    <hr class="rule">
+
+                    <!-- Methods Section -->
+                    <section id="methods">
+                        <h2>Methods</h2>
+                        <p class="section-lede">The main <code>Endfield</code> client class provides all functionality for querying player data and game information.</p>
+
+
+                        <!-- __init__ -->
+                        <div class="api" id="init">
+                            <h3><code><span class="kw">def</span> <span class="fn">__init__</span>(session=<span class="kw">None</span>, debug=<span class="kw">False</span>, timeout=5, proxy_pool=<span class="kw">None</span>)</code></h3>
+                            <p class="desc">Initialize the Endfield client.</p>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>session</td><td><span class="t-type">Optional[aiohttp.ClientSession]</span></td></tr>
+                                        <tr><td>debug</td><td><span class="t-type">bool</span> — Enable debug logging. Default: <code>False</code></td></tr>
+                                        <tr><td>timeout</td><td><span class="t-type">int</span> — Timeout in seconds. Default: <code>5</code></td></tr>
+                                        <tr><td>proxy_pool</td><td><span class="t-type">Optional[ProxyPool]</span> — Proxy pool for auth requests</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- __aenter__ / __aexit__ -->
+                        <div class="api" id="aenter">
+                            <h3><code><span class="kw">async</span> <span class="fn">__aenter__</span>()</code></h3>
+                            <p class="desc">Async context manager entry.</p>
+                        </div>
+
+                        <div class="api" id="aexit">
+                            <h3><code><span class="kw">async</span> <span class="fn">__aexit__</span>(exc_type, exc_val, exc_tb)</code></h3>
+                            <p class="desc">Async context manager exit. Ensures the session is closed.</p>
+                        </div>
+
+                        <!-- close -->
+                        <div class="api" id="close">
+                            <h3><code><span class="kw">def</span> <span class="fn">close</span>() <span class="ret">→ None</span></code></h3>
+                            <p class="desc">Close the internal aiohttp ClientSession if it was created internally (not provided externally).</p>
+                        </div>
+
+                        <!-- verify_user -->
+                        <div class="api" id="verify_user">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-token">requires token</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">verify_user</span>(token: str) <span class="ret">→ UserData | None</span></code></h3>
+                            <p class="desc">Verify an authentication token and retrieve user information.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>token</td><td><span class="t-type">str</span> — Authentication token</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>result</td><td><span class="t-type"><a href="#model_UserData">UserData</a> | None</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_showcase -->
+                        <div class="api" id="get_showcase">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-uid">requires uid</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_showcase</span>(uid: int | str) <span class="ret">→ <a href="#model_ShowcaseData">ShowcaseData</a></span></code></h3>
+                            <p class="desc">Retrieve showcase data (profile and characters) for a specific user ID.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>uid</td><td><span class="t-type">int | str</span> — User ID (UID)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>showcase</td><td><span class="t-type"><a href="#model_ShowcaseData">ShowcaseData</a></span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_character_showcase -->
+                        <div class="api" id="get_character_showcase">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-uid">requires uid</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_character_showcase</span>(uid: int | str, index: int = 0) <span class="ret">→ <a href="#model_CharacterData">CharacterData</a></span></code></h3>
+                            <p class="desc">Retrieve character showcase data for a specific user ID and character index.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>uid</td><td><span class="t-type">int | str</span> — User ID (UID)</td></tr>
+                                        <tr><td>index</td><td><span class="t-type">int</span> — Character index. Default: <code>0</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>character</td><td><span class="t-type"><a href="#model_CharacterData">CharacterData</a></span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_profile -->
+                        <div class="api" id="get_profile">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-uid">requires uid</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_profile</span>(uid: int | str) <span class="ret">→ <a href="#model_PlayerProfile">PlayerProfile</a></span></code></h3>
+                            <p class="desc">Retrieve only the player profile data for a specific user ID.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>uid</td><td><span class="t-type">int | str</span> — User ID (UID)</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>profile</td><td><span class="t-type"><a href="#model_PlayerProfile">PlayerProfile</a></span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_detailed_stats -->
+                        <div class="api" id="get_detailed_stats">
+                            <div class="badges"><span class="badge badge-sync">sync</span><span class="badge badge-offline">offline</span></div>
+                            <h3><code><span class="kw">def</span> <span class="fn">get_detailed_stats</span>(char_data: <a href="#model_CharacterData">CharacterData</a>) <span class="ret">→ dict</span></code></h3>
+                            <p class="desc">Compute detailed stats for a character with display names and icon URLs.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>char_data</td><td><span class="t-type"><a href="#model_CharacterData">CharacterData</a></span> — Character to compute</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>stats</td><td><span class="t-type">dict</span> — Detailed stat info with icons and names</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_game_stats -->
+                        <div class="api" id="get_game_stats">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-token">requires token</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_game_stats</span>(token: str, server: int = 3) <span class="ret">→ <a href="#model_GameStats">GameStats</a> | None</span></code></h3>
+                            <p class="desc">Fetch game statistics using an authentication token.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>token</td><td><span class="t-type">str</span> — Authentication token</td></tr>
+                                        <tr><td>server</td><td><span class="t-type">int</span> — Server ID. Default: <code>3</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>stats</td><td><span class="t-type"><a href="#model_GameStats">GameStats</a> | None</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_game_character -->
+                        <div class="api" id="get_game_character">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-token">requires token</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_game_character</span>(token: str, char_id: str, server: int = 3) <span class="ret">→ <a href="#model_CharacterData">CharacterData</a> | None</span></code></h3>
+                            <p class="desc">Fetch a specific character from the authenticated user's roster.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>token</td><td><span class="t-type">str</span> — Authentication token</td></tr>
+                                        <tr><td>char_id</td><td><span class="t-type">str</span> — Character hashed ID (<a href="#get_all_characters"> use get_all_characters </a>)</td></tr>
+                                        <tr><td>server</td><td><span class="t-type">int</span> — Server ID. Default: <code>3</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>character</td><td><span class="t-type"><a href="#model_CharacterData">CharacterData</a> | None</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_all_characters -->
+                        <div class="api" id="get_all_characters">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-token">requires token</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_all_characters</span>(token: str) <span class="ret">→ <a href="#model_AllCharacters">AllCharacters</a> | None</span></code></h3>
+                            <p class="desc">Fetch all characters from the authenticated user's roster.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>token</td><td><span class="t-type">str</span> — Authentication token</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>result</td><td><span class="t-type"><a href="#model_AllCharacters">AllCharacters</a> | None</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- perform_daily_sign -->
+                        <div class="api" id="perform_daily_sign">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-token">requires token</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">perform_daily_sign</span>(token: str) <span class="ret">→ str</span></code></h3>
+                            <p class="desc">Perform daily sign-in using an authentication token.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>token</td><td><span class="t-type">str</span> — Authentication token</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>message</td><td><span class="t-type">str</span> — Sign-in result message</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- get_monument -->
+                        <div class="api" id="get_monument">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-token">requires token</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_monument</span>(token: str, server: int = 3) <span class="ret">→ dict | None</span></code></h3>
+                            <p class="desc">Fetch monument/building data for the authenticated user.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>token</td><td><span class="t-type">str</span> — Authentication token</td></tr>
+                                        <tr><td>server</td><td><span class="t-type">int</span> — Server ID. Default: <code>3</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>monument</td><td><span class="t-type">dict | None</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- check_for_updates -->
+                        <div class="api" id="check_for_updates">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-offline">offline</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">check_for_updates</span>() <span class="ret">→ Any</span></code></h3>
+                            <p class="desc">Check for available asset updates.</p>
+                        </div>
+
+                        <!-- update_assets -->
+                        <div class="api" id="update_assets">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-offline">offline</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">update_assets</span>() <span class="ret">→ None</span></code></h3>
+                            <p class="desc">Download and apply asset updates.</p>
+                        </div>
+
+                        <!-- get_factory_blueprints -->
+                        <div class="api" id="get_factory_blueprints">
+                            <div class="badges"><span class="badge badge-async">async</span><span class="badge badge-offline">offline</span></div>
+                            <h3><code><span class="kw">async</span> <span class="fn">get_factory_blueprints</span>(region="Both", item="all", start=0, end=10) <span class="ret">→ <a href="#model_FactoryPlans">FactoryPlans</a></span></code></h3>
+                            <p class="desc">Fetch factory blueprints from the Endfieldtools API with optional filtering and pagination.</p>
+                            <h4>Parameters</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>region</td><td><span class="t-type">str</span> — "Americas/Europe", "Asia", or "Both". Default: <code>"Both"</code></td></tr>
+                                        <tr><td>item</td><td><span class="t-type">str</span> — Filter by output item or "all". Default: <code>"all"</code></td></tr>
+                                        <tr><td>start</td><td><span class="t-type">int</span> — Pagination start index. Default: <code>0</code></td></tr>
+                                        <tr><td>end</td><td><span class="t-type">int</span> — Pagination end index. Default: <code>10</code></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4>Returns</h4>
+                            <div class="table-wrap">
+                                <table class="kv">
+                                    <tbody>
+                                        <tr><td>plans</td><td><span class="t-type"><a href="#model_FactoryPlans">FactoryPlans</a></span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="rule">
+
+                    <!-- Models Section -->
+                    <section id="models">
+                        <h2>Data Models</h2>
+                        <p class="section-lede">Complete reference for all data structures returned by the SDK.</p>
+
+
+                        <!-- ShowcaseData -->
+                        <div class="api" id="model_ShowcaseData">
+                            <h3>ShowcaseData</h3>
+                            <p class="desc">Master object representing a player's showcase data.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>profile</code></td><td><span class="t-type"><a href="#model_PlayerProfile">PlayerProfile</a></span></td><td>Player profile and statistics</td></tr>
+                                        <tr><td><code>characters</code></td><td><span class="t-type">list[<a href="#model_CharacterData">CharacterData</a>]</span></td><td>Showcased characters</td></tr>
+                                        <tr><td><code>ttl</code></td><td><span class="t-type">int | null</span></td><td>Cache time-to-live</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- PlayerProfile -->
+                        <div class="api" id="model_PlayerProfile">
+                            <h3>PlayerProfile</h3>
+                            <p class="desc">Player profile information.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>uid</code></td><td><span class="t-type">str</span></td><td>Player UID</td></tr>
+                                        <tr><td><code>name</code></td><td><span class="t-type">str</span></td><td>Player name</td></tr>
+                                        <tr><td><code>short_id</code></td><td><span class="t-type">str</span></td><td>Short identifier</td></tr>
+                                        <tr><td><code>signature</code></td><td><span class="t-type">str</span></td><td>Player signature/bio</td></tr>
+                                        <tr><td><code>avatar_url</code></td><td><span class="t-type">str</span></td><td>Avatar image URL</td></tr>
+                                        <tr><td><code>bg_url</code></td><td><span class="t-type">str</span></td><td>Profile background URL</td></tr>
+                                        <tr><td><code>adventure_level</code></td><td><span class="t-type">int</span></td><td>Adventure level</td></tr>
+                                        <tr><td><code>world_level</code></td><td><span class="t-type">int</span></td><td>World level</td></tr>
+                                        <tr><td><code>char_count</code></td><td><span class="t-type">int</span></td><td>Total characters owned</td></tr>
+                                        <tr><td><code>weapon_count</code></td><td><span class="t-type">int</span></td><td>Total weapons owned</td></tr>
+                                        <tr><td><code>doc_count</code></td><td><span class="t-type">int</span></td><td>Total documents collected</td></tr>
+                                        <tr><td><code>domain_progress</code></td><td><span class="t-type">list[dict]</span></td><td>Domain progression</td></tr>
+                                        <tr><td><code>medals</code></td><td><span class="t-type">dict</span></td><td>Player achievements</td></tr>
+                                        <tr><td><code>characters</code></td><td><span class="t-type">list[dict]</span></td><td>Profile display characters</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- CharacterData -->
+                        <div class="api" id="model_CharacterData">
+                            <h3>CharacterData</h3>
+                            <p class="desc">Comprehensive character information including stats, equipment, and talents.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>template_id</code></td><td><span class="t-type">int</span></td><td>Character template ID</td></tr>
+                                        <tr><td><code>str_id</code></td><td><span class="t-type">str</span></td><td>String identifier (e.g., "chr_0030_zhuangfy")</td></tr>
+                                        <tr><td><code>name</code></td><td><span class="t-type">str</span></td><td>Character name</td></tr>
+                                        <tr><td><code>rarity</code></td><td><span class="t-type">int</span></td><td>Rarity level</td></tr>
+                                        <tr><td><code>element</code></td><td><span class="t-type">str</span></td><td>Elemental affinity</td></tr>
+                                        <tr><td><code>profession</code></td><td><span class="t-type">str</span></td><td>Class/profession type</td></tr>
+                                        <tr><td><code>weapon_type</code></td><td><span class="t-type">str</span></td><td>Weapon type restriction</td></tr>
+                                        <tr><td><code>level</code></td><td><span class="t-type">int</span></td><td>Current level</td></tr>
+                                        <tr><td><code>potential_level</code></td><td><span class="t-type">int</span></td><td>Potential breakthrough level</td></tr>
+                                        <tr><td><code>splash_url</code></td><td><span class="t-type">str</span></td><td>Splash art URL</td></tr>
+                                        <tr><td><code>round_icon_url</code></td><td><span class="t-type">str</span></td><td>Round icon URL</td></tr>
+                                        <tr><td><code>weapon</code></td><td><span class="t-type"><a href="#model_WeaponData">WeaponData</a></span></td><td>Equipped weapon</td></tr>
+                                        <tr><td><code>equips</code></td><td><span class="t-type">list[<a href="#model_EquipData">EquipData</a>]</span></td><td>Equipped relics</td></tr>
+                                        <tr><td><code>stats</code></td><td><span class="t-type">dict</span></td><td>Computed final stats</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- WeaponData -->
+                        <div class="api" id="model_WeaponData">
+                            <h3>WeaponData</h3>
+                            <p class="desc">Equipped weapon information.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>weapon_id</code></td><td><span class="t-type">str</span></td><td>Weapon identifier</td></tr>
+                                        <tr><td><code>name</code></td><td><span class="t-type">str</span></td><td>Weapon name</td></tr>
+                                        <tr><td><code>weapon_type</code></td><td><span class="t-type">str</span></td><td>Weapon category</td></tr>
+                                        <tr><td><code>rarity</code></td><td><span class="t-type">int</span></td><td>Rarity level</td></tr>
+                                        <tr><td><code>level</code></td><td><span class="t-type">int</span></td><td>Current level</td></tr>
+                                        <tr><td><code>refine_lv</code></td><td><span class="t-type">int</span></td><td>Refinement level</td></tr>
+                                        <tr><td><code>breakthrough_lv</code></td><td><span class="t-type">int</span></td><td>Breakthrough level</td></tr>
+                                        <tr><td><code>base_atk</code></td><td><span class="t-type">float</span></td><td>Base attack value</td></tr>
+                                        <tr><td><code>icon_url</code></td><td><span class="t-type">str</span></td><td>Weapon icon URL</td></tr>
+                                        <tr><td><code>skill_levels</code></td><td><span class="t-type">list[int]</span></td><td>Passive skill levels</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- EquipData -->
+                        <div class="api" id="model_EquipData">
+                            <h3>EquipData</h3>
+                            <p class="desc">Equipped relic item information.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>slot_id</code></td><td><span class="t-type">int</span></td><td>Equipment slot</td></tr>
+                                        <tr><td><code>template_id</code></td><td><span class="t-type">int</span></td><td>Relic template ID</td></tr>
+                                        <tr><td><code>suit_id</code></td><td><span class="t-type">str</span></td><td>Suit set identifier</td></tr>
+                                        <tr><td><code>rarity</code></td><td><span class="t-type">int</span></td><td>Rarity level</td></tr>
+                                        <tr><td><code>icon_url</code></td><td><span class="t-type">str</span></td><td>Relic icon URL</td></tr>
+                                        <tr><td><code>attr_modifiers</code></td><td><span class="t-type">list[dict]</span></td><td>Main and sub-stats</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- GameStats -->
+                        <div class="api" id="model_GameStats">
+                            <h3>GameStats</h3>
+                            <p class="desc">Authenticated game statistics for the user.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>regions</code></td><td><span class="t-type">dict[str, list[dict]]</span></td><td>Factory and settlement stats by region</td></tr>
+                                        <tr><td><code>sanity_point</code></td><td><span class="t-type">dict</span></td><td>Current/max sanity and recovery time</td></tr>
+                                        <tr><td><code>battle_pass</code></td><td><span class="t-type">dict</span></td><td>Battle pass level info</td></tr>
+                                        <tr><td><code>daily_points</code></td><td><span class="t-type">dict</span></td><td>Daily points current/max</td></tr>
+                                        <tr><td><code>weekly_points</code></td><td><span class="t-type">dict</span></td><td>Weekly challenge points</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- FactoryPlans -->
+                        <div class="api" id="model_FactoryPlans">
+                            <h3>FactoryPlans</h3>
+                            <p class="desc">Factory blueprint data from Endfieldtools API.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>blueprints</code></td><td><span class="t-type">list[dict]</span></td><td>Blueprint definitions and output rates</td></tr>
+                                        <tr><td><code>total</code></td><td><span class="t-type">int</span></td><td>Total matched blueprints across all pages</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- UserData -->
+                        <div class="api" id="model_UserData">
+                            <h3>UserData</h3>
+                            <p class="desc">Authenticated user information from token verification.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>token</code></td><td><span class="t-type">str</span></td><td>Authentication token</td></tr>
+                                        <tr><td><code>uid</code></td><td><span class="t-type">str</span></td><td>User ID</td></tr>
+                                        <tr><td><code>name</code></td><td><span class="t-type">str</span></td><td>Username</td></tr>
+                                        <tr><td><code>server</code></td><td><span class="t-type">int</span></td><td>Home server ID</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- AllCharacters -->
+                        <div class="api" id="model_AllCharacters">
+                            <h3>AllCharacters</h3>
+                            <p class="desc">Collection of all characters for an authenticated user.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>characters</code></td><td><span class="t-type">list[<a href="#model_Character">Character</a>]</span></td><td>List of character objects with basic info</td></tr>
+                                        <tr><td><code>total</code></td><td><span class="t-type">int</span></td><td>Total count of characters</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Character -->
+                        <div class="api" id="model_Character">
+                            <h3>Character</h3>
+                            <p class="desc">Basic character information in an authenticated user's roster.</p>
+                            <h4>Attributes</h4>
+                            <div class="table-wrap">
+                                <table>
+                                    <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><code>char_id</code></td><td><span class="t-type">str</span></td><td>Unique character identifier</td></tr>
+                                        <tr><td><code>name</code></td><td><span class="t-type">str</span></td><td>Character name</td></tr>
+                                        <tr><td><code>level</code></td><td><span class="t-type">int</span></td><td>Current level (1-60)</td></tr>
+                                        <tr><td><code>potential_level</code></td><td><span class="t-type">int</span></td><td>Potential breakthrough level</td></tr>
+                                        <tr><td><code>evolve_phase</code></td><td><span class="t-type">int</span></td><td>Ascension phase</td></tr>
+                                        <tr><td><code>rarity</code></td><td><span class="t-type">int</span></td><td>Rarity tier (1-6)</td></tr>
+                                        <tr><td><code>square_icon</code></td><td><span class="t-type">str</span></td><td>Square avatar icon URL</td></tr>
+                                        <tr><td><code>profession</code></td><td><span class="t-type">str</span></td><td>Class/profession type (uppercase)</td></tr>
+                                        <tr><td><code>element</code></td><td><span class="t-type">str</span></td><td>Elemental affinity (first letter uppercase)</td></tr>
+                                        <tr><td><code>rect_icon</code></td><td><span class="t-type">str</span></td><td>Rectangular portrait icon URL</td></tr>
+                                        <tr><td><code>splash_icon</code></td><td><span class="t-type">str</span></td><td>Full splash art URL</td></tr>
+                                        <tr><td><code>owned_at</code></td><td><span class="t-type">int</span></td><td>Unix timestamp when character was obtained</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="rule">
+
+                    <!-- Examples Section -->
+                    <section id="examples">
+                        <h2>Examples</h2>
+                        
+                        <h3>Basic Usage</h3>
+                        <div class="code">
+                            <div class="code-head"><span class="dot"></span>python</div>
+                            <pre><code class="language-python">import asyncio
+from endfield import Endfield
+
+async def main():
+    client = Endfield()
+    
+    # Fetch player profile (public data)
+    showcase = await client.get_showcase(uid="123456789")
+    print(f"Player: {showcase.profile.name}")
+    print(f"Adventure Level: {showcase.profile.adventure_level}")
+    
+    # Close session
+    await client.close()
+
+asyncio.run(main())</code></pre>
+                        </div>
+
+                        <h3>Context Manager</h3>
+                        <div class="code">
+                            <div class="code-head"><span class="dot"></span>python</div>
+                            <pre><code class="language-python">import asyncio
+from endfield import Endfield
+
+async def main():
+    # Use as async context manager
+    async with Endfield() as client:
+        showcase = await client.get_showcase(uid="123456789")
+        print(f"Characters: {len(showcase.characters)}")
+        # Session auto-closes on exit
+
+asyncio.run(main())</code></pre>
+                        </div>
+
+                        <h3>Fetch Authenticated Data</h3>
+                        <div class="code">
+                            <div class="code-head"><span class="dot"></span>python</div>
+                            <pre><code class="language-python">import asyncio
+from endfield import Endfield
+
+async def main():
+    async with Endfield() as client:
+        # Verify token and get user info
+        user = await client.verify_user(token="your_token_here")
+        if user:
+            print(f"Verified: {user.name} (UID: {user.uid})")
+        
+        # Fetch game stats
+        stats = await client.get_game_stats(token="your_token_here")
+        if stats:
+            print(f"Sanity: {stats.sanity_point['current']}/{stats.sanity_point['max']}")
+            
+        # Get all characters
+        characters = await client.get_all_characters(token="your_token_here")
+        for char in characters:
+            print(f"- {char.name} (Lv. {char.level})")
+
+asyncio.run(main())</code></pre>
+                        </div>
+
+                        <h3>Factory Blueprints</h3>
+                        <div class="code">
+                            <div class="code-head"><span class="dot"></span>python</div>
+                            <pre><code class="language-python">import asyncio
+from endfield import Endfield
+
+async def main():
+    async with Endfield() as client:
+        # Get factory blueprints
+        plans = await client.get_factory_blueprints(
+            region="Both",
+            item="all",
+            start=0,
+            end=10
+        )
+        
+        print(f"Total blueprints: {plans.total}")
+        for blueprint in plans.blueprints:
+            print(f"- {blueprint.name} ({blueprint.region})")
+            for output in blueprint.output_items:
+                print(f"  → {output.name}: {output.per_minute}/min")
+
+asyncio.run(main())</code></pre>
+                        </div>
+                    </section>
+
+                    <footer style="text-align: center; padding: 60px 0; border-top: 1px solid var(--border); margin-top: 80px;">
+                        <p style="color: var(--text-faint); font-size: 0.85rem; margin-bottom: 8px;">Endfield SDK Documentation</p>
+                        <p style="color: var(--text-faint); font-size: 0.8rem;"><a href="https://github.com/MR-LORD-REX/endfield" target="_blank">View on GitHub</a></p>
+                    </footer>
+                </div>
+
+                <!-- TOC Sidebar -->
+                <aside class="toc" id="toc">
+                    <div class="toc-title">On this page</div>
+                    <ul></ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

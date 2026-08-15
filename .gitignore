@@ -7,6 +7,7 @@ __pycache__/
 .env
 debug_*.json
 scripts/
+docs/game_character_conversion_report.md
 new.js
 nameMap.js
 call.md

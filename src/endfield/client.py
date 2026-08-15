@@ -11,6 +11,7 @@ import aiohttp
 import asyncio
 
 from .basic.decoder import DataDecoder
+from .basic.game_character_adapter import GameCharacterAdapter
 from .resolver import AssetResolver
 
 from .errors import APIError, CharacterNotFoundError, WeaponNotFoundError, DecodeError
@@ -24,13 +25,17 @@ from .models import (
 )
 from .models.factory.blueprint import Blueprint, OutputItems , FactoryPlans
 from .models.auth.game_stats import GameStats
+from .models.auth.user import User
+from .models.auth.indie_hard import IndieHardData
+from .models.auth.allc import AllCharacters
 from .data_cache import CacheManager
 from .basic.calculator import ID_TO_PROP, ID_TO_OBJ_MAP, OBJ_TO_ID , OBJ_TO_NAME
 from .proxy_pool import ProxyPool , ProxySession
+from .models.auth.indie_hard import IndieHardData
 
 from .update import check_update, download_update
 from .basic.calculator import compute_final_stats
-from .auth.api import perform_daily_sign, game_stats
+from .auth.api import GameApi
 from .factory.api import get_or_update_blueprints
 from .factory.factory import format_blueprints , items
 
@@ -92,6 +97,7 @@ class Endfield:
         self._timeout = timeout
         self.proxies=proxy_pool
         self.enka_data_cache= enka_data_cache
+        self.game_api = GameApi() 
 
         log_level = logging.DEBUG if debug else logging.WARNING
         logging.basicConfig(
@@ -151,6 +157,31 @@ class Endfield:
                 ))
         return ComputedStatsWithDetails(all=details)
 
+    
+    async def verify_user(self, token: str) -> User | None:
+        """
+        Verify the user using the provided token and return a User object if valid.
+        
+        Args:
+            token: The authentication token to verify.
+        """
+        if not self._session:
+            await self._init_session()
+        user = await self.game_api.verify_user(token, self._session)
+        return user
+            
+    async def get_monument(self, token: str) -> IndieHardData | None:
+        """
+        Retrieve monument data for the user associated with the provided token.
+        
+        Args:
+            token: The authentication token to retrieve monument data for.
+        """
+        if not self._session:
+            await self._init_session()
+        monument_data = await self.game_api.get_monument(self._session, token)
+        return monument_data
+        
     async def get_showcase(self, uid: int | str) -> ShowcaseData:
         """
         Retrieve showcase data (profile and characters) for a specific user ID.
@@ -224,6 +255,48 @@ class Endfield:
         character = await self._build_character_data(char_data, gender)
         character.detailed_stats= self.get_detailed_stats(character)
         return character
+
+    async def get_game_character(self, token: str, char_id:str,gender:Literal["1","2"]="1") -> CharacterData:
+        """
+        Retrieve a specific game character's data using an authentication token and character ID.
+        
+        Args:
+            token: The authentication token to verify the user.
+            char_id: Hashed character ID to fetch the character data for.
+            gender: The gender of the MC (1 for male, 2 for female, default is 1).
+        """
+        if not self._session:
+            await self._init_session()
+        data= await self.game_api.get_char(self._session, token, char_id)
+        data= await self._convert_game_character(data, gender=int(gender))
+        return data
+    
+    async def get_all_characters(self, token: str) -> AllCharacters | None:
+        """
+        Retrieve all characters for the user associated with the provided token.
+        
+        Args:
+            token: The authentication token to retrieve all characters for.
+        """
+        if not self._session:
+            await self._init_session()
+        data= await self.game_api.get_all_characters(self._session, token)
+        return data
+    async def _convert_game_character(
+        self,
+        game_character: dict,
+        gender: int = 1,
+    ) -> CharacterData:
+        """Convert a Skport game API character to the public CharacterData model."""
+        if not self._session or not self._resolver:
+            await self._init_session()
+        if not self._resolver:
+            raise RuntimeError("Asset resolver is not initialized")
+
+        enka_character = GameCharacterAdapter(self._resolver).convert(game_character)
+        character = await self._build_character_data(enka_character, gender)
+        character.detailed_stats = self.get_detailed_stats(character)
+        return character
     
     async def get_profile(self, uid: int | str) -> PlayerProfile:
         """
@@ -266,10 +339,10 @@ class Endfield:
                 if self.proxies:
                     async with self.proxies.get_proxy() as p:
                         logger.debug(f"Using proxy: {p.proxy}")
-                        stats = await game_stats(p.session, token, server)
+                        stats = await self.game_api.game_stats(p.session, token, server)
                 else:
                     logger.debug("No proxies found, using direct connection")
-                    stats = await game_stats(self._session, token, server)
+                    stats = await self.game_api.game_stats(self._session, token, server)
                 if stats:
                     self.stat_cache.set(token, stats, ttl=300)  # Cache for 5 minutes
             return stats
@@ -287,7 +360,7 @@ class Endfield:
         Returns:
             str: A message indicating the result of the sign-in.
         """
-        msg = await perform_daily_sign(self._session, token)
+        msg = await self.game_api.perform_daily_sign(self._session, token)
         return msg
     
     async def check_for_updates(self):
@@ -302,92 +375,7 @@ class Endfield:
     async def update_assets(self) -> None:
         """Download and apply updates for assets."""
         await download_update()
-
-    async def test_equip(self, uid: int | str):
-        if not self._session:
-            await self._init_session()
-        
-        async def _fetch_and_decode():
-            raw = await self._fetch_api(str(uid))
-            return DataDecoder(raw).decode()
-        
-        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
-        char_data = decoded["playerInfo"].get("charData", [])
-        char_data= char_data[0] 
-        equip= char_data["equip"][0]
-        equip_data= await self._build_equip(equip)
-        logger.debug(f"Equip data: {equip_data}")
-        
-    async def test_suit_set(self, suit_id: str, active:bool=False, equiped:int=0):
-        suit= await self._build_suit_set(suit_id, active, equiped)
-        logger.debug(f"Suit set: {suit}")
     
-    async def test_weapon(self, uid: int | str):
-        if not self._session:
-            await self._init_session()
-        
-        async def _fetch_and_decode():
-            raw = await self._fetch_api(str(uid))
-            return DataDecoder(raw).decode()
-        
-        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
-        char_data = decoded["playerInfo"].get("charData", [])
-        for cd in char_data:
-            char_id= cd.get("templateId", 0)
-            char_info = self._resolver.get_character(str(char_id))
-            logger.debug(f"Character: {char_info.get('NameHash', 'unknown')} (ID: {char_id})")
-            weapon_raw= cd.get("weapon", {})
-            weapon_data= await self._build_weapon(weapon_raw)
-            logger.debug(f"Weapon data: {weapon_data}")
-            
-    async def test_skill_meta(self, uid: int | str):
-        if not self._session:
-            await self._init_session()
-        
-        async def _fetch_and_decode():
-            raw = await self._fetch_api(str(uid))
-            return DataDecoder(raw).decode()
-        
-        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
-        char_data = decoded["playerInfo"].get("charData", [])
-        for cd in char_data:
-            char_id= cd.get("templateId", 0)
-            skill_info= cd.get("skillInfo", {})
-            skill_meta= await self._build_skill_meta(skill_info, str(char_id))
-            logger.debug(f"Character ID: {char_id}, Skill Meta: {skill_meta}")
-    
-    async def test_talent_info(self, uid: int | str):
-        if not self._session:
-            await self._init_session()
-        
-        async def _fetch_and_decode():
-            raw = await self._fetch_api(str(uid))
-            return DataDecoder(raw).decode()
-        
-        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
-        char_data = decoded["playerInfo"].get("charData", [])
-        for cd in char_data:
-            char_id= cd.get("templateId", 0)
-            talent_info= cd.get("talent", {})
-            pote= cd.get("potentialLevel", 0)
-            talent_meta= await self._build_talent_info(talent_info, str(char_id),potential=pote)
-            logger.debug(f"Character ID: {char_id}, Talent Info: {talent_meta}")
-    
-    async def test_full_character_data(self, uid: int | str):
-        if not self._session:
-            await self._init_session()
-        
-        async def _fetch_and_decode():
-            raw = await self._fetch_api(str(uid))
-            return DataDecoder(raw).decode()
-        
-        decoded = await _retry_with_backoff(_fetch_and_decode, max_retries=3)
-        char_data = decoded["playerInfo"].get("charData", [])
-        for cd in char_data:
-            char_id= cd.get("templateId", 0)
-            char_full_data= await self._build_character_data(cd)
-            logger.debug(f"Character ID: {char_id}, Full Data: {char_full_data}")
-            
     async def _fetch_api(self, uid: str) -> dict:
         cached= self.enka_data_cache.get(uid)
         if cached:
@@ -643,6 +631,7 @@ class Endfield:
         breakthrough_lvl= weapon_raw.get("breakthroughLv", 0)
         gems= weapon_raw.get("attachedGem",{})
         gem_temp_id= gems.get("templateId", 0)
+        gem_terms = []
         
         gem = None
         if gem_temp_id:
