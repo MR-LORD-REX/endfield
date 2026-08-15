@@ -484,7 +484,7 @@ html[data-theme="light"] .theme-toggle .moon {
     font-weight: 550;
 }
 
-.toc .toc-sub a {
+.toc a.toc-sub {
     padding-left: 24px;
     font-size: 0.78rem;
 }
@@ -596,6 +596,22 @@ html[data-theme="light"] .theme-toggle .moon {
     text-transform: uppercase;
     color: var(--text-muted);
     margin: 20px 0 8px;
+}
+
+/* Group divider between families of models (Character, Weapon, Auth, ...) */
+.content h3.model-group {
+    font-size: 0.76rem;
+    font-weight: 680;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 44px 0 16px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.content h3.model-group:first-of-type {
+    margin-top: 28px;
 }
 
 .content p {
