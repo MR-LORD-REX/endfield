@@ -117,13 +117,11 @@ For issues, questions, or suggestions, please open an issue on the [GitHub repos
 
 ## Changelog
 
-### Version 1.1.4
+### Version 1.2.0
 
 - game V1.4 asset update
-- Fixed issue where stats were not being computed correctly
-- folder structure changed 
-- older versions " before v1.1.1 " will not support auto update anymore, you will have to manually update the library to get the latest assets or just update the library to the latest version
-- added proxies 
+- Added monument showcase support
+- Added support for fetching character directly from skport API using token 
 
 
 ---
